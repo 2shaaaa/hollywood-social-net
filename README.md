@@ -1,6 +1,6 @@
 # Thu thập mạng lưới phim điện ảnh, phim truyền hình & đạo diễn quốc tế (Wikipedia/Wikidata)
 
-Dự án cho môn Phân tích phương tiện mạng xã hội — xem kế hoạch gốc tại [PLAN.md](PLAN.md).
+Dự án cho môn Phân tích phương tiện mạng xã hội.
 
 ## Cài đặt
 
