@@ -25,9 +25,10 @@ def _qid_of(uri: str) -> str:
     return uri.rsplit("/", 1)[-1]
 
 
-def fetch_award_subjects(session, award_qid: str, subject_type: str = "film") -> list[dict]:
+def fetch_award_subjects(session, award_qid: str, subject_type: str = "film", prop: str = "P166") -> list[dict]:
     """Trả về danh sách {subject_qid, subject_label, film_qid, film_label, year} cho 1 giải thưởng.
 
+    - prop="P166" (award received = đã THẮNG) hoặc prop="P1411" (nominated for = được ĐỀ CỬ).
     - subject_type="film": giải trao cho phim (Best Picture, Golden Lion...) -> subject BẮT BUỘC
       là instance-of film (lọc bỏ trường hợp cùng giải cũng được gắn cho nhà sản xuất/cá nhân khác
       trong Wikidata).
@@ -41,8 +42,8 @@ def fetch_award_subjects(session, award_qid: str, subject_type: str = "film") ->
     )
     query = f"""
     SELECT DISTINCT ?subject ?subjectLabel ?film ?filmLabel ?year WHERE {{
-      ?subject p:P166 ?stmt .
-      ?stmt ps:P166 wd:{award_qid} .
+      ?subject p:{prop} ?stmt .
+      ?stmt ps:{prop} wd:{award_qid} .
       {type_filter}
       OPTIONAL {{ ?stmt pq:P585 ?date . BIND(YEAR(?date) AS ?year) }}
       OPTIONAL {{ ?stmt pq:P1686 ?film . }}
