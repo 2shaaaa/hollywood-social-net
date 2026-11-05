@@ -1,3 +1,8 @@
+> ⚠️ **Đã bị thay thế bởi [PLAN_DE5.md](PLAN_DE5.md)** — tài liệu này viết trước khi đọc được
+> [SUBJECT.md](SUBJECT.md) (đề bài thật), nên giả định sai số liệu mục tiêu (5.000 mẫu gộp,
+> không phải ≥2.000 node/≥5.000 cạnh/≥10 loại quan hệ) và chưa có kỹ thuật NLP/Neo4j đề bài yêu cầu.
+> Phần thu thập Wikidata/SPARQL/scrape vẫn hữu ích làm nền, nhưng **làm theo PLAN_DE5.md**.
+
 # Kế hoạch thu thập dữ liệu: Mạng lưới phim điện ảnh, phim truyền hình & đạo diễn quốc tế
 
 **Môn học:** Phân tích phương tiện mạng xã hội (Social Media/Network Analysis)
