@@ -1,4 +1,4 @@
-"""Tiện ích HTTP dùng chung: session có retry + rate limit lịch sự."""
+"""Shared HTTP utilities: a session with retries + polite rate limiting."""
 import time
 import requests
 from requests.adapters import HTTPAdapter, Retry

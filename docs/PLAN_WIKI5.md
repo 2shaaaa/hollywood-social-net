@@ -1,142 +1,186 @@
-# Kế hoạch triển khai Đề 5 — Mạng lưới diễn viên & đạo diễn Hollywood
+# Implementation plan for Topic 5 — Hollywood Actor & Director Network
 
-Thay thế định hướng cũ ở [PLAN.md](../PLAN.md) (viết trước khi đọc được [SUBJECT.md](SUBJECT.md)).
-Tài liệu này đối chiếu đúng yêu cầu đề bài thật và vạch lộ trình 8 ngày (hạn nộp **23:59 11/11/2026**,
-hôm nay 03/11/2026).
+Supersedes the earlier direction in [PLAN.md](PLAN.md) (written before reading
+[SUBJECT.md](SUBJECT.md)). This document maps the actual assignment requirements and lays out
+an 8-day roadmap (deadline **23:59 on 11/11/2026**, today being 03/11/2026).
 
-## 0. Các quyết định đã chốt
+## 0. Decisions locked in
 
-| Vấn đề | Quyết định |
+| Issue | Decision |
 |---|---|
-| Phạm vi | **Hollywood/Mỹ** (tận dụng ngoại lệ "đề quốc tế được thu hẹp phạm vi") |
-| Hệ quản trị CSDL đồ thị | **Neo4j** — có GDS library tính centrality/community detection sẵn cho bài cuối kỳ, Cypher dễ học, driver Python tốt |
-| Vai trò | Làm một mình toàn bộ pipeline (thu thập → NLP → nạp Neo4j → báo cáo) |
-| Kỹ thuật NLP cho 2 cạnh mới | **spaCy** (NER + dependency parsing), không dùng LLM để tránh rủi ro "không tính là NLP tự làm" |
+| Scope | **Hollywood/US** (using the "international topics may narrow their scope" exception) |
+| Graph database | **Neo4j** — ships with the GDS library for centrality/community detection needed later in the final assignment, Cypher is easy to learn, good Python driver |
+| Role | Doing the whole pipeline solo (collection → NLP → load into Neo4j → report) |
+| NLP technique for the 2 new edges | **spaCy** (NER + dependency parsing), not an LLM, to avoid the risk of it "not counting as NLP done by hand" |
 
-## 1. Vì sao dữ liệu hiện tại (run1) chưa đạt
+## 1. Why the current data (run1) falls short
 
-| Yêu cầu đề bài | run1 hiện tại | Khoảng cách |
+| Assignment requirement | Current run1 | Gap |
 |---|---|---|
-| ≥1.000 node (phạm vi thu hẹp) | 1.392 node, nhưng chỉ **99/165 phim là Mỹ (60%)** | Cần thu thập thêm phim/người Mỹ, lọc bỏ phần quốc tế không cần nữa |
-| ≥5.000 cạnh | 3.662 cạnh | Thiếu ~1.400+ cạnh |
-| ≥10 loại quan hệ chi tiết | 6 loại | Thiếu ≥4 loại |
-| Đúng 3 cạnh đề 5 nêu tên | Chỉ có `COLLABORATED_WITH` ≈ "Hợp tác thường xuyên"; **chưa có** "Đại diện thương mại", "Xung đột/Thay thế vai diễn" | Thiếu 2/3, và đây là phần **NLP thật** đề bài muốn thấy |
-| Kỹ thuật NLP trên văn bản | 0% — toàn bộ lấy từ Wikidata SPARQL (structured) | Lệch hướng kỹ thuật cốt lõi của đề |
-| Neo4j/ArangoDB/... | Chưa có, chỉ có CSV phẳng | Chưa làm |
-| Báo cáo ≥10 trang | Chưa có | Chưa làm |
+| ≥1,000 nodes (narrowed scope) | 1,392 nodes, but only **99/165 films are American (60%)** | Need to collect more US films/people, drop the international portion we no longer need |
+| ≥5,000 edges | 3,662 edges | Short by ~1,400+ |
+| ≥10 detailed relation types | 6 types | Short by ≥4 types |
+| The exact 3 edges Topic 5 names | Only `COLLABORATED_WITH` ≈ "Frequent collaboration"; **missing** "Commercial representation" and "Conflict/Role replacement" | Missing 2/3, and this is the **real NLP** part the assignment wants to see |
+| NLP technique on text | 0% — everything comes from structured Wikidata SPARQL | Misses the assignment's core technique |
+| Neo4j/ArangoDB/... | Not set up yet, only flat CSV | Not done |
+| Report ≥10 pages | Not started | Not done |
 
-**Điểm mấu chốt cần nhớ**: ghi chú cuối SUBJECT.md nói "chất lượng mạng ≥90% **chưa** đánh giá ở bước nộp 11/11, sẽ đánh giá ở bài cuối kỳ". Vậy mục tiêu lần nộp này là: **đạt đủ số lượng + đủ 10 loại quan hệ + nạp được vào Neo4j + viết báo cáo** — độ chính xác NLP có thể chưa hoàn hảo, miễn minh bạch nêu rõ trong báo cáo (mục "chưa đạt được").
+**Key point to remember**: the footnote in SUBJECT.md says network quality ≥90% "is **not**
+graded at this 11/11 submission step — it's graded in the final assignment." So the goal for
+this submission is: **hit the quantity targets + reach 10 relation types + load into Neo4j +
+write the report** — the NLP accuracy doesn't need to be perfect yet, as long as the report is
+transparent about it (in a "not yet achieved" section).
 
-## 2. Schema mới cho Đề 5
+## 2. New schema for Topic 5
 
-### Node
-| Loại | Nguồn | Ghi chú |
+### Nodes
+| Type | Source | Notes |
 |---|---|---|
-| `Film` | Wikidata (country=US) | Mở rộng từ 99 → mục tiêu ~1.200-1.500 phim Mỹ |
+| `Film` | Wikidata (country=US) | Scale up from 99 → target ~1,200-1,500 American films |
 | `Director` | Wikidata | |
 | `Actor` | Wikidata | |
-| `Studio` (hãng sản xuất) | Wikidata P272 | |
-| `Agency` (hãng quản lý tài năng) | **MỚI** — danh sách cố định (CAA, WME, UTA, ICM Partners, Paradigm, Gersh, APA, Independent Artist Group, Verve...) + NLP phát hiện trong text | |
-| `AwardEvent` | Wikidata + giải Mỹ | Đổi seed sang giải mang tính Hollywood |
+| `Studio` (production company) | Wikidata P272 | |
+| `Agency` (talent management company) | **NEW** — a fixed list (CAA, WME, UTA, ICM Partners, Paradigm, Gersh, APA, Independent Artist Group, Verve...) + detected via NLP in text | |
+| `AwardEvent` | Wikidata + US-centric awards | Switch seeds to Hollywood-oriented awards |
 
-### Edge — đủ 10+ loại, chia 2 nhóm
+### Edges — 10+ types total, in 2 groups
 
-**A. Structured (từ Wikidata, mở rộng từ 6 loại hiện có, lấy nhanh)**
-1. `DIRECTED` (đã có)
-2. `ACTED_IN` (đã có)
-3. `PRODUCED_BY` (đã có)
-4. `WON_AWARD` — tách từ `WON_OR_NOMINATED` cũ (P166)
-5. `NOMINATED_FOR` — tách riêng, lấy thêm qua P1411 "nominated for" (trước đây bỏ qua)
-6. `CO_STARRED_WITH` (đã có, suy ra)
-7. `COLLABORATED_WITH` — **chính là "Hợp tác thường xuyên"** đề 5 yêu cầu (đạo diễn hay chọn diễn viên nào) — đã có, giữ nguyên nhưng áp ngưỡng weight≥2 để đúng nghĩa "thường xuyên"
-8. `DISTRIBUTED_BY` — hãng phát hành (P750), khác hãng sản xuất
-9. `BASED_ON` — phim dựa trên tác phẩm khác (P144), bổ sung ý nghĩa mạng
+**A. Structured (from Wikidata, expanded from the existing 6 types, quick to fetch)**
+1. `DIRECTED` (already have)
+2. `ACTED_IN` (already have)
+3. `PRODUCED_BY` (already have)
+4. `WON_AWARD` — split out from the old `WON_OR_NOMINATED` (P166)
+5. `NOMINATED_FOR` — split out separately, additionally sourced via P1411 "nominated for" (previously ignored)
+6. `CO_STARRED_WITH` (already have, derived)
+7. `COLLABORATED_WITH` — **this is exactly the "frequent collaboration"** edge Topic 5 asks for (which director keeps picking which actor) — already have it, keeping as-is but applying a weight≥2 threshold to match the "frequent" meaning
+8. `DISTRIBUTED_BY` — distribution company (P750), distinct from the production company
+9. `MARRIED_TO` — spouse (P26), kept only where both sides are already actors/directors in this dataset — a genuine social tie not derivable from any other relation here, structured/high-precision, real yield (111 unique pairs out of 2,383 people)
 
-**B. NLP-derived (trích xuất từ văn bản bằng spaCy — đúng trọng tâm đề bài)**
-10. `REPRESENTED_BY` — **"Đại diện thương mại"**: NER nhận diện ORG trùng danh sách agency + dependency parse tìm cụm động từ "sign/represent/client of" gần tên agency trong bio diễn viên/đạo diễn
-11. `REPLACED_IN_ROLE` — **"Xung đột/Thay thế vai diễn"**: quét mục "Production"/"Casting" của bài phim, tìm pattern "replaced by / recast / dropped out / fired from / departed" + 2 thực thể PERSON (người bị thay, người thay thế), gắn vào film liên quan
+**B. NLP-derived (extracted from text with spaCy — the assignment's actual focus)**
+10. `REPRESENTED_BY` — **"Commercial representation"**: NER detects an ORG entity matching the agency list + dependency parsing finds a "sign/represent/client of" verb phrase near the agency name in the actor/director's bio
+11. `REPLACED_IN_ROLE` — **"Conflict/Role replacement"**: scans the "Production"/"Casting" section of a film article for patterns like "replaced by / recast / dropped out / fired from / departed" plus 2 PERSON entities (the person replaced, the replacement), linked to the relevant film
 
-→ Đủ **11 loại quan hệ chi tiết**, dư so với yêu cầu 10.
+→ Totals **11 detailed relation types**, above the required minimum.
 
-## 3. Chiến lược mở rộng dữ liệu Hollywood (để bù phần "60% Mỹ")
+**Dropped**: `BASED_ON` (P144, film based on another work) was tried and removed — after restricting it to "target must also be one of our collected films" (to avoid pulling in Book/Play nodes outside the schema), it only yielded 2 edges out of 714 films. Keeping a relation type that thin looked more like padding the type-count than genuine diversity, so it was cut. Replaced by `MARRIED_TO`, which uses the same low-cost structured-fetch pattern but yields a real, substantial edge count (111 pairs) instead of 2.
 
-Đổi seed giải thưởng từ các giải quốc tế/châu Âu/châu Á (Cannes, Venice, Berlin, Golden Horse...)
-sang **giải mang tính Hollywood**, dùng Wikidata SPARQL như cũ (đã có hạ tầng `fetch_award_subjects`):
+## 3. Hollywood data-scaling strategy (to fix the "60% American" gap)
 
-- Golden Globe Awards (phim + truyền hình)
+Switch award seeds away from international/European/Asian awards (Cannes, Venice, Berlin,
+Golden Horse...) toward **Hollywood-centric awards**, still via Wikidata SPARQL as before
+(the `fetch_award_subjects` infrastructure already supports this):
+
+- Golden Globe Awards (film + television)
 - Screen Actors Guild (SAG) Awards
 - Critics' Choice Awards
 - Directors Guild of America (DGA) Award
 - Producers Guild of America (PGA) Award
-- Primetime Emmy Award (mở rộng sang **phim truyền hình** — đúng tên đề bài gốc "diễn viên/đạo diễn" không giới hạn điện ảnh)
-- Giữ lại Oscar/BAFTA (BAFTA vẫn trao nhiều cho phim Mỹ)
+- Primetime Emmy Award (extending into **TV series** — matching the original assignment
+  wording "actors/directors" without limiting it to film)
+- Keep the Oscars/BAFTA (BAFTA still goes to plenty of American films)
 
-Nếu vẫn chưa đủ ~1.200-1.500 phim Mỹ: nới thêm bằng truy vấn Wikidata "phim Mỹ có ngân sách phòng vé
-(P2142) ghi nhận" (proxy cho độ nổi tiếng) thay vì chỉ dựa giải thưởng.
+If that still doesn't reach ~1,200-1,500 American films: widen further with a Wikidata query
+for "American films with recorded box-office figures" (P2142, as a popularity proxy) instead
+of relying on awards alone.
 
-## 4. Thiết lập Neo4j
+## 4. Setting up Neo4j
 
-1. Cài Neo4j Desktop (hoặc Docker: `docker run -p7474:7474 -p7687:7687 neo4j:5`) — có GDS + APOC plugin.
-2. Viết script `src/load_neo4j.py` dùng driver `neo4j` (Python) để:
-   - Tạo constraint unique theo `qid`/`event_id`/`agency_id` cho từng label.
-   - Nạp node theo batch (`UNWIND $rows AS row MERGE (n:Film {qid: row.qid}) SET n += row`).
-   - Nạp edge theo batch tương tự với `MATCH ... MERGE ... -[r:RELATION]->...`.
-3. Query mẫu cho báo cáo: top-10 đạo diễn theo degree, số thành phần liên thông
-   (`CALL gds.wcc.stream(...)`), vài node trung tâm nhất (`CALL gds.betweenness.stream(...)`).
+1. Install Neo4j Desktop (or Docker: `docker run -p7474:7474 -p7687:7687 neo4j:5`) — with the
+   GDS + APOC plugins.
+2. Write a `src/load_neo4j.py` script using the Python `neo4j` driver to:
+   - Create a uniqueness constraint on `qid`/`event_id`/`agency_id` for each label.
+   - Load nodes in batches (`UNWIND $rows AS row MERGE (n:Film {qid: row.qid}) SET n += row`).
+   - Load edges in batches similarly, with `MATCH ... MERGE ... -[r:RELATION]->...`.
+3. Sample queries for the report: top-10 directors by degree, number of connected components
+   (`CALL gds.wcc.stream(...)`), a few of the most central nodes (`CALL gds.betweenness.stream(...)`).
 
-## 4b. Giai đoạn phân tích mạng (sau khi nạp Neo4j)
+## 4b. Network analysis stage (after loading Neo4j)
 
-Dùng **thư viện** cho cả 2 bước, không tự viết thuật toán, không dùng LLM:
+Use a **library** for both steps — no hand-rolled algorithms, no LLM:
 
-1. **NetworkX** (Python, đọc trực tiếp từ CSV) — dùng để kiểm tra nhanh trong lúc phát triển:
-   degree distribution, số thành phần liên thông, vài centrality cơ bản — không cần chờ Neo4j dựng xong.
-2. **Neo4j Graph Data Science (GDS)** — bản chính thức đưa vào báo cáo, chạy ngay trên DB đã nạp:
-   - `CALL gds.graph.project(...)` tạo in-memory graph projection
-   - `CALL gds.degree.stream(...)` / `CALL gds.betweenness.stream(...)` — tìm node trung tâm (đạo diễn/diễn viên "hub")
-   - `CALL gds.louvain.stream(...)` hoặc `gds.wcc.stream(...)` — community detection / connected components (đạo diễn-diễn viên tụ theo studio/thập niên nào)
-   - Kết quả này đi thẳng vào mục "Các thống kê về mạng đã xây dựng được" của báo cáo.
+1. **NetworkX** (Python, reading straight from the CSVs) — for quick checks during development:
+   degree distribution, number of connected components, a few basic centrality metrics —
+   doesn't require waiting for Neo4j to be fully set up.
+2. **Neo4j Graph Data Science (GDS)** — the official version that goes into the report, run
+   directly on the loaded database:
+   - `CALL gds.graph.project(...)` creates an in-memory graph projection
+   - `CALL gds.degree.stream(...)` / `CALL gds.betweenness.stream(...)` — finding central
+     "hub" directors/actors
+   - `CALL gds.louvain.stream(...)` or `gds.wcc.stream(...)` — community detection / connected
+     components (do directors-actors cluster by studio or by decade?)
+   - These results feed directly into the report's "Statistics on the built network" section.
 
-## 5. Lịch 8 ngày (03/11 → 11/11)
+## 5. 8-day schedule (03/11 → 11/11)
 
-| Ngày | Việc |
+| Day | Task |
 |---|---|
-| T3 03/11 (hôm nay) | Duyệt kế hoạch này; đổi seed sang giải Hollywood; chạy lại pipeline mở rộng phim Mỹ |
-| T4 04/11 | Hoàn tất thu thập structured (đủ node/edge mục tiêu), tách WON/NOMINATED, thêm DISTRIBUTED_BY/BASED_ON |
-| T5 05/11 | Cài spaCy, viết + test extractor `REPLACED_IN_ROLE` trên vài case nổi tiếng đã biết (Justice League, All the Money in the World...) |
-| T6 06/11 | Viết + test extractor `REPRESENTED_BY` (NER + gazetteer agency), bổ sung thủ công nếu yield quá thấp |
-| T7 07/11 | Gộp toàn bộ, chạy full pipeline, QA số lượng (≥1.000 node/≥5.000 cạnh/≥10 loại) |
-| CN 08/11 | Cài Neo4j, viết `load_neo4j.py`, nạp dữ liệu, chạy thử query |
-| T2 09/11 | Tính thống kê mạng (degree, component, community) cho báo cáo + vẽ biểu đồ |
-| T3 10/11 | Viết báo cáo 10 trang (đủ mục theo SUBJECT.md), dọn GitHub repo, push |
-| T4 11/11 sáng | Buffer rà soát trước 23:59 |
+| Tue 03/11 (today) | Approve this plan; switch seeds to Hollywood awards; re-run the pipeline to scale up American films |
+| Wed 04/11 | Finish the structured collection (hit node/edge targets), split WON/NOMINATED, add DISTRIBUTED_BY/BASED_ON |
+| Thu 05/11 | Install spaCy, write + test the `REPLACED_IN_ROLE` extractor on a few known famous cases (Justice League, All the Money in the World...) |
+| Fri 06/11 | Write + test the `REPRESENTED_BY` extractor (NER + agency gazetteer), add manual entries if the yield is too low |
+| Sat 07/11 | Merge everything, run the full pipeline, QA the numbers (≥1,000 nodes/≥5,000 edges/≥10 types) |
+| Sun 08/11 | Install Neo4j, write `load_neo4j.py`, load the data, try some queries |
+| Mon 09/11 | Compute network statistics (degree, components, community) for the report + draw charts |
+| Tue 10/11 | Write the 10-page report (covering every section from SUBJECT.md), clean up the GitHub repo, push |
+| Wed 11/11 morning | Buffer / final review |
 
-Nếu bị trễ tiến độ, **ưu tiên cắt giảm theo thứ tự**: (1) giảm độ phức tạp `REPRESENTED_BY` (chỉ cần
-vài chục cạnh, bổ sung thủ công cũng được), (2) bỏ qua community detection trong báo cáo (chỉ cần
-thống kê cơ bản), (3) không cắt số node/edge/loại quan hệ bắt buộc — đây là điều kiện cứng của đề.
+If we fall behind schedule, **cut scope in this priority order**: (1) simplify
+`REPRESENTED_BY` (only needs a few dozen edges, manual entries are fine), (2) drop community
+detection from the report (basic stats are enough), (3) never cut the required node/edge/
+relation-type counts — those are the assignment's hard requirements.
 
-## 6. Rủi ro
+## 5b. Deferred task — Infobox cross-validation (do later, not blocking current work)
 
-- **`REPRESENTED_BY` từ Wikipedia có thể cho yield rất thấp** vì bài tiểu sử ít khi ghi rõ "ký hợp đồng với CAA" — xử lý bằng cách bổ sung một bảng nhỏ thủ công (có trích dẫn nguồn báo chí công khai) nếu NLP tự động không đủ, nêu rõ trong báo cáo đây là hybrid NLP + curation.
-- **Ranh giới "cắt cạnh có cần giảm theo tỷ lệ node không"** khi thu hẹp phạm vi — đề bài không nói rõ; quyết định an toàn: vẫn nhắm ≥5.000 cạnh đầy đủ để không bị trừ điểm nếu giám khảo chấm theo yêu cầu chung.
-- **spaCy model tiếng Anh** (`en_core_web_sm` hoặc `en_core_web_trf` cho độ chính xác cao hơn nhưng chậm hơn) — cần cài thêm, chưa có trong `requirements.txt`.
+Reduced-scope version: parse the raw Infobox wikitext (via `mwparserfromhell`) for a random
+sample of ~30-50 films, compare director/cast against what Wikidata gave us, and report a
+concrete agreement/accuracy percentage — goes into the report's "preprocessing steps" /
+accuracy discussion. Addresses the earlier note: "dữ liệu từ Wiki phải để ý Infobox, một số
+thực thể được gán nhãn sẵn nhưng chưa chắc đúng hết." Scheduled after the two NLP relations
+(REPLACED_IN_ROLE, REPRESENTED_BY) and before report writing.
 
-## 7. Quyết định cuối (đã chốt để bắt đầu code — 05/11)
+## 5c. Status: data + NLP stage complete
 
-1. Schema 11 loại quan hệ ở mục 2: **giữ nguyên**, không mở rộng thêm node `Distributor`/`Role`/`Franchise`/`Genre-node`
-   đã thảo luận — để tránh phình phạm vi khi chỉ còn ~6 ngày; ghi lại ở đây như hướng mở rộng cho bài
-   cuối kỳ sau này nếu còn thời gian.
-2. Danh sách giải thưởng Hollywood ở mục 3: **giữ nguyên**, không thêm Tony (sân khấu ngoài phạm vi
-   điện ảnh/truyền hình của đề 5).
-3. Neo4j: **Docker** (`docker run -p7474:7474 -p7687:7687 ... neo4j:5-enterprise` hoặc community +
-   GDS plugin) — kiểm tra máy có Docker trước khi chạy bước 4.
+Final merged numbers in `data/output/run2/`: **3,956 nodes / 18,778 edges / 11 distinct
+relation types** — all three assignment minimums (≥1,000 nodes, ≥5,000 edges, ≥10 relation
+types) cleared with margin. `REPLACED_IN_ROLE`: 25 edges (714 films scanned, ~3.5% yield).
+`REPRESENTED_BY`: 41 edges / 6 agencies (built by scanning each agency's own Wikipedia article
+for "clients" mentions, not each actor's bio — direct bio-scanning was tested and found ~0%
+yield). `BASED_ON` (P144) was tried and dropped — only 2/714 films yielded an edge after
+restricting the target to films already in-dataset, too thin to justify keeping as a distinct
+type. `MARRIED_TO` (P26) added in its place — structured, near-zero engineering cost (same
+`fetch_relation` helper), 111 unique spouse pairs among the 2,383 actors/directors already
+collected. Next: Neo4j (section 4), then network stats (section 4b), then the report.
 
-### Lịch thực tế đã trễ 2 ngày so với kế hoạch gốc — dồn lại từ hôm nay (05/11, còn 6 ngày)
+## 6. Risks
 
-| Hôm nay 05/11 | Đổi seed Hollywood + mở rộng relation type (gộp việc của 03-04/11 cũ) |
+- **`REPRESENTED_BY` from Wikipedia may yield very little**, since bios rarely state "signed
+  with CAA" explicitly — mitigate by adding a small manually-curated table (citing public press
+  sources) if automated NLP falls short, and be transparent in the report that this is a hybrid
+  NLP + curation approach.
+- **Whether the edge count should scale down proportionally with the narrowed scope** is not
+  specified by the assignment; the safe call: still aim for the full ≥5,000 edges so we don't
+  lose points if graded against the general requirement.
+- **English spaCy model** (`en_core_web_sm`, or `en_core_web_trf` for higher accuracy but
+  slower) — needs to be installed, not yet in `requirements.txt`.
+
+## 7. Final decisions (locked in to start coding — 05/11)
+
+1. The 11-relation-type schema in section 2: **keep as is**, not expanding with the previously
+   discussed `Distributor`/`Role`/`Franchise`/`Genre-node` entities — to avoid scope creep with
+   only ~6 days left; noted here as a possible extension for the final assignment later if time
+   allows.
+2. The Hollywood award list in section 3: **keep as is**, not adding the Tonys (theater is
+   outside Topic 5's film/TV scope).
+3. Neo4j: **Docker** (`docker run -p7474:7474 -p7687:7687 ... neo4j:5-enterprise`, or community
+   + the GDS plugin) — check that the machine has Docker before running step 4.
+
+### Actual schedule is 2 days behind the original plan — compressed starting today (05/11, 6 days left)
+
+| Today 05/11 | Switch to Hollywood seeds + expand relation types (merging the old 03-04/11 work) |
 |---|---|
-| 06/11 | spaCy: extractor `REPLACED_IN_ROLE` |
-| 07/11 | spaCy: extractor `REPRESENTED_BY` |
-| 08/11 | Gộp, chạy full pipeline, QA số lượng |
+| 06/11 | spaCy: `REPLACED_IN_ROLE` extractor |
+| 07/11 | spaCy: `REPRESENTED_BY` extractor |
+| 08/11 | Merge everything, run the full pipeline, QA the numbers |
 | 09/11 | Neo4j (Docker) + load script + NetworkX/GDS stats |
-| 10/11 | Viết báo cáo 10 trang, dọn GitHub, push |
-| 11/11 sáng | Buffer |
+| 10/11 | Write the 10-page report, clean up GitHub, push |
+| 11/11 morning | Buffer |

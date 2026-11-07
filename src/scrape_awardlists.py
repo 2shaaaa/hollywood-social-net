@@ -1,7 +1,8 @@
-"""Quét (scrape) trang danh sách giải thưởng trên Wikipedia — kỹ thuật thứ 3 theo kế hoạch.
+"""Scrapes Wikipedia award-list pages — the 3rd collection technique required by the plan.
 
-Dùng cho Palme d'Or: trang này không có qualifier năm/trao-giải sạch trên Wikidata như Oscar,
-nên lấy trực tiếp từ bảng HTML "List of winners" trên chính bài Wikipedia.
+Used for the Palme d'Or: this page doesn't have clean year/won qualifiers on Wikidata like the
+Oscars do, so we pull directly from the "List of winners" HTML table on the Wikipedia article
+itself.
 """
 from bs4 import BeautifulSoup
 
@@ -30,7 +31,7 @@ def scrape_palme_dor(session) -> list[dict]:
         header_cells = table.find("tr").find_all(["th", "td"])
         headers = [c.get_text(" ", strip=True) for c in header_cells]
         if len(headers) < 5 or headers[0] != "Year" or "Title" not in headers[1]:
-            continue  # bỏ qua các bảng thống kê khác (Wins by country, Multiple winners...)
+            continue  # skip the other stats tables (Wins by country, Multiple winners...)
 
         for row in flatten_table_rows(table, skip_header_rows=1):
             if len(row) < 5:

@@ -1,8 +1,9 @@
-"""Tiện ích làm phẳng bảng HTML wikitable có rowspan/colspan (để quét các trang 'List of ...')."""
+"""Utility to flatten an HTML wikitable with rowspan/colspan (for scraping 'List of ...' pages)."""
 
 
 def flatten_table_rows(table_soup, skip_header_rows: int = 1) -> list[list[dict]]:
-    """Trả về list các dòng, mỗi dòng là list ô {text, hrefs} đã căn đúng cột (xử lý rowspan/colspan)."""
+    """Return a list of rows, each row a list of {text, hrefs} cells aligned to the right
+    column (handles rowspan/colspan)."""
     trs = table_soup.find_all("tr")[skip_header_rows:]
     active: dict[int, list] = {}  # col_idx -> [cell_dict, remaining_rowspan]
     rows_out = []

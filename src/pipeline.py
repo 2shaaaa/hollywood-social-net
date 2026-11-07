@@ -1,7 +1,7 @@
-"""Pipeline tổng hợp: seed giải thưởng (SPARQL + scrape) -> enrich quan hệ (SPARQL) ->
-text (MediaWiki API) -> xuất nodes/edges/events CSV.
+"""Orchestrator pipeline: award seeds (SPARQL + scrape) -> enrich relations (SPARQL) ->
+text (MediaWiki API) -> export nodes/edges/events CSV.
 
-Chạy pilot nhỏ:
+Run a small pilot:
     python -m src.pipeline --pilot --film-limit 50 --out data/output/pilot
 """
 import argparse
@@ -30,7 +30,7 @@ def collect_award_rows(session, verbose=True):
                     person_qid, person_label = None, None
                 else:
                     if not r["film_qid"]:
-                        continue  # thiếu qualifier "for work" trên Wikidata -> bỏ qua, không đoán bừa
+                        continue  # missing "for work" qualifier on Wikidata -> skip, don't guess
                     film_qid, film_label = r["film_qid"], r["film_label"]
                     person_qid, person_label = r["subject_qid"], r["subject_label"]
                 n_with_film += 1
@@ -48,7 +48,7 @@ def collect_award_rows(session, verbose=True):
                     }
                 )
             if verbose:
-                print(f"  [sparql:{status}] {seed['key']}: {n_with_film} dòng có phim / {len(subs)} tổng")
+                print(f"  [sparql:{status}] {seed['key']}: {n_with_film} rows with a film / {len(subs)} total")
 
     for seed in config.SCRAPE_AWARD_SEEDS:
         if seed["key"] != "palme_dor":
@@ -75,20 +75,21 @@ def collect_award_rows(session, verbose=True):
                     "person_qid": director_qid,
                     "person_label": rec["director_titles"][0] if rec["director_titles"] else None,
                     "year": rec["year"],
-                    "status": "won",  # trang "List of winners" không có danh sách đề cử để scrape
+                    "status": "won",  # the "List of winners" page has no nominee list to scrape
                     "source": "scrape",
                 }
             )
         if verbose:
-            print(f"  [scrape] {seed['key']}: {n_with_film} dòng có phim / {len(records)} tổng")
+            print(f"  [scrape] {seed['key']}: {n_with_film} rows with a film / {len(records)} total")
     return rows
 
 
 def select_balanced_films(award_rows: list[dict], target_films: int) -> set[str]:
-    """Chọn tập phim cuối cùng theo 2 nguyên tắc:
-    1) Giữ lại mọi phim được >=2 giải/LHP khác nhau ghi nhận (phim "hub", quan trọng cho mạng lưới).
-    2) Lấp đầy phần còn lại bằng round-robin qua từng nguồn giải thưởng, để không bị lệch về
-       một khu vực/giải nào (áp dụng quota cân bằng khu vực nêu trong PLAN.md một cách thực tế).
+    """Pick the final film set using 2 rules:
+    1) Keep every film recognized by >=2 different awards/festivals (a "hub" film, important
+       for network connectivity).
+    2) Fill the rest via round-robin across award sources, so no single region/award dominates
+       (a practical application of the regional-balance quota noted in PLAN.md).
     """
     mentions = defaultdict(set)
     by_seed = defaultdict(list)
@@ -123,13 +124,13 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
     session = get_session()
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print("[1/8] Thu thập hạt giống từ các giải thưởng (SPARQL + scrape)...")
+    print("[1/8] Collecting seeds from awards (SPARQL + scrape)...")
     award_rows = collect_award_rows(session)
 
     all_film_qids = sorted({r["film_qid"] for r in award_rows})
-    print(f"    -> {len(all_film_qids)} phim duy nhất trước khi lọc quốc gia")
+    print(f"    -> {len(all_film_qids)} unique films before country filtering")
 
-    print("[2/8] Lọc phạm vi Hollywood (quốc gia sản xuất có Mỹ, P495=Q30)...")
+    print("[2/8] Filtering to Hollywood scope (production country includes the US, P495=Q30)...")
     country_edges_all = wd.fetch_relation(session, all_film_qids, "P495")
     country_by_film = defaultdict(set)
     country_label_by_qid = {}
@@ -138,11 +139,11 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
         if c_label:
             country_label_by_qid[c_qid] = c_label
     us_film_qids = {f for f in all_film_qids if config.WIKIDATA_US_QID in country_by_film.get(f, set())}
-    print(f"    -> {len(us_film_qids)}/{len(all_film_qids)} phim có Mỹ trong danh sách quốc gia sản xuất")
+    print(f"    -> {len(us_film_qids)}/{len(all_film_qids)} films have the US among their production countries")
     award_rows = [r for r in award_rows if r["film_qid"] in us_film_qids]
     all_film_qids = sorted(us_film_qids)
 
-    print(f"    -> {len(all_film_qids)} phim Mỹ duy nhất trước khi chọn lọc, {len(award_rows)} dòng giải thưởng")
+    print(f"    -> {len(all_film_qids)} unique US films before final selection, {len(award_rows)} award rows")
 
     if pilot and film_limit:
         film_qids = all_film_qids[:film_limit]
@@ -152,15 +153,14 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
         film_qids = all_film_qids
     film_qid_set = set(film_qids)
     award_rows = [r for r in award_rows if r["film_qid"] in film_qid_set]
-    print(f"    -> Chọn {len(film_qids)} phim cho lần chạy này, {len(award_rows)} dòng giải thưởng liên quan")
+    print(f"    -> Selected {len(film_qids)} films for this run, {len(award_rows)} related award rows")
 
-    print("[3/8] Lấy quan hệ phim -> đạo diễn / diễn viên / hãng sản xuất / phát hành (Wikidata)...")
+    print("[3/8] Fetching film -> director / cast / production / distribution relations (Wikidata)...")
     director_edges = wd.fetch_relation(session, film_qids, "P57")
     cast_edges_raw = wd.fetch_relation(session, film_qids, "P161")
     studio_edges = wd.fetch_relation(session, film_qids, "P272")
     genre_edges = wd.fetch_relation(session, film_qids, "P136")
     distributor_edges = wd.fetch_relation(session, film_qids, "P750")
-    based_on_edges = wd.fetch_relation(session, film_qids, "P144")
 
     cast_by_film = defaultdict(list)
     for film_qid, actor_qid, label in cast_edges_raw:
@@ -171,7 +171,7 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
             cast_edges.append((film_qid, actor_qid, label))
 
     print(
-        f"    -> DIRECTED: {len(director_edges)} | ACTED_IN (sau khi cắt top-{config.MAX_CAST_PER_FILM}): "
+        f"    -> DIRECTED: {len(director_edges)} | ACTED_IN (after keeping top-{config.MAX_CAST_PER_FILM}): "
         f"{len(cast_edges)} | PRODUCED_BY: {len(studio_edges)}"
     )
 
@@ -180,11 +180,18 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
     actor_qids = sorted({a for _, a, _ in cast_edges})
     studio_qids = sorted({s for _, s, _ in studio_edges})
 
-    print("[4/8] Lấy thuộc tính thực thể (năm, quốc tịch, năm sinh)...")
+    print("[4/8] Fetching entity attributes (year, nationality, birth year)...")
     film_years = wd.fetch_min_year(session, film_qids, "P577")
     all_person_qids = sorted(set(director_qids) | set(actor_qids))
     person_birth_years = wd.fetch_min_year(session, all_person_qids, "P569") if all_person_qids else {}
     person_nat_edges = wd.fetch_relation(session, all_person_qids, "P27") if all_person_qids else []
+
+    # MARRIED_TO: spouse (P26), kept only where both sides are already actors/directors in this
+    # dataset. P26 is symmetric on Wikidata (recorded on both entities) -> dedupe to one edge
+    # per unordered pair using a canonical (min, max) qid ordering.
+    person_qid_set = set(all_person_qids)
+    spouse_edges_raw = wd.fetch_relation(session, all_person_qids, "P26") if all_person_qids else []
+    married_pairs = {tuple(sorted((a, b))) for a, b, _ in spouse_edges_raw if b in person_qid_set}
     nationality_by_person = {}
     for p, _, label in person_nat_edges:
         nationality_by_person.setdefault(p, label)
@@ -193,14 +200,14 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
     for f, _, label in genre_edges:
         if label:
             genre_by_film[f].append(label)
-    # country_by_film đã có sẵn (set QID) từ bước lọc Hollywood -> đổi thành nhãn để ghi CSV
+    # country_by_film is already available (a set of QIDs) from the Hollywood-filter step above
+    # -> turn it into labels here for the CSV output
     country_labels_by_film = {
         f: [country_label_by_qid.get(q, q) for q in qids] for f, qids in country_by_film.items()
     }
 
-    print("[5/8] Lấy tiêu đề bài Wikipedia tiếng Anh + đoạn text mở đầu...")
+    print("[5/8] Fetching English Wikipedia titles + lead text...")
     distributor_qids = sorted({s for _, s, _ in distributor_edges})
-    based_on_edges_internal = [(f_qid, t_qid, lbl) for f_qid, t_qid, lbl in based_on_edges if t_qid in film_qid_set]
 
     all_entity_qids = sorted(set(film_qids) | set(all_person_qids) | set(studio_qids) | set(distributor_qids))
     titles_map = wd.fetch_enwiki_titles(session, all_entity_qids)
@@ -211,8 +218,9 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
         t = titles_map.get(qid)
         return extracts_by_title.get(t, "") if t else ""
 
-    print("[6/8] Dựng node sự kiện giải thưởng (events) + cạnh WON_AWARD/NOMINATED_FOR...")
-    # Winner trước, để loại NOMINATED_FOR trùng ngữ nghĩa với WON_AWARD (ai thắng thì không tính là "chỉ được đề cử")
+    print("[6/8] Building award-event nodes + WON_AWARD/NOMINATED_FOR edges...")
+    # Process winners first, so we can drop any NOMINATED_FOR that would be semantically
+    # redundant with WON_AWARD (a winner isn't also counted as "merely nominated").
     won_keys = set()
     for r in award_rows:
         if r["status"] == "won":
@@ -236,7 +244,7 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
         elif (subject_qid, r["award_key"], r["year"]) not in won_keys:
             nominated_edges.append((subject_qid, event_id, r["film_qid"]))
 
-    print("[7/8] Tính cạnh suy ra: CO_STARRED_WITH, COLLABORATED_WITH (director-actor)...")
+    print("[7/8] Computing derived edges: CO_STARRED_WITH, COLLABORATED_WITH (director-actor)...")
     costar_weight = defaultdict(lambda: {"weight": 0, "films": set()})
     for film_qid, lst in cast_by_film.items():
         top_cast = [a for a, _ in lst[: config.MAX_CAST_PER_FILM]]
@@ -256,7 +264,7 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
                 collab_weight[key]["weight"] += 1
                 collab_weight[key]["films"].add(film_qid)
 
-    # ---------------- Xuất CSV ----------------
+    # ---------------- CSV export ----------------
     def label_map_from_edges(edges):
         m = {}
         for _, qid, label in edges:
@@ -328,8 +336,6 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
             w.writerow([f_qid, s_qid, "PRODUCED_BY", 1, ""])
         for f_qid, s_qid, _ in distributor_edges:
             w.writerow([f_qid, s_qid, "DISTRIBUTED_BY", 1, ""])
-        for f_qid, t_qid, _ in based_on_edges_internal:
-            w.writerow([f_qid, t_qid, "BASED_ON", 1, ""])
         for subject_qid, event_id, film_qid in won_edges:
             w.writerow([subject_qid, event_id, "WON_AWARD", 1, film_qid or ""])
         for subject_qid, event_id, film_qid in nominated_edges:
@@ -338,6 +344,8 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
             w.writerow([a1, a2, "CO_STARRED_WITH", info["weight"], "|".join(sorted(info["films"]))])
         for (d, a), info in collab_weight.items():
             w.writerow([d, a, "COLLABORATED_WITH", info["weight"], "|".join(sorted(info["films"]))])
+        for p1, p2 in sorted(married_pairs):
+            w.writerow([p1, p2, "MARRIED_TO", 1, ""])
 
     n_nodes = len(film_qids) + len(director_qids) + len(actor_qids) + len(all_company_qids) + len(events)
     n_edges = (
@@ -345,23 +353,23 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
         + len(cast_edges)
         + len(studio_edges)
         + len(distributor_edges)
-        + len(based_on_edges_internal)
         + len(won_edges)
         + len(nominated_edges)
         + len(costar_weight)
         + len(collab_weight)
+        + len(married_pairs)
     )
     structured_relation_types = {
-        "DIRECTED", "ACTED_IN", "PRODUCED_BY", "DISTRIBUTED_BY", "BASED_ON",
-        "WON_AWARD", "NOMINATED_FOR", "CO_STARRED_WITH", "COLLABORATED_WITH",
+        "DIRECTED", "ACTED_IN", "PRODUCED_BY", "DISTRIBUTED_BY",
+        "WON_AWARD", "NOMINATED_FOR", "CO_STARRED_WITH", "COLLABORATED_WITH", "MARRIED_TO",
     }
-    print("\n=== TỔNG KẾT ===")
+    print("\n=== SUMMARY ===")
     print(f"Films: {len(film_qids)} | Directors: {len(director_qids)} | Actors: {len(actor_qids)} | Studios/Distributors: {len(all_company_qids)} | Events: {len(events)}")
-    print(f"DIRECTED: {len(director_edges)} | ACTED_IN: {len(cast_edges)} | PRODUCED_BY: {len(studio_edges)} | DISTRIBUTED_BY: {len(distributor_edges)} | BASED_ON: {len(based_on_edges_internal)}")
-    print(f"WON_AWARD: {len(won_edges)} | NOMINATED_FOR: {len(nominated_edges)} | CO_STARRED_WITH: {len(costar_weight)} | COLLABORATED_WITH: {len(collab_weight)}")
-    print(f"SỐ LOẠI QUAN HỆ (structured): {len(structured_relation_types)}/11 — còn thiếu REPRESENTED_BY, REPLACED_IN_ROLE (làm ở bước NLP spaCy)")
-    print(f"TỔNG NODE: {n_nodes} (đề bài yêu cầu ≥1.000 vì đã thu hẹp Hollywood) | TỔNG EDGE: {n_edges} (đề bài yêu cầu ≥5.000)")
-    print(f"Đã ghi CSV vào: {out_dir}")
+    print(f"DIRECTED: {len(director_edges)} | ACTED_IN: {len(cast_edges)} | PRODUCED_BY: {len(studio_edges)} | DISTRIBUTED_BY: {len(distributor_edges)}")
+    print(f"WON_AWARD: {len(won_edges)} | NOMINATED_FOR: {len(nominated_edges)} | CO_STARRED_WITH: {len(costar_weight)} | COLLABORATED_WITH: {len(collab_weight)} | MARRIED_TO: {len(married_pairs)}")
+    print(f"RELATION TYPES (structured): {len(structured_relation_types)}/10 — still missing REPRESENTED_BY, REPLACED_IN_ROLE (the spaCy NLP step)")
+    print(f"TOTAL NODES: {n_nodes} (assignment requires >=1,000, Hollywood scope narrowed) | TOTAL EDGES: {n_edges} (assignment requires >=5,000)")
+    print(f"CSV written to: {out_dir}")
 
 
 def main():

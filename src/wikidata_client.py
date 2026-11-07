@@ -1,4 +1,4 @@
-"""Client gọi Wikidata: SPARQL (quan hệ có cấu trúc) + Action API (tra QID theo tên trang enwiki)."""
+"""Wikidata client: SPARQL (structured relations) + Action API (QID lookup by enwiki page title)."""
 from . import config
 from .http_utils import get_json
 
@@ -26,14 +26,15 @@ def _qid_of(uri: str) -> str:
 
 
 def fetch_award_subjects(session, award_qid: str, subject_type: str = "film", prop: str = "P166") -> list[dict]:
-    """Trả về danh sách {subject_qid, subject_label, film_qid, film_label, year} cho 1 giải thưởng.
+    """Return a list of {subject_qid, subject_label, film_qid, film_label, year} for one award.
 
-    - prop="P166" (award received = đã THẮNG) hoặc prop="P1411" (nominated for = được ĐỀ CỬ).
-    - subject_type="film": giải trao cho phim (Best Picture, Golden Lion...) -> subject BẮT BUỘC
-      là instance-of film (lọc bỏ trường hợp cùng giải cũng được gắn cho nhà sản xuất/cá nhân khác
-      trong Wikidata).
-    - subject_type="person": giải trao cho cá nhân (Best Director...) -> subject BẮT BUỘC là
-      instance-of human, film lấy qua qualifier P1686 "for work" (có thể rỗng nếu Wikidata thiếu).
+    - prop="P166" (award received = WON) or prop="P1411" (nominated for = NOMINATED).
+    - subject_type="film": awards given to a film (Best Picture, Golden Lion...) -> the subject
+      MUST be instance-of film (filters out cases where the same award is also attached to a
+      producer or other individual on Wikidata).
+    - subject_type="person": awards given to an individual (Best Director...) -> the subject
+      MUST be instance-of human; the film is read from the P1686 "for work" qualifier (can be
+      empty if Wikidata is missing it).
     """
     type_filter = (
         "?subject wdt:P31/wdt:P279* wd:Q11424 ."
@@ -66,7 +67,7 @@ def fetch_award_subjects(session, award_qid: str, subject_type: str = "film", pr
 
 
 def fetch_relation(session, qids: list[str], prop: str, value_is_entity: bool = True) -> list[tuple]:
-    """Lấy quan hệ film -(prop)-> value theo lô, trả về [(film_qid, value_qid_or_literal, value_label)]."""
+    """Fetch the film -(prop)-> value relation in batches, returning [(film_qid, value_qid_or_literal, value_label)]."""
     out = []
     for batch in _chunks(qids, config.SPARQL_BATCH_SIZE):
         values = " ".join(f"wd:{q}" for q in batch)
@@ -98,7 +99,7 @@ def fetch_relation(session, qids: list[str], prop: str, value_is_entity: bool = 
 
 
 def fetch_min_year(session, qids: list[str], prop: str = "P577") -> dict[str, str]:
-    """Năm sớm nhất của một mốc thời gian (vd P577 publication date) cho mỗi entity."""
+    """Earliest year of a date property (e.g. P577 publication date) for each entity."""
     out = {}
     for batch in _chunks(qids, config.SPARQL_BATCH_SIZE):
         values = " ".join(f"wd:{q}" for q in batch)
@@ -116,7 +117,7 @@ def fetch_min_year(session, qids: list[str], prop: str = "P577") -> dict[str, st
 
 
 def fetch_enwiki_titles(session, qids: list[str]) -> dict[str, str]:
-    """Tên bài Wikipedia tiếng Anh tương ứng mỗi QID (để lấy lead text qua MediaWiki API)."""
+    """English Wikipedia page title for each QID (used to fetch lead text via the MediaWiki API)."""
     out = {}
     for batch in _chunks(qids, config.SPARQL_BATCH_SIZE):
         values = " ".join(f"wd:{q}" for q in batch)
@@ -132,5 +133,3 @@ def fetch_enwiki_titles(session, qids: list[str]) -> dict[str, str]:
         for row in rows:
             out[_qid_of(row["item"]["value"])] = row["title"]["value"]
     return out
-
-

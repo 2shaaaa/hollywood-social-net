@@ -1,4 +1,4 @@
-"""Client gọi MediaWiki Action API (Wikipedia tiếng Anh): lấy đoạn text mở đầu (lead) theo tiêu đề."""
+"""MediaWiki Action API client (English Wikipedia): fetches the lead (intro) text by title."""
 from .http_utils import get_json
 
 API_URL = "https://en.wikipedia.org/w/api.php"
@@ -10,9 +10,9 @@ def _chunks(seq, size):
 
 
 def resolve_qids_for_titles(session, titles: list[str], batch_size: int = 50) -> dict[str, str]:
-    """Tra QID Wikidata theo tiêu đề bài Wikipedia tiếng Anh, tự xử lý trang đổi hướng (redirect)
-    qua pageprops.wikibase_item — tránh lỗi khi tiêu đề lấy từ wikilink là một redirect
-    (vd 'Bong Joon-ho' redirect sang 'Bong Joon Ho')."""
+    """Look up the Wikidata QID for an English Wikipedia page title, transparently handling
+    redirect pages via pageprops.wikibase_item — avoids failures when a title scraped from a
+    wikilink is itself a redirect (e.g. 'Bong Joon-ho' redirects to 'Bong Joon Ho')."""
     out = {}
     for batch in _chunks(titles, batch_size):
         data = get_json(
@@ -42,7 +42,7 @@ def resolve_qids_for_titles(session, titles: list[str], batch_size: int = 50) ->
 
 
 def fetch_lead_extracts(session, titles: list[str], batch_size: int = 20, max_chars: int = 600) -> dict[str, str]:
-    """Trả về {title: đoạn text mở đầu bài}. Dùng redirects=1 để xử lý trang đổi hướng."""
+    """Return {title: lead/intro text}. Uses redirects=1 to transparently follow redirect pages."""
     out = {}
     for batch in _chunks(titles, batch_size):
         data = get_json(
@@ -60,7 +60,7 @@ def fetch_lead_extracts(session, titles: list[str], batch_size: int = 20, max_ch
             },
         )
         pages = data.get("query", {}).get("pages", {})
-        # map redirect gốc -> tiêu đề đích để không mất liên kết
+        # map original (redirect) title -> resolved title, so we don't lose the lookup
         redirect_map = {r["from"]: r["to"] for r in data.get("query", {}).get("redirects", [])}
         title_to_extract = {}
         for page in pages.values():
