@@ -5,14 +5,17 @@ Technique: for every film, fetch the full plaintext (not just the lead), scan th
 from the "Production"/"Casting" section onward for a trigger verb ("replace"/"recast") in
 either active or passive voice, pull out the two PERSON entities involved, apply a light
 same-document coreference heuristic (surname-only mentions resolved to the full name seen
-earlier in the article), then verify each name resolves to a real Wikidata QID before keeping
-the edge — this acts as a precision filter against NER false positives.
+earlier in the article), then verify each name resolves to a real Wikidata QID AND is
+instance-of-human (P31=Q5) before keeping the edge — this acts as a precision filter against NER
+false positives and non-human QID matches (disambiguation pages, bare family-name entities,
+organizations mistagged as PERSON).
 """
 import re
 
 import spacy
 
 from . import wiki_api_client as wapi
+from . import wikidata_client as wd
 from .http_utils import get_json
 
 API_URL = "https://en.wikipedia.org/w/api.php"
@@ -150,12 +153,23 @@ def extract_role_replacements_for_films(session, film_titles: dict[str, str], ve
     names = sorted({m["old_actor_name"] for m in raw_mentions} | {m["new_actor_name"] for m in raw_mentions})
     name_to_qid = wapi.resolve_qids_for_titles(session, names) if names else {}
 
+    # Precision filter: a resolved QID isn't necessarily a specific human — common surnames
+    # ("Downey", "Day-Lewis") can resolve to a Wikimedia disambiguation page or a bare family-name
+    # entity, and spaCy's NER can mistag an organization span (e.g. a production company) as
+    # PERSON. Require instance-of-human (Q5), same check nlp_agency_representation.py already
+    # does for REPRESENTED_BY.
+    candidate_qids = sorted(set(name_to_qid.values()))
+    instance_of_edges = wd.fetch_relation(session, candidate_qids, "P31") if candidate_qids else []
+    human_qids = {qid for qid, value_qid, _ in instance_of_edges if value_qid == "Q5"}
+
     out = []
     for m in raw_mentions:
         old_qid = name_to_qid.get(m["old_actor_name"])
         new_qid = name_to_qid.get(m["new_actor_name"])
         if not old_qid or not new_qid:
             continue  # name didn't resolve to a real Wikipedia/Wikidata entity -> drop (precision filter)
+        if old_qid not in human_qids or new_qid not in human_qids:
+            continue  # resolved to a non-human entity (disambiguation page, family name, company...) -> drop
         out.append(
             {
                 "film_qid": m["film_qid"],

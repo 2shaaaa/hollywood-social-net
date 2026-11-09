@@ -1,4 +1,6 @@
 """MediaWiki Action API client (English Wikipedia): fetches the lead (intro) text by title."""
+import mwparserfromhell
+
 from .http_utils import get_json
 
 API_URL = "https://en.wikipedia.org/w/api.php"
@@ -38,6 +40,45 @@ def resolve_qids_for_titles(session, titles: list[str], batch_size: int = 50) ->
             original = redirect_map.get(title)
             if original:
                 out[original] = qid
+    return out
+
+
+def fetch_infobox_starring(session, titles: list[str], batch_size: int = 20) -> dict[str, list[str]]:
+    """{film page title: [page titles linked in its `Infobox film` `starring` field, in order]}.
+    That field lists the credited leads in poster billing order — what Wikidata's P161 can't give
+    (no billing order, and it also lists uncredited extras)."""
+    out = {}
+    for batch in _chunks(titles, batch_size):
+        params = {
+            "action": "query",
+            "prop": "revisions",
+            "rvprop": "content",
+            "rvslots": "main",
+            "redirects": 1,
+            "titles": "|".join(batch),
+            "format": "json",
+            "formatversion": 2,
+        }
+        while True:  # large pages can spill into a continuation response
+            data = get_json(session, API_URL, params=params)
+            query = data.get("query", {})
+            redirect_map = {r["to"]: r["from"] for r in query.get("redirects", [])}
+            for page in query.get("pages", []):
+                revisions = page.get("revisions")
+                if not revisions:
+                    continue
+                starring = []
+                for tpl in mwparserfromhell.parse(revisions[0]["slots"]["main"]["content"]).filter_templates():
+                    if tpl.name.strip().lower().startswith("infobox film") and tpl.has("starring"):
+                        for link in tpl.get("starring").value.filter_wikilinks():
+                            t = str(link.title).split("#")[0].strip()
+                            if t and t not in starring:
+                                starring.append(t)
+                        break
+                out[redirect_map.get(page["title"], page["title"])] = starring
+            if "continue" not in data:
+                break
+            params = {**params, **data["continue"]}
     return out
 
 

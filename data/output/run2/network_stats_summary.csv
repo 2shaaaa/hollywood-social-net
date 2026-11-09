@@ -1,0 +1,3878 @@
+metric,qid,name,type,value
+degree_top10,Q51495,William Wyler,Director,100
+degree_top10,Q8877,Steven Spielberg,Actor,91
+degree_top10,Q907311,Netflix,Studio,89
+degree_top10,Q126399,Warner Bros. Entertainment,Studio,88
+degree_top10,Q159846,Paramount Pictures,Studio,82
+degree_top10,Q434841,20th Century Studios,Studio,82
+degree_top10,Q179200,Metro-Goldwyn-Mayer,Studio,79
+degree_top10,Q41148,Martin Scorsese,Actor,78
+degree_top10,Q95002,William Holden,Actor,70
+degree_top10,Q51547,Billy Wilder,Director,65
+betweenness_top10,Q907311,Netflix,Studio,0.067314
+betweenness_top10,Q434841,20th Century Studios,Studio,0.063217
+betweenness_top10,Q159846,Paramount Pictures,Studio,0.059236
+betweenness_top10,Q168383,Universal Pictures,Studio,0.047549
+betweenness_top10,Q126399,Warner Bros. Entertainment,Studio,0.046745
+betweenness_top10,Q186941,Columbia Pictures,Studio,0.04665
+betweenness_top10,Q179200,Metro-Goldwyn-Mayer,Studio,0.042024
+betweenness_top10,Q8877,Steven Spielberg,Actor,0.037137
+betweenness_top10,Q219400,United Artists,Studio,0.031992
+betweenness_top10,Q1097348,InterCom,Studio,0.026573
+community_0,Q506183,Andrew Marton,Director,447
+community_0,Q455912,Marjorie Rambeau,Actor,447
+community_0,Q841781,Gaslight,Film,447
+community_0,Q313040,James Whitmore,Actor,447
+community_0,Q1210022,Dickie Moore,Actor,447
+community_0,Q934722,Charles Ruggles,Actor,447
+community_0,Q76708,Herman Bing,Actor,447
+community_0,Q239770,Anne Revere,Actor,447
+community_0,Q284686,National Velvet,Film,447
+community_0,Q736243,"Claude Jarman, Jr.",Actor,447
+community_0,Q738552,The Life of Emile Zola,Film,447
+community_0,Q728485,The Asphalt Jungle,Film,447
+community_0,Q987741,Edward Brophy,Actor,447
+community_0,Q798692,Bad Girl,Film,447
+community_0,Q156178,Leslie Howard,Actor,447
+community_0,oscar_best_picture_1960,oscar_best_picture,AwardEvent,447
+community_0,oscar_best_picture_1929,oscar_best_picture,AwardEvent,447
+community_0,Q153244,Enid Bennett,Actor,447
+community_0,Q93957,Gary Cooper,Actor,447
+community_0,Q103788,Mervyn LeRoy,Director,447
+community_0,Q1811134,My Man Godfrey,Film,447
+community_0,Q267282,RKO Pictures,Studio,447
+community_0,Q333595,Q333595,Actor,447
+community_0,Q1619885,Lost Horizon,Film,447
+community_0,Q1199446,The Smiling Lieutenant,Film,447
+community_0,Q339425,Random Harvest,Film,447
+community_0,Q185214,Anna Christie,Film,447
+community_0,Q73168,Gustav von Seyffertitz,Actor,447
+community_0,Q233845,Gale Sondergaard,Actor,447
+community_0,Q3031861,Sally Eilers,Actor,447
+community_0,Q139646,Zachary Scott,Actor,447
+community_0,oscar_best_picture_1950,oscar_best_picture,AwardEvent,447
+community_0,Q1195531,The Southerner,Film,447
+community_0,Q253282,Marie Dressler,Actor,447
+community_0,Q527420,Tilly Losch,Actor,447
+community_0,Q128944,Joan Bennett,Actor,447
+community_0,Q1344801,Harry Carey,Actor,447
+community_0,Q1276956,Harry Cording,Actor,447
+community_0,Q224021,Donna Reed,Actor,447
+community_0,Q325427,Howard Keel,Actor,447
+community_0,Q1489956,Robert Lewis,Director,447
+community_0,Q5443,Greta Garbo,Actor,447
+community_0,Q85118,Vanessa Brown,Actor,447
+community_0,Q4690,Margaret Wycherly,Actor,447
+community_0,Q106001,Maurice Chevalier,Actor,447
+community_0,Q130769,San Francisco,Film,447
+community_0,Q449704,Q449704,Actor,447
+community_0,Q887227,Blossoms in the Dust,Film,447
+community_0,Q274868,Olive Carey,Actor,447
+community_0,Q72869,Stan Laurel,Actor,447
+community_0,Q165357,Herbert Lom,Actor,447
+community_0,Q234640,Clara Bow,Actor,447
+community_0,Q1140611,Wuthering Heights,Film,447
+community_0,Q228904,Hattie McDaniel,Actor,447
+community_0,Q103949,Buster Keaton,Actor,447
+community_0,Q201293,Roman Holiday,Film,447
+community_0,oscar_best_director_1932,oscar_best_director,AwardEvent,447
+community_0,Q267829,Lucile Watson,Actor,447
+community_0,Q1198497,The Thin Man,Film,447
+community_0,Q981032,The Hollywood Revue of 1929,Film,447
+community_0,Q4030,Duke Ellington,Actor,447
+community_0,Q203819,Claudette Colbert,Actor,447
+community_0,Q179200,Metro-Goldwyn-Mayer,Studio,447
+community_0,Q259536,June Lockhart,Actor,447
+community_0,Q353142,Addison Richards,Actor,447
+community_0,Q370280,Raymond Hatton,Actor,447
+community_0,Q944624,I Am a Fugitive from a Chain Gang,Film,447
+community_0,Q1263583,The Barretts of Wimpole Street,Film,447
+community_0,Q457840,Will Rogers,Actor,447
+community_0,Q78719,Josef von Sternberg,Director,447
+community_0,Q67543,Sig Ruman,Actor,447
+community_0,oscar_best_picture_1945,oscar_best_picture,AwardEvent,447
+community_0,Q321978,Lon McCallister,Actor,447
+community_0,Q983420,Chester Morris,Actor,447
+community_0,Q95111,Norman Taurog,Director,447
+community_0,Q259574,Les Misérables,Film,447
+community_0,Q1724081,Romance,Film,447
+community_0,Q251997,Cimarron,Film,447
+community_0,Q152888,Fay Bainter,Actor,447
+community_0,Q358379,Adolphe Menjou,Actor,447
+community_0,Q24541,E. H. Calvert,Actor,447
+community_0,Q860764,A Free Soul,Film,447
+community_0,Q457220,Lewis Stone,Actor,447
+community_0,Q1100552,Cleopatra,Film,447
+community_0,oscar_best_picture_1938,oscar_best_picture,AwardEvent,447
+community_0,Q445018,Marjorie Main,Actor,447
+community_0,Q242477,Miriam Hopkins,Actor,447
+community_0,Q643811,War and Peace,Film,447
+community_0,Q645627,Hal Mohr,Director,447
+community_0,oscar_best_picture_unknown,oscar_best_picture,AwardEvent,447
+community_0,Q744357,Paul Fix,Actor,447
+community_0,Q439601,Elizabeth Patterson,Actor,447
+community_0,Q181774,Ray Milland,Actor,447
+community_0,Q85154,John Banner,Actor,447
+community_0,Q241701,Ann Miller,Actor,447
+community_0,oscar_best_picture_1947,oscar_best_picture,AwardEvent,447
+community_0,Q224356,Virginia Weidler,Actor,447
+community_0,Q367073,Donald Crisp,Actor,447
+community_0,Q240886,Ray Bolger,Actor,447
+community_0,Q866120,Mr. Smith Goes to Washington,Film,447
+community_0,Q255800,Susan Peters,Actor,447
+community_0,Q471281,James Dunn,Actor,447
+community_0,Q322179,Wallace Beery,Actor,447
+community_0,Q346833,Ian Wolfe,Actor,447
+community_0,Q2186004,Ziegfeld Follies (film),Film,447
+community_0,Q62558,Cyd Charisse,Actor,447
+community_0,Q4801965,Lee Phelps,Actor,447
+community_0,oscar_best_director_1940,oscar_best_director,AwardEvent,447
+community_0,Q3039327,Lyle Talbot,Actor,447
+community_0,Q313046,Eddie Albert,Actor,447
+community_0,Q939424,Sergeant York,Film,447
+community_0,Q727015,James Stephenson,Actor,447
+community_0,Q55452,Vittorio Gassman,Actor,447
+community_0,Q256117,Eleanor Powell,Actor,447
+community_0,oscar_best_director_1931,oscar_best_director,AwardEvent,447
+community_0,Q102462,James Stewart,Actor,447
+community_0,Q109211,Elsa Bassermann,Actor,447
+community_0,Q7135326,Paramount Famous Productions,Studio,447
+community_0,Q79044,Oskar Homolka,Actor,447
+community_0,Q478371,Mrs. Miniver,Film,447
+community_0,Q3122043,Guy Oliver,Actor,447
+community_0,Q539982,Richard Carlson,Actor,447
+community_0,Q773066,Sidney Franklin,Director,447
+community_0,Q703011,Arrowsmith,Film,447
+community_0,Q129429,Vivien Leigh,Actor,447
+community_0,Q463869,The Informer,Film,447
+community_0,Q275001,Émile Chautard,Actor,447
+community_0,Q182057,Paul Lukas,Actor,447
+community_0,Q349518,George W. Hill,Director,447
+community_0,Q71275,Spencer Tracy,Actor,447
+community_0,Q1246938,Naughty Marietta,Film,447
+community_0,Q100937,Fred Astaire,Actor,447
+community_0,oscar_best_director_1936,oscar_best_director,AwardEvent,447
+community_0,Q40475,Joan Crawford,Actor,447
+community_0,Q253757,Grace Moore,Actor,447
+community_0,Q886154,John W. Reynolds,Actor,447
+community_0,Q707999,Victor Schertzinger,Director,447
+community_0,Q71206,Bette Davis,Actor,447
+community_0,Q543443,Victoria Spivey,Actor,447
+community_0,Q141673,Jack Conway,Director,447
+community_0,Q153292,Ben Turpin,Actor,447
+community_0,Q937247,Forrest Tucker,Actor,447
+community_0,Q181819,Fredric March,Actor,447
+community_0,Q204191,It's a Wonderful Life,Film,447
+community_0,Q529489,Minna Gombell,Actor,447
+community_0,Q554443,George E. Stone,Actor,447
+community_0,Q324797,Judith Barrett,Actor,447
+community_0,Q274737,Frieda Inescort,Actor,447
+community_0,Q533315,Francis McDonald,Actor,447
+community_0,Q34529,Bela Lugosi,Actor,447
+community_0,Q287713,Ruth Chatterton,Actor,447
+community_0,Q195274,Little Women,Film,447
+community_0,Q181786,Ronald Colman,Actor,447
+community_0,Q1367933,Victor Jory,Actor,447
+community_0,Q214864,John Mylong,Actor,447
+community_0,Q51133,King Vidor,Director,447
+community_0,Q556552,E. E. Clive,Actor,447
+community_0,Q531332,The Big House,Film,447
+community_0,Q1619460,Broadway Melody of 1936,Film,447
+community_0,Q565643,The Little Foxes,Film,447
+community_0,Q470218,The Great Ziegfeld,Film,447
+community_0,Q1618878,Smilin' Through,Film,447
+community_0,Q207739,Carole Lombard,Actor,447
+community_0,Q56014,George Cukor,Director,447
+community_0,Q61859,Henry Koster,Director,447
+community_0,Q1618931,State Fair,Film,447
+community_0,Q589894,Ninotchka,Film,447
+community_0,Q435029,Clarence Brown,Director,447
+community_0,Q214684,Emil Rameau,Actor,447
+community_0,Q48765,Stanley Donen,Director,447
+community_0,Q329577,Victor McLaglen,Actor,447
+community_0,Q23957,Warner Oland,Actor,447
+community_0,Q1619389,One Night of Love,Film,447
+community_0,Q1575490,A Farewell to Arms,Film,447
+community_0,Q264004,Flora Robson,Actor,447
+community_0,Q539170,Ned Sparks,Actor,447
+community_0,oscar_best_picture_1939,oscar_best_picture,AwardEvent,447
+community_0,Q275428,Mary Philips,Actor,447
+community_0,Q3341939,Nina Mae McKinney,Actor,447
+community_0,Q345517,Peter Lawford,Actor,447
+community_0,Q1306660,One Hour with You,Film,447
+community_0,Q113566,Barbara O'Neil,Actor,447
+community_0,Q200514,Frank Morgan,Actor,447
+community_0,Q193695,The Wizard of Oz,Film,447
+community_0,Q148732,Jack Benny,Actor,447
+community_0,Q922580,Neil Hamilton,Actor,447
+community_0,Q554094,Guy Kibbee,Actor,447
+community_0,Q62163,She Done Him Wrong,Film,447
+community_0,Q330819,Harry d'Abbadie d'Arrast,Director,447
+community_0,Q139258,The Lives of a Bengal Lancer,Film,447
+community_0,Q240193,May Whitty,Actor,447
+community_0,Q182292,Paul Muni,Actor,447
+community_0,Q453962,Irene Rich,Actor,447
+community_0,Q1430490,A Tale of Two Cities,Film,447
+community_0,Q409022,Airport,Film,447
+community_0,Q7411497,Samuel Goldwyn Productions,Studio,447
+community_0,Q105960,William Powell,Actor,447
+community_0,Q386105,Andy Devine,Actor,447
+community_0,Q1144850,Father of the Bride,Film,447
+community_0,Q275760,Henry Armetta,Actor,447
+community_0,Q1174069,David Copperfield,Film,447
+community_0,Q92133,Felix Bressart,Actor,447
+community_0,Q452545,"Noah Beery, Sr.",Actor,447
+community_0,Q488376,Anatomy of a Murder,Film,447
+community_0,Q206856,Angela Lansbury,Actor,447
+community_0,Q230099,Irene Dunne,Actor,447
+community_0,Q736969,Guess Who's Coming to Dinner,Film,447
+community_0,Q642876,J. Carrol Naish,Actor,447
+community_0,Q51562,Ernst Lubitsch,Actor,447
+community_0,Q932792,Josephine Hutchinson,Actor,447
+community_0,Q275952,Louise Dresser,Actor,447
+community_0,Q1436798,The Bishop's Wife,Film,447
+community_0,Q255630,Eve Arden,Actor,447
+community_0,Q920105,Watch on the Rhine,Film,447
+community_0,Q825079,Madame X,Film,447
+community_0,Q357041,Charles W. Morris,Actor,447
+community_0,Q260099,Jane Powell,Actor,447
+community_0,Q547078,W. S. Van Dyke,Director,447
+community_0,Q1388800,Gustav Machatý,Director,447
+community_0,Q1141493,The Heiress,Film,447
+community_0,Q271863,Isabel Sanford,Actor,447
+community_0,Q1571464,Hallelujah!,Film,447
+community_0,Q272083,Glenda Farrell,Actor,447
+community_0,Q246656,Grand Hotel,Film,447
+community_0,Q152941,George Irving,Actor,447
+community_0,Q1618533,Alibi,Film,447
+community_0,Q461949,Henry O'Neill,Actor,447
+community_0,oscar_best_picture_1951,oscar_best_picture,AwardEvent,447
+community_0,Q352701,Richard Loo,Actor,447
+community_0,Q513849,Bess Flowers,Actor,447
+community_0,Q295593,Lionel Barrymore,Actor,447
+community_0,Q43227,James Hilton,Actor,447
+community_0,Q276353,Evelyn Venable,Actor,447
+community_0,Q230958,Merle Oberon,Actor,447
+community_0,Q213302,Helen Hayes,Actor,447
+community_0,Q51581,Howard Hawks,Director,447
+community_0,Q237030,Jeanette MacDonald,Actor,447
+community_0,Q51123,D. W. Griffith,Actor,447
+community_0,oscar_best_picture_1937,oscar_best_picture,AwardEvent,447
+community_0,Q1109750,The Patriot,Film,447
+community_0,Q1020603,Stage Door,Film,447
+community_0,Q1197352,Test Pilot,Film,447
+community_0,Q233856,Alice Brady,Actor,447
+community_0,palme_dor_1957,palme_dor,AwardEvent,447
+community_0,Q1535748,Liberty Films,Studio,447
+community_0,Q241876,Captains Courageous,Film,447
+community_0,Q224742,Frances Drake,Actor,447
+community_0,Q272036,Wings,Film,447
+community_0,Q62503,Victor Fleming,Director,447
+community_0,oscar_best_director_1935,oscar_best_director,AwardEvent,447
+community_0,Q273804,Laura Solari,Actor,447
+community_0,Q6820223,Merrill Pye,Director,447
+community_0,Q459580,Claire McDowell,Actor,447
+community_0,Q374721,Wild Bill Elliott,Actor,447
+community_0,Q51495,William Wyler,Director,447
+community_0,Q153501,Mae Busch,Actor,447
+community_0,Q766697,Erik Rhodes,Actor,447
+community_0,Q1332362,Elliott Nugent,Actor,447
+community_0,Q463733,The Champ,Film,447
+community_0,Q930598,Kent Taylor,Actor,447
+community_0,Q1347264,Richard Boleslawski,Director,447
+community_0,Q918353,Karl Dane,Actor,447
+community_0,Q77570,Al Shean,Actor,447
+community_0,Q441889,Elizabeth Inglis,Actor,447
+community_0,Q718786,Mary Carlisle,Actor,447
+community_0,Q236987,Deanna Durbin,Actor,447
+community_0,Q369190,Frank Borzage,Director,447
+community_0,Q283178,Elizabeth Allan,Actor,447
+community_0,Q573399,Louis Calhern,Actor,447
+community_0,Q1064903,Wesley Ruggles,Director,447
+community_0,Q165172,One Hundred Men and a Girl,Film,447
+community_0,Q959404,Eric Blore,Actor,447
+community_0,Q675295,Mitzi Green,Actor,447
+community_0,Q963045,Bad Day at Black Rock,Film,447
+community_0,Q773964,The High and the Mighty,Film,447
+community_0,Q577754,Morocco,Film,447
+community_0,Q443585,Cesar Romero,Actor,447
+community_0,Q441414,Anita Louise,Actor,447
+community_0,Q275779,Mona Freeman,Actor,447
+community_0,Q182462,Janet Gaynor,Actor,447
+community_0,Q310150,Stewart Granger,Actor,447
+community_0,Q918762,Roy Del Ruth,Director,447
+community_0,Q917469,The Divorcee,Film,447
+community_0,Q95034,John Barrymore,Actor,447
+community_0,Q263215,Gloria Holden,Actor,447
+community_0,Q2875,Gone with the Wind,Film,447
+community_0,Q87145,Carl Esmond,Actor,447
+community_0,Q77181,Emil Jannings,Actor,447
+community_0,Q1804597,Lesley Selander,Director,447
+community_0,Q1302593,Richard Carle,Actor,447
+community_0,Q719247,Sam Jaffe,Actor,447
+community_0,Q104081,Mickey Rooney,Actor,447
+community_0,Q272079,Corinne Griffith,Actor,447
+community_0,Q3760487,George F. Marion,Actor,447
+community_0,Q540613,Gene Reynolds,Actor,447
+community_0,Q145132,Robert Taylor,Actor,447
+community_0,Q166456,G. Raymond Nye,Actor,447
+community_0,Q55413,William Dieterle,Director,447
+community_0,Q625877,Margot Grahame,Actor,447
+community_0,Q1619412,Viva Villa!,Film,447
+community_0,Q466415,Compton Bennett,Director,447
+community_0,Q272143,Adriana Caselotti,Actor,447
+community_0,Q552813,C. Aubrey Smith,Actor,447
+community_0,Q42786,Audrey Hepburn,Actor,447
+community_0,Q1581723,The Love Parade,Film,447
+community_0,Q446423,Florence Eldridge,Actor,447
+community_0,Q235639,Billie Burke,Actor,447
+community_0,Q1257247,Three Smart Girls,Film,447
+community_0,Q288547,Matt Moore,Actor,447
+community_0,Q95089,Ginger Rogers,Actor,447
+community_0,oscar_best_director_1930,oscar_best_director,AwardEvent,447
+community_0,Q2058654,Lowell Sherman,Director,447
+community_0,Q237221,Julie Newmar,Actor,447
+community_0,Q105719,Jean Harlow,Actor,447
+community_0,Q71243,Clark Gable,Actor,447
+community_0,Q50713,Jean Renoir,Director,447
+community_0,Q265391,Frances Dee,Actor,447
+community_0,Q242548,Edna May Oliver,Actor,447
+community_0,Q230011,Lee Remick,Actor,447
+community_0,Q1471671,King Solomon's Mines,Film,447
+community_0,Q612540,The Good Earth,Film,447
+community_0,oscar_best_picture_1935,oscar_best_picture,AwardEvent,447
+community_0,oscar_best_picture_1932,oscar_best_picture,AwardEvent,447
+community_0,Q374167,Victor Varconi,Actor,447
+community_0,Q18994,Luise Rainer,Actor,447
+community_0,Q83410,Cary Grant,Actor,447
+community_0,Q1159055,Dan Duryea,Actor,447
+community_0,oscar_best_picture_1948,oscar_best_picture,AwardEvent,447
+community_0,Q438865,Dolores Fuller,Actor,447
+community_0,bafta_best_film_1949,bafta_best_film,AwardEvent,447
+community_0,Q457250,Henry Hathaway,Director,447
+community_0,Q234089,Jane Wyatt,Actor,447
+community_0,Q1168233,The Letter,Film,447
+community_0,oscar_best_picture_1931,oscar_best_picture,AwardEvent,447
+community_0,Q269731,Robert Z. Leonard,Director,447
+community_0,Q983092,David Butler,Actor,447
+community_0,Q295679,Ruth Hussey,Actor,447
+community_0,Q105941,Myrna Loy,Actor,447
+community_0,Q182486,Greer Garson,Actor,447
+community_0,Q459786,Frank Faylen,Actor,447
+community_0,Q919206,Gilbert Roland,Actor,447
+community_0,Q218638,Joyce Compton,Actor,447
+community_0,Q2960106,Charles Reisner,Director,447
+community_0,Q329163,Scotty Beckett,Actor,447
+community_0,Q426466,Skippy,Film,447
+community_0,Q329709,Mutiny on the Bounty,Film,447
+community_0,Q1239937,Donald Haines,Actor,447
+community_0,Q289991,Gail Patrick,Actor,447
+community_0,dga_outstanding_directing_1961,dga_outstanding_directing,AwardEvent,447
+community_0,Q439655,Estelle Taylor,Actor,447
+community_0,Q51492,Frank Capra,Director,447
+community_0,Q232376,Anna May Wong,Actor,447
+community_0,Q93632,Joseph Schildkraut,Actor,447
+community_0,Q632718,Crossfire (film),Film,447
+community_0,Q301649,Lady for a Day,Film,447
+community_0,Q5314585,Duncan Renaldo,Actor,447
+community_0,Q713929,Charles Middleton,Actor,447
+community_0,Q266473,Una Merkel,Actor,447
+community_0,oscar_best_picture_1928,oscar_best_picture,AwardEvent,447
+community_0,Q1444836,Fredi Washington,Actor,447
+community_0,Q326723,Leon Ames,Actor,447
+community_0,Q95019,Norma Shearer,Actor,447
+community_0,Q372073,Jackie Cooper,Actor,447
+community_0,Q506081,John Waters,Director,447
+community_0,Q63189,Dana Wynter,Actor,447
+community_0,Q168383,Universal Pictures,Studio,447
+community_0,Q7407878,Sam McDaniel,Actor,447
+community_0,Q555672,Robert Warwick,Actor,447
+community_0,Q56016,Katharine Hepburn,Actor,447
+community_0,Q202878,Mae West,Actor,447
+community_0,Q1619523,Alice Adams,Film,447
+community_0,Q317026,Thomas Mitchell,Actor,447
+community_0,Q4612,Marlene Dietrich,Actor,447
+community_0,Q235744,Jean Hagen,Actor,447
+community_0,Q359446,Regis Toomey,Actor,447
+community_0,Q1142707,Trader Horn,Film,447
+community_0,Q645094,The Best Years of Our Lives,Film,447
+community_0,Q498822,The Philadelphia Story,Film,447
+community_0,Q1081181,Romeo and Juliet,Film,447
+community_0,Q230136,Teresa Wright,Actor,447
+community_0,Q3134091,Herman Shumlin,Director,447
+community_0,Q947098,The Gay Divorcee,Film,447
+community_0,Q873186,A Star Is Born,Film,447
+community_0,Q269585,Gregory La Cava,Director,447
+community_0,Q1619752,The Story of Louis Pasteur,Film,447
+community_0,Q2007296,O.P. Heggie,Actor,447
+community_0,Q966972,Owen Moore,Actor,447
+community_0,Q418424,Akim Tamiroff,Actor,447
+community_0,Q1139031,Top Hat,Film,447
+community_0,Q950857,Warren William,Actor,447
+community_0,oscar_best_director_1946,oscar_best_director,AwardEvent,447
+community_0,Q952079,The Divine Lady,Film,447
+community_0,Q531336,Helen Vinson,Actor,447
+community_0,Q1490055,Marcia Mae Jones,Actor,447
+community_0,Q231595,Sylvia Sidney,Actor,447
+community_0,Q676341,Dead End,Film,447
+community_0,Q72911,Oliver Hardy,Actor,447
+community_0,oscar_best_picture_1940,oscar_best_picture,AwardEvent,447
+community_0,Q267814,Marsha Hunt,Actor,447
+community_0,Q177208,Patricia Collinge,Actor,447
+community_0,Q297562,Leopold Stokowski,Actor,447
+community_0,oscar_best_director_1937,oscar_best_director,AwardEvent,447
+community_0,Q364135,Ralph Bellamy,Actor,447
+community_0,Q1620831,Battleground,Film,447
+community_0,Q290962,William A. Wellman,Actor,447
+community_0,Q55264,Charles Laughton,Actor,447
+community_0,oscar_best_picture_1936,oscar_best_picture,AwardEvent,447
+community_0,Q233009,Elsa Lanchester,Actor,447
+community_0,Q230084,Maureen O'Sullivan,Actor,447
+community_0,Q674451,Shane Rimmer,Actor,447
+community_0,Q441745,Jessie Ralph,Actor,447
+community_0,Q382529,Mark Sandrich,Director,447
+community_0,Q232532,Beatrice Straight,Actor,447
+community_0,Q2826799,Aggie Herring,Actor,447
+community_0,Q1543253,Shanghai Express,Film,447
+community_0,Q1305029,The Country Girl,Film,447
+community_0,Q278513,The Awful Truth,Film,447
+community_0,Q1358863,John M. Stahl,Director,447
+community_0,Q153358,Fanny Brice,Actor,447
+community_0,Q209662,Lucille Ball,Actor,447
+community_0,Q323166,Sterling Hayden,Actor,447
+community_0,Q727016,Boys Town,Film,447
+community_0,Q375578,Libeled Lady,Film,447
+community_0,Q466440,Beulah Bondi,Actor,447
+community_0,Q463204,Frances Langford,Actor,447
+community_0,Q447217,Florence Vidor,Actor,447
+community_0,Q1520430,The Human Comedy,Film,447
+community_0,Q271324,Hedda Hopper,Actor,447
+community_0,Q391541,Imitation of Life,Film,447
+community_0,Q967502,Roland West,Director,447
+community_0,Q251340,Hugo Haas,Actor,447
+community_0,Q208632,It Happened One Night,Film,447
+community_0,Q436022,Jean Parker,Actor,447
+community_0,Q179393,William Campbell,Actor,447
+community_0,Q266694,Fay Wray,Actor,447
+community_0,Q273727,Katharine Houghton,Actor,447
+community_0,Q621716,Madame Curie,Film,447
+community_0,Q430625,Taylor Holmes,Actor,447
+community_0,Q11637,Judy Garland,Actor,447
+community_0,Q444371,Lew Ayres,Actor,447
+community_0,Q457229,Franchot Tone,Actor,447
+community_0,Q662679,Seven Brides for Seven Brothers,Film,447
+community_0,Q3266586,Luis Alberni,Actor,447
+community_0,Q368451,Seventh Heaven,Film,447
+community_0,Q1217612,The Yearling,Film,447
+community_0,Q43883,George Tobias,Actor,447
+community_0,Q433856,Maurizio Arena,Actor,447
+community_1,Q1335528,Luca Guadagnino,Director,373
+community_1,Q1544011,Pathé,Studio,373
+community_1,oscar_best_director_2011,oscar_best_director,AwardEvent,373
+community_1,Q177955,SF Studios,Studio,373
+community_1,Q228865,Mia Wasikowska,Actor,373
+community_1,Q4121965,Open Road Flims,Studio,373
+community_1,oscar_best_director_2016,oscar_best_director,AwardEvent,373
+community_1,Q715271,Eduardo Moscovis,Actor,373
+community_1,Q340213,Adam Arkin,Actor,373
+community_1,Q74886,Burghart Klaußner,Actor,373
+community_1,Q231320,Camilla Läckberg,Actor,373
+community_1,Q2060840,Working Title Films,Studio,373
+community_1,Q380841,The Kids Are All Right,Film,373
+community_1,Q16254330,Protozoa Pictures,Studio,373
+community_1,golden_globe_drama_2013,golden_globe_drama,AwardEvent,373
+community_1,Q235905,Melanie Lynskey,Actor,373
+community_1,Q23547,Bryan Cranston,Actor,373
+community_1,Q72749,Marin Ireland,Actor,373
+community_1,Q41396,Josh Brolin,Actor,373
+community_1,Q24057,Dallas Robert,Actor,373
+community_1,Q18067135,Q18067135,Film,373
+community_1,Q35358,Richard Norton,Actor,373
+community_1,Q65359104,HBO Max,Studio,373
+community_1,Q54314,Chris Hemsworth,Actor,373
+community_1,Q17089396,Exclusive Media,Studio,373
+community_1,Q7088045,Olivia Colman,Actor,373
+community_1,Q18703032,Room,Film,373
+community_1,Q483118,Q483118,Director,373
+community_1,Q907311,Netflix,Studio,373
+community_1,Q10748653,Alliance Atlantis,Studio,373
+community_1,Q39359896,ProVideo,Studio,373
+community_1,Q621364,Legendary Pictures,Studio,373
+community_1,Q299297,Simon Helberg,Actor,373
+community_1,Q217004,Josh Hutcherson,Actor,373
+community_1,Q2079232,Saturn Films,Studio,373
+community_1,Q46677,Melissa Benoist,Actor,373
+community_1,Q185723,Phoebe Tonkin,Actor,373
+community_1,Q207149,Zlatko Burić,Actor,373
+community_1,Q191828,Marisa Tomei,Actor,373
+community_1,Q292214,Megan Park,Actor,373
+community_1,Q19881683,Voltage Pictures,Studio,373
+community_1,Q1356753,Stalag 17,Film,373
+community_1,Q4349,Jimmy Bennett,Actor,373
+community_1,Q187278,Toy Story 3,Film,373
+community_1,Q206659,Brendan Gleeson,Actor,373
+community_1,Q117415,Josh Stewart,Actor,373
+community_1,Q3476213,Scott Free Productions,Studio,373
+community_1,Q16345,Leonard Nimoy,Actor,373
+community_1,Q202859,Flea,Actor,373
+community_1,Q632323,Summit Entertainment,Studio,373
+community_1,Q314502,Jason Reitman,Director,373
+community_1,Q44158,Dave Bautista,Actor,373
+community_1,Q298347,Nicholas Hoult,Actor,373
+community_1,Q648977,The Cider House Rules,Film,373
+community_1,Q25188,Inception,Film,373
+community_1,Q165817,Q165817,Film,373
+community_1,Q543581,The Ides of March,Film,373
+community_1,Q64645,Matthias Schweighöfer,Actor,373
+community_1,Q140393,Q140393,Actor,373
+community_1,Q374273,Armie Hammer,Actor,373
+community_1,Q63187,Sebastian Koch,Actor,373
+community_1,Q257625,Kerry Condon,Actor,373
+community_1,Q304828,Macdonald Carey,Actor,373
+community_1,Q598675,Gary Ross,Director,373
+community_1,Q19850715,The Big Short,Film,373
+community_1,Q28921,Hanna Schygulla,Actor,373
+community_1,Q13644938,Jonathan Dayton,Director,373
+community_1,Q190386,Rachel McAdams,Actor,373
+community_1,Q55294,Kenneth Branagh,Actor,373
+community_1,Q25390743,Coproduction Office,Studio,373
+community_1,Q21935651,Dunkirk,Film,373
+community_1,golden_globe_drama_2024,golden_globe_drama,AwardEvent,373
+community_1,Q208026,Tom Hardy,Actor,373
+community_1,Q24053277,"Three Billboards Outside Ebbing, Missouri",Film,373
+community_1,Q108314506,The Banshees of Inisherin,Film,373
+community_1,Q621818,Rian Johnson,Director,373
+community_1,bafta_best_film_2012,bafta_best_film,AwardEvent,373
+community_1,Q25139,Q25139,Film,373
+community_1,Q212006,Q212006,Actor,373
+community_1,Q217732,Neal Huff,Actor,373
+community_1,golden_lion_2020,golden_lion,AwardEvent,373
+community_1,Q2864822,Arte France Cinéma,Studio,373
+community_1,Q224159,William H. Macy,Actor,373
+community_1,Q213081,Star Trek,Film,373
+community_1,Q457893,Amblin Entertainment,Studio,373
+community_1,oscar_best_picture_2024,oscar_best_picture,AwardEvent,373
+community_1,Q7628112,StudioCanal UK,Studio,373
+community_1,Q236956,Rosemarie DeWitt,Actor,373
+community_1,Q193458,Sienna Miller,Actor,373
+community_1,Q76877,Elizabeth Marvel,Actor,373
+community_1,Q512858,Spyglass Media Group,Studio,373
+community_1,Q273208,Chris Cooper,Actor,373
+community_1,Q59653,Q59653,Film,373
+community_1,Q3703758,Davis Films,Studio,373
+community_1,Q464169,Fisher Stevens,Actor,373
+community_1,Q32433,Q32433,Film,373
+community_1,Q172044,Jennifer Garner,Actor,373
+community_1,oscar_best_picture_2015,oscar_best_picture,AwardEvent,373
+community_1,Q275343,Tara Subkoff,Actor,373
+community_1,Q65106,Alexandra Maria Lara,Actor,373
+community_1,Q116219,Alex Borstein,Actor,373
+community_1,Q223303,Mena Suvari,Actor,373
+community_1,Q152456,Q152456,Film,373
+community_1,Q191104,Sean Bean,Actor,373
+community_1,Q79503,Juno,Film,373
+community_1,Q84712797,Glass Onion: A Knives Out Mystery,Film,373
+community_1,golden_lion_2008,golden_lion,AwardEvent,373
+community_1,Q139326,The Wrestler,Film,373
+community_1,Q44857,John Legend,Actor,373
+community_1,Q984047,Syncopy Inc.,Studio,373
+community_1,Q232868,Clémence Poésy,Actor,373
+community_1,Q18992,Gregory Itzin,Actor,373
+community_1,Q147077,Q147077,Actor,373
+community_1,Q139387194,Bullee Trading,Studio,373
+community_1,Q53680,Jeff Daniels,Actor,373
+community_1,Q80046,Charlize Theron,Actor,373
+community_1,Q229291,Toni Collette,Actor,373
+community_1,Q138048207,Q138048207,Studio,373
+community_1,Q309932,Bruce Campbell,Actor,373
+community_1,Q20382729,Arrival,Film,373
+community_1,Q27646824,Kaap Holland Film,Studio,373
+community_1,dga_outstanding_directing_2007,dga_outstanding_directing,AwardEvent,373
+community_1,Q223875,Erykah Badu,Actor,373
+community_1,Q3963037,Smokehouse Pictures,Studio,373
+community_1,Q23685,Jimmy Carter,Actor,373
+community_1,Q183063,The Sixth Sense,Film,373
+community_1,Q104061,Steve Buscemi,Actor,373
+community_1,dga_outstanding_directing_2006,dga_outstanding_directing,AwardEvent,373
+community_1,Q459482,Kathryn Hunter,Actor,373
+community_1,Q134867,Danny Boyle,Director,373
+community_1,Q465907,Fernanda Torres,Actor,373
+community_1,Q173399,Elliot Page,Actor,373
+community_1,bafta_best_film_unknown,bafta_best_film,AwardEvent,373
+community_1,Q65511,Meret Becker,Actor,373
+community_1,Q8036757,Worldview Entertainment,Studio,373
+community_1,Q16249615,Cross Creek Pictures,Studio,373
+community_1,Q189489,Zendaya,Actor,373
+community_1,Q200534,Tilda Swinton,Actor,373
+community_1,bafta_best_film_2024,bafta_best_film,AwardEvent,373
+community_1,Q335455,Fernanda Montenegro,Actor,373
+community_1,Q4632862,2929 Entertainment,Studio,373
+community_1,Q150482,J. K. Simmons,Actor,373
+community_1,Q215363,Sveriges Television,Studio,373
+community_1,Q233347,Q233347,Actor,373
+community_1,Q192762,Darren Aronofsky,Director,373
+community_1,Q97304180,Triangle of Sadness,Film,373
+community_1,Q23466,Chris Pine,Actor,373
+community_1,oscar_best_picture_2016,oscar_best_picture,AwardEvent,373
+community_1,Q468877,Going My Way,Film,373
+community_1,Q200355,Olivia Wilde,Actor,373
+community_1,Q175535,Matt Damon,Actor,373
+community_1,Q1329615,UIP-Dunafilm,Studio,373
+community_1,Q28044841,C & L,Studio,373
+community_1,Q177311,Joseph Gordon-Levitt,Actor,373
+community_1,Q237215,Barton Fink,Film,373
+community_1,Q125904,Edward Norton,Actor,373
+community_1,Q975410,Yorgos Lanthimos,Director,373
+community_1,Q201418,Abigail Breslin,Actor,373
+community_1,Q107249,Tony Shalhoub,Actor,373
+community_1,Q13644887,Valerie Faris,Director,373
+community_1,Q17343544,Deep River Productions,Studio,373
+community_1,Q25191,Q25191,Director,373
+community_1,Q212064,Channing Tatum,Actor,373
+community_1,Q17343307,Mike Zoss Productions,Studio,373
+community_1,Q29086,Matthew Lillard,Actor,373
+community_1,Q61112,Ralf Moeller,Actor,373
+community_1,Q463615,Capote,Film,373
+community_1,Q560286,Mark Gatiss,Actor,373
+community_1,Q28871047,Vertigo Média,Studio,373
+community_1,Q4801022,Curzon Artificial Eye,Studio,373
+community_1,Q2698248,Warner Independent Pictures,Studio,373
+community_1,Q227129,Zoë Kravitz,Actor,373
+community_1,Q29836837,Dombey Street Productions,Studio,373
+community_1,Q215072,John Goodman,Actor,373
+community_1,Q201279,Woody Harrelson,Actor,373
+community_1,Q267330,Miles Teller,Actor,373
+community_1,Q80281711,Bioscop,Studio,373
+community_1,Q202589,Cillian Murphy,Actor,373
+community_1,Q3521465,The Kennedy/Marshall Company,Studio,373
+community_1,Q19747898,Atlas Entertainment,Studio,373
+community_1,Q51489,M. Night Shyamalan,Actor,373
+community_1,Q188137,J. J. Abrams,Director,373
+community_1,Q211228,Ruben Östlund,Director,373
+community_1,Q7177037,Peter Spears,Actor,373
+community_1,Q658041,Thelma & Louise,Film,373
+community_1,Q85804726,T-Street Productions,Studio,373
+community_1,Q6143324,James Smith,Actor,373
+community_1,Q231058,Shailene Woodley,Actor,373
+community_1,Q23844,George Clooney,Actor,373
+community_1,Q190602,Annette Bening,Actor,373
+community_1,Q180560,Philip Seymour Hoffman,Actor,373
+community_1,Q509013,April Grace,Actor,373
+community_1,Q208667,Stellan Skarsgård,Actor,373
+community_1,Q3568109,Q3568109,Studio,373
+community_1,Q15648198,Whiplash,Film,373
+community_1,golden_globe_drama_2018,golden_globe_drama,AwardEvent,373
+community_1,Q204299,Frances McDormand,Actor,373
+community_1,Q193570,Sunset Boulevard,Film,373
+community_1,Q229230,Evan Rachel Wood,Actor,373
+community_1,Q17386859,Blueprint Pictures,Studio,373
+community_1,Q275254,Lucinda Jenney,Actor,373
+community_1,Q165219,Robert Downey Jr.,Actor,373
+community_1,Q108760382,Poor Things,Film,373
+community_1,Q108839994,Q108839994,Film,373
+community_1,Q511731,Imagine Entertainment,Studio,373
+community_1,oscar_best_director_2002,oscar_best_director,AwardEvent,373
+community_1,Q128518,Q128518,Film,373
+community_1,Q694140,Michael Clayton,Film,373
+community_1,Q28498,Brendan Sexton III,Actor,373
+community_1,Q1320443,Sony Pictures Classics,Studio,373
+community_1,Q22001133,The Favourite,Film,373
+community_1,oscar_best_picture_2011,oscar_best_picture,AwardEvent,373
+community_1,Q165524,Q165524,Actor,373
+community_1,Q13595311,Joel Coen,Director,373
+community_1,Q446960,George Miller,Director,373
+community_1,golden_globe_drama_2007,golden_globe_drama,AwardEvent,373
+community_1,Q41422,Mark Ruffalo,Actor,373
+community_1,oscar_best_intl_feature_1998,oscar_best_intl_feature,AwardEvent,373
+community_1,Q105607,Joerg Stadler,Actor,373
+community_1,Q48989,ZDF,Studio,373
+community_1,Q306403,James Franco,Actor,373
+community_1,Q71662,Q71662,Actor,373
+community_1,Q18154496,Q18154496,Film,373
+community_1,Q238912,Lindsay Crouse,Actor,373
+community_1,Q107119206,Babylon,Film,373
+community_1,Q25136757,Call Me by Your Name,Film,373
+community_1,bafta_best_film_2000,bafta_best_film,AwardEvent,373
+community_1,Q179018,Seabiscuit,Film,373
+community_1,oscar_best_picture_2000,oscar_best_picture,AwardEvent,373
+community_1,Q605867,Detective Story,Film,373
+community_1,Q56005,Ridley Scott,Director,373
+community_1,Q110710,Sunnyi Melles,Actor,373
+community_1,Q449959,Richard Kind,Actor,373
+community_1,Q4440,Eric Bana,Actor,373
+community_1,Q236189,Judy Greer,Actor,373
+community_1,Q548823,Denis Villeneuve,Director,373
+community_1,Q20714622,Bold Films,Studio,373
+community_1,Q1581633,Wake Island,Film,373
+community_1,Q3058969,Esther Garrel,Actor,373
+community_1,Q798768,Bad Robot Productions,Studio,373
+community_1,Q5368270,Mandate Pictures,Studio,373
+community_1,Q253891,Wendy Crewson,Actor,373
+community_1,Q211429,Up in the Air,Film,373
+community_1,Q83492,Gary Oldman,Actor,373
+community_1,Q138005,Michael Keaton,Actor,373
+community_1,Q229305,Joan Allen,Actor,373
+community_1,Q17037404,Revolution Films,Studio,373
+community_1,Q106744,Joachim Paul Assböck,Actor,373
+community_1,Q223117,Stanley Tucci,Actor,373
+community_1,Q9916,Dwight D. Eisenhower,Actor,373
+community_1,Q172035,Colin Farrell,Actor,373
+community_1,Q39574,Candice King,Actor,373
+community_1,Q353117,Tony Gilroy,Director,373
+community_1,Q193835,Q193835,Film,373
+community_1,oscar_best_picture_2018,oscar_best_picture,AwardEvent,373
+community_1,Q555,Rachel Maddow,Actor,373
+community_1,palme_dor_1991,palme_dor,AwardEvent,373
+community_1,Q20856802,Q20856802,Film,373
+community_1,Q229056,Minnie Driver,Actor,373
+community_1,Q192073,Little Miss Sunshine,Film,373
+community_1,Q159846,Paramount Pictures,Studio,373
+community_1,Q1152369,Section Eight Productions,Studio,373
+community_1,Q13255497,Q13255497,Film,373
+community_1,Q192557,DreamWorks,Studio,373
+community_1,Q80782,Kevin Rankin,Actor,373
+community_1,Q231128,Amber Tamblyn,Actor,373
+community_1,Q139325,Zach Galifianakis,Actor,373
+community_1,Q311804,Ben Foster,Actor,373
+community_1,oscar_best_picture_2017,oscar_best_picture,AwardEvent,373
+community_1,golden_globe_comedy_2023,golden_globe_comedy,AwardEvent,373
+community_1,oscar_best_picture_2008,oscar_best_picture,AwardEvent,373
+community_1,Q817863,Bennett Miller,Director,373
+community_1,Q2680,Q2680,Actor,373
+community_1,Q271553,Amira Casar,Actor,373
+community_1,Q430922,Paul Reiser,Actor,373
+community_1,Q22675,Tom Wlaschiha,Actor,373
+community_1,Q10361417,RioFilme,Studio,373
+community_1,Q17305144,Q17305144,Studio,373
+community_1,Q1757288,Mad Max: Fury Road,Film,373
+community_1,Q236097,Abbie Cornish,Actor,373
+community_1,Q319061,"Good Night, and Good Luck.",Film,373
+community_1,Q3520498,Dallas Buyers Club,Film,373
+community_1,Q1160868,Revolution Studios,Studio,373
+community_1,oscar_best_director_2006,oscar_best_director,AwardEvent,373
+community_1,Q220584,Michael Madsen,Actor,373
+community_1,Q28044843,Dawliz,Studio,373
+community_1,golden_globe_drama_2011,golden_globe_drama,AwardEvent,373
+community_1,Q438445,Michael Stuhlbarg,Actor,373
+community_1,pga_best_theatrical_2010,pga_best_theatrical,AwardEvent,373
+community_1,Q207458,Mischa Barton,Actor,373
+community_1,Q183081,Q183081,Film,373
+community_1,Q6522913,Lenny Abrahamson,Director,373
+community_1,golden_lion_2023,golden_lion,AwardEvent,373
+community_1,Q514527,Tom McCarthy,Director,373
+community_1,Q326114,Q326114,Film,373
+community_1,Q922453,Mr. Mudd,Studio,373
+community_1,Q110855,Frederik Pleitgen,Actor,373
+community_1,Q183239,The Curious Case of Benjamin Button,Film,373
+community_1,Q16253226,Mirage Enterprises,Studio,373
+community_1,Q310318,David Strathairn,Actor,373
+community_1,Q635131,James Brown,Actor,373
+community_1,Q349202,Adam Dunn,Actor,373
+community_1,Q82275,Bruno Barreto,Director,373
+community_1,Q67701,Anna Kendrick,Actor,373
+community_1,Q230383,Kelly Macdonald,Actor,373
+community_1,Q960885,David Mackenzie,Director,373
+community_1,Q20026847,Hell or High Water,Film,373
+community_1,Q13595531,Ethan Coen,Director,373
+community_1,Q9589,Q9589,Studio,373
+community_1,Q18547944,The Martian,Film,373
+community_1,oscar_best_director_2008,oscar_best_director,AwardEvent,373
+community_1,Q221384,Black Hawk Down,Film,373
+community_1,Q23017119,Likely Story,Studio,373
+community_1,Q29328,Brie Larson,Actor,373
+community_1,Q4692020,Independent Artist Group,Agency,373
+community_1,Q380920,Lee Unkrich,Director,373
+community_1,Q295148,Peter Stormare,Actor,373
+community_1,Q178552,Mickey Rourke,Actor,373
+community_1,dga_outstanding_directing_1996,dga_outstanding_directing,AwardEvent,373
+community_1,Q527303,Michael Lerner,Actor,373
+community_1,Q236875,Thora Birch,Actor,373
+community_1,Q123969,Claudio Castagnoli,Actor,373
+community_1,Q372394,Martin McDonagh,Director,373
+community_1,Q1148711,Paramount Vantage,Studio,373
+community_1,Q309640,Beau Bridges,Actor,373
+community_1,Q229487,Allison Janney,Actor,373
+community_1,Q326444,Mark Pellegrino,Actor,373
+community_1,Q134895,Javier Bardem,Actor,373
+community_1,Q64568948,30West,Studio,373
+community_1,Q203205,Jon Polito,Actor,373
+community_1,Q4981847,Bríd Ní Neachtain,Actor,373
+community_1,Q300555,Q300555,Film,373
+community_1,Q54958752,Disney+,Studio,373
+community_1,Q953040,Searchlight Pictures,Studio,373
+community_1,Q236578,Lizzy Caplan,Actor,373
+community_1,Q655067,Canal+,Studio,373
+community_1,Q231163,Olivia Williams,Actor,373
+community_1,Q108283,Alan Arkin,Actor,373
+community_1,Q174843,Jeff Bridges,Actor,373
+community_1,Q497155,Touchstone Pictures,Studio,373
+community_1,Q679373,The Verdict,Film,373
+community_1,Q4547,Daniel Craig,Actor,373
+community_1,Q3368592,Pat Shortt,Actor,373
+community_1,Q1768437,Rush,Film,373
+community_1,Q2595367,Ciné+,Studio,373
+community_1,Q49828,Randy Pausch,Actor,373
+community_1,bafta_best_film_2018,bafta_best_film,AwardEvent,373
+community_1,Q866,YouTube,Studio,373
+community_1,Q61740820,Q61740820,Film,373
+community_1,Q258525,Lisa Cholodenko,Director,373
+community_1,Q222720,Q222720,Film,373
+community_1,Q231249,Kate Mara,Actor,373
+community_1,Q83389,Turkish Radio and Television Corporation,Studio,373
+community_1,Q216221,Steve Carell,Actor,373
+community_1,pga_best_theatrical_2008,pga_best_theatrical,AwardEvent,373
+community_1,Q58603,Moritz Bleibtreu,Actor,373
+community_1,Q11459,Serena Williams,Actor,373
+community_1,Q2450848,StudioCanal,Studio,373
+community_1,palme_dor_2022,palme_dor,AwardEvent,373
+community_1,Q71130,Judah Friedlander,Actor,373
+community_1,Q60834962,Q60834962,Film,373
+community_1,oscar_best_picture_1998,oscar_best_picture,AwardEvent,373
+community_1,Q244234,John Turturro,Actor,373
+community_1,Q500611,Jean-Marc Vallée,Director,373
+community_1,Q231203,Amy Ryan,Actor,373
+community_1,Q273686,The Descendants,Film,373
+community_1,Q18350026,Damien Chazelle,Director,373
+community_1,Q5477105,Foxcatcher,Film,373
+community_1,Q174371,127 Hours,Film,373
+community_1,Q137703,Four Days in September,Film,373
+community_1,Q219373,Elizabeth Banks,Actor,373
+community_1,Q28044838,Mill Film,Studio,373
+community_1,Q24196182,Element Pictures,Studio,373
+community_2,Q200405,John Hurt,Actor,343
+community_2,Q57391,Til Schweiger,Actor,343
+community_2,pga_best_theatrical_2013,pga_best_theatrical,AwardEvent,343
+community_2,Q20178,Joe Pesci,Actor,343
+community_2,Q2263306,Duane Whitaker,Actor,343
+community_2,Q706475,Steve McQueen,Director,343
+community_2,golden_globe_comedy_2013,golden_globe_comedy,AwardEvent,343
+community_2,Q210094,John Ortiz,Actor,343
+community_2,Q23365,Jeremy Renner,Actor,343
+community_2,Q36949,Robert De Niro,Actor,343
+community_2,Q76819,Christoph Waltz,Actor,343
+community_2,Q435677,Paolo Bonacelli,Actor,343
+community_2,Q188955,Matthew McConaughey,Actor,343
+community_2,Q646031,Q646031,Film,343
+community_2,Q363117,Martin Brest,Director,343
+community_2,Q7736222,The Gersh Agency,Agency,343
+community_2,Q166462,Beasts of the Southern Wild,Film,343
+community_2,Q233593,Sheryl Lee,Actor,343
+community_2,Q207506,Kyle MacLachlan,Actor,343
+community_2,golden_globe_drama_1978,golden_globe_drama,AwardEvent,343
+community_2,Q918367,Mississippi Burning,Film,343
+community_2,oscar_best_intl_feature_2023,oscar_best_intl_feature,AwardEvent,343
+community_2,Q374175,Brad Davis,Actor,343
+community_2,bafta_best_film_2023,bafta_best_film,AwardEvent,343
+community_2,Q16621151,Vidéa,Studio,343
+community_2,Q206576,Q206576,Film,343
+community_2,sag_outstanding_cast_2013,sag_outstanding_cast,AwardEvent,343
+community_2,Q47087,Arthur C. Clarke,Actor,343
+community_2,Q272860,Q272860,Film,343
+community_2,golden_globe_drama_1989,golden_globe_drama,AwardEvent,343
+community_2,palme_dor_1994,palme_dor,AwardEvent,343
+community_2,Q2926038,Bronagh Gallagher,Actor,343
+community_2,Q2225497,Sascha Nathan,Actor,343
+community_2,Q203840,Isabella Rossellini,Actor,343
+community_2,Q288815,Debra Granik,Director,343
+community_2,Q272972,Robin Wright,Actor,343
+community_2,Q335798,Sugar Ray Leonard,Actor,343
+community_2,golden_globe_drama_1993,golden_globe_drama,AwardEvent,343
+community_2,Q316647,Randy Quaid,Actor,343
+community_2,Q229410,Melissa Leo,Actor,343
+community_2,Q3285496,Mandeville Films,Studio,343
+community_2,oscar_best_director_1993,oscar_best_director,AwardEvent,343
+community_2,Q191132,Harvey Keitel,Actor,343
+community_2,Q37876,Natalie Portman,Actor,343
+community_2,Q221820,Moneyball,Film,343
+community_2,Q352,Adolf Hitler,Actor,343
+community_2,Q229042,Barbara Hershey,Actor,343
+community_2,Q60687,Benno Fürmann,Actor,343
+community_2,Q160432,Jude Law,Actor,343
+community_2,Q377450,Adrienne Corri,Actor,343
+community_2,golden_globe_comedy_1998,golden_globe_comedy,AwardEvent,343
+community_2,oscar_best_picture_2014,oscar_best_picture,AwardEvent,343
+community_2,Q310190,Tobin Bell,Actor,343
+community_2,Q58592,Daniel Brühl,Actor,343
+community_2,Q518449,Sharon Farrell,Actor,343
+community_2,Q37628,Q37628,Actor,343
+community_2,Q362824,Todd Phillips,Director,343
+community_2,Q17295709,Scott Rudin Productions,Studio,343
+community_2,Q185140,Joaquin Phoenix,Actor,343
+community_2,Q211280,Ray Liotta,Actor,343
+community_2,Q47221,Taxi Driver,Film,343
+community_2,Q118175825,A Complete Unknown,Film,343
+community_2,Q189448,Zena Grey,Actor,343
+community_2,Q16242963,Annapurna Pictures,Studio,343
+community_2,Q76478,Kirsten Dunst,Actor,343
+community_2,Q43370948,BlacKkKlansman,Film,343
+community_2,Q822314,Sony Pictures,Studio,343
+community_2,Q301049,Winter's Bone,Film,343
+community_2,Q189422,Jean Dujardin,Actor,343
+community_2,Q233536,Laura Harring,Actor,343
+community_2,Q127036,Fred Weller,Actor,343
+community_2,Q459384,John Hawkes,Actor,343
+community_2,Q23814,Stephen Merchant,Actor,343
+community_2,Q442897,Rebel Wilson,Actor,343
+community_2,Q598178,Tzi Ma,Actor,343
+community_2,Q1291686,Edward Berger,Director,343
+community_2,Q634574,Robert Beatty,Actor,343
+community_2,Q28252,Plan B Entertainment,Studio,343
+community_2,Q119348,Irvin Kershner,Actor,343
+community_2,Q5593631,Gramercy Pictures,Studio,343
+community_2,Q271284,Alan Parker,Director,343
+community_2,Q32709,Fran Lebowitz,Actor,343
+community_2,Q40321,Dave Chappelle,Actor,343
+community_2,Q219124,Guillermo del Toro,Director,343
+community_2,Q1341001,Lawrence Pressman,Director,343
+community_2,Q316446,Sam Rockwell,Actor,343
+community_2,Q45647,Eddie Marsan,Actor,343
+community_2,Q233563,Sally Hawkins,Actor,343
+community_2,Q29057443,Q29057443,Film,343
+community_2,oscar_best_director_1987,oscar_best_director,AwardEvent,343
+community_2,Q2071,David Lynch,Actor,343
+community_2,Q493077,James Avery,Actor,343
+community_2,Q107933,Jim Belushi,Actor,343
+community_2,golden_globe_drama_2020,golden_globe_drama,AwardEvent,343
+community_2,Q14537,Bill Hader,Actor,343
+community_2,Q185724,Mike Myers,Actor,343
+community_2,Q10661216,Sandrew Film & Theater,Studio,343
+community_2,Q312124,Tom Hollander,Actor,343
+community_2,Q50128931,20th Century Fox France,Studio,343
+community_2,Q57118,Diane Kruger,Actor,343
+community_2,oscar_best_director_1969,oscar_best_director,AwardEvent,343
+community_2,oscar_best_director_1981,oscar_best_director,AwardEvent,343
+community_2,Q229319,Lorraine Bracco,Actor,343
+community_2,Q7250053,Propaganda Films,Studio,343
+community_2,Q231259,Billy Ray Cyrus,Actor,343
+community_2,Q244674,Benedict Cumberbatch,Actor,343
+community_2,Q242732,Cathy Moriarty,Actor,343
+community_2,bafta_best_film_2013,bafta_best_film,AwardEvent,343
+community_2,Q174699,Midnight Express,Film,343
+community_2,Q459349,Noah Baumbach,Director,343
+community_2,Q1125442,Q1125442,Film,343
+community_2,Q72090,Joyeux Noël,Film,343
+community_2,Q132444195,Q132444195,Actor,343
+community_2,Q233575,Melissa George,Actor,343
+community_2,palme_dor_1990,palme_dor,AwardEvent,343
+community_2,Q176945,Colleen Camp,Actor,343
+community_2,Q128379,David Prowse,Actor,343
+community_2,Q111647431,Carrie Louise Putrello,Actor,343
+community_2,Q456047,Domhnall Gleeson,Actor,343
+community_2,Q34436,Scarlett Johansson,Actor,343
+community_2,Q17371486,Closest to the Hole Productions,Studio,343
+community_2,Q7445452,Q7445452,Studio,343
+community_2,Q38111,Leonardo DiCaprio,Actor,343
+community_2,Q44380,Cameron Diaz,Actor,343
+community_2,Q323472,The Fighter,Film,343
+community_2,Q85729,Rudolf Martin,Actor,343
+community_2,oscar_best_picture_2013,oscar_best_picture,AwardEvent,343
+community_2,Q3011161,DC Entertainment,Studio,343
+community_2,oscar_best_picture_2019,oscar_best_picture,AwardEvent,343
+community_2,Q361465,Gerran Howell,Actor,343
+community_2,Q153815,"Princess Margaret, Countess of Snowdon",Actor,343
+community_2,Q439778,Margaret Tyzack,Actor,343
+community_2,Q9049760,New Regency Productions,Studio,343
+community_2,Q660950,Blue Velvet,Film,343
+community_2,Q259913,Spike Jonze,Actor,343
+community_2,Q54862508,Jojo Rabbit,Film,343
+community_2,Q1141252,Do the Right Thing,Film,343
+community_2,Q86919,Devid Striesow,Actor,343
+community_2,oscar_best_director_2015,oscar_best_director,AwardEvent,343
+community_2,Q154581,Q154581,Film,343
+community_2,Q358032,Aidan Gillen,Actor,343
+community_2,Q80948336,FandangoNow,Studio,343
+community_2,Q229254,Octavia Spencer,Actor,343
+community_2,Q234360,Ruby Dee,Actor,343
+community_2,bafta_best_film_1995,bafta_best_film,AwardEvent,343
+community_2,dga_outstanding_directing_2015,dga_outstanding_directing,AwardEvent,343
+community_2,Q555180,Benh Zeitlin,Director,343
+community_2,bafta_best_film_1969,bafta_best_film,AwardEvent,343
+community_2,Q8016,Winston Churchill,Actor,343
+community_2,Q55215,Alejandro González Iñárritu,Director,343
+community_2,Q41148,Martin Scorsese,Actor,343
+community_2,Q31197934,DC Studios,Studio,343
+community_2,Q433417,Keith Carradine,Actor,343
+community_2,Q223233,Sam Mendes,Director,343
+community_2,Q348755,Adam Beach,Actor,343
+community_2,oscar_best_picture_1981,oscar_best_picture,AwardEvent,343
+community_2,Q1392744,Q1392744,Film,343
+community_2,Q61864271,Imperative Entertainment,Studio,343
+community_2,Q3028386,Dino De Laurentiis Company,Studio,343
+community_2,Q481832,Amy Adams,Actor,343
+community_2,Q57147,Michael Fassbender,Actor,343
+community_2,Q64577,Peter Berling,Actor,343
+community_2,Q19848,Q19848,Actor,343
+community_2,Q7339672,Roadside Attractions,Studio,343
+community_2,Q1579809,TriBeCa Productions,Studio,343
+community_2,Q182931,John Kapelos,Actor,343
+community_2,oscar_best_director_2022,oscar_best_director,AwardEvent,343
+community_2,Q6047285,Intermedia,Studio,343
+community_2,Q3023357,Q3023357,Film,343
+community_2,Q567633,Anonymous Content,Studio,343
+community_2,Q2924399,Brenda Hillhouse,Actor,343
+community_2,Q2856187,MRC,Studio,343
+community_2,Q116845,Silver Linings Playbook,Film,343
+community_2,Q4041684,Ivi.ru,Studio,343
+community_2,Q164119,Mark Wahlberg,Actor,343
+community_2,Q9013673,American Hustle,Film,343
+community_2,Q104121,Gilbert von Sohlern,Actor,343
+community_2,Q15079,Louis C.K.,Actor,343
+community_2,Q22686,Q22686,Actor,343
+community_2,Q101797,Winona Ryder,Actor,343
+community_2,Q314342,David O. Russell,Director,343
+community_2,Q220901,Laura Dern,Actor,343
+community_2,Q28402309,Transmission Films,Studio,343
+community_2,Q195396,Freddie Jones,Actor,343
+community_2,Q277978,Topher Grace,Actor,343
+community_2,Q2388576,Taika Waititi,Director,343
+community_2,Q152309,Tom Savini,Actor,343
+community_2,Q261356,Patricia McPherson,Actor,343
+community_2,Q188772,Willem Dafoe,Actor,343
+community_2,Q62446736,Apple TV,Studio,343
+community_2,Q6296536,Journeyman Pictures,Studio,343
+community_2,Q7015366,New Zealand Film Commission,Studio,343
+community_2,Q55081822,Ford v Ferrari,Film,343
+community_2,Q272608,Mulholland Drive,Film,343
+community_2,Q135288,Q135288,Studio,343
+community_2,Q29055,Sacha Baron Cohen,Actor,343
+community_2,Q232968,Kathryn Morris,Actor,343
+community_2,Q3772,Quentin Tarantino,Actor,343
+community_2,Q104123,Pulp Fiction,Film,343
+community_2,Q189490,Jennifer Lawrence,Actor,343
+community_2,Q532169,Lukas Haas,Actor,343
+community_2,Q193555,Brendan Fraser,Actor,343
+community_2,Q26698156,Q26698156,Film,343
+community_2,Q309690,Charles Dance,Actor,343
+community_2,golden_globe_drama_2026,golden_globe_drama,AwardEvent,343
+community_2,golden_globe_drama_2022,golden_globe_drama,AwardEvent,343
+community_2,Q1138789,The Weinstein Company,Studio,343
+community_2,Q712437,Garret Dillahunt,Actor,343
+community_2,Q152272,Georges Méliès,Actor,343
+community_2,Q908689,Brendan Fletcher,Actor,343
+community_2,Q5120878,Cinereach,Studio,343
+community_2,Q21116815,RatPac-Dune Entertainment,Studio,343
+community_2,Q1554656,01 Distribution,Studio,343
+community_2,Q48671199,Marriage Story,Film,343
+community_2,Q199884,Anna Paquin,Actor,343
+community_2,Q220751,Bryan Singer,Director,343
+community_2,Q87304,Mathias Herrmann,Actor,343
+community_2,Q153723,Inglourious Basterds,Film,343
+community_2,Q1796693,Albrecht Schuch,Actor,343
+community_2,Q1968839,Paul Weitz,Director,343
+community_2,Q234076,Rosie Perez,Actor,343
+community_2,Q511760,Katya Wyeth,Actor,343
+community_2,golden_lion_2017,golden_lion,AwardEvent,343
+community_2,Q3041294,RatPac-Dune Entertainment,Studio,343
+community_2,Q310394,Alan Alda,Actor,343
+community_2,Q5318180,Dwight Henry,Actor,343
+community_2,Q35332,Brad Pitt,Actor,343
+community_2,oscar_best_picture_2012,oscar_best_picture,AwardEvent,343
+community_2,palme_dor_1976,palme_dor,AwardEvent,343
+community_2,Q132444197,Q132444197,Actor,343
+community_2,Q1651742,Quvenzhané Wallis,Actor,343
+community_2,Q183542,Martin Lawrence,Actor,343
+community_2,Q2487180,Dale Dickey,Actor,343
+community_2,Q2663746,Canal+ S.A.,Studio,343
+community_2,Q276175,Vivian Kubrick,Actor,343
+community_2,Q230184,Lee Grant,Actor,343
+community_2,Q2926174,Brooksfilms,Studio,343
+community_2,Q726823,The Stunt Man,Film,343
+community_2,Q233882,Frances Conroy,Actor,343
+community_2,Q121045,Norbert Weisser,Actor,343
+community_2,Q257442,Sarah Paulson,Actor,343
+community_2,Q466459,Regency Enterprises,Studio,343
+community_2,oscar_best_intl_feature_2006,oscar_best_intl_feature,AwardEvent,343
+community_2,Q2001,Stanley Kubrick,Director,343
+community_2,Q180214,Black Swan,Film,343
+community_2,Q507322,Andrew Scott,Actor,343
+community_2,Q181086,A Clockwork Orange,Film,343
+community_2,Q108837349,All Quiet on the Western Front,Film,343
+community_2,Q176277,Brett Cullen,Actor,343
+community_2,Q649165,Being John Malkovich,Film,343
+community_2,Q262182,Lauren Lee Smith,Actor,343
+community_2,Q54953618,Black Bear Pictures,Studio,343
+community_2,golden_globe_drama_1994,golden_globe_drama,AwardEvent,343
+community_2,Q2437875,Tobias Langhoff,Actor,343
+community_2,Q58444,Liam Neeson,Actor,343
+community_2,Q383754,Q383754,Actor,343
+community_2,Q1138876,In Good Company,Film,343
+community_2,Q3286391,A Star Is Born,Film,343
+community_2,Q1323594,Walt Disney Studios Motion Pictures,Studio,343
+community_2,oscar_best_director_2025,oscar_best_director,AwardEvent,343
+community_2,Q159778,Michelle Pfeiffer,Actor,343
+community_2,oscar_best_picture_2007,oscar_best_picture,AwardEvent,343
+community_2,oscar_best_picture_1993,oscar_best_picture,AwardEvent,343
+community_2,Q28871739,Mozinet,Studio,343
+community_2,oscar_best_director_2020,oscar_best_director,AwardEvent,343
+community_2,Q190231,Adam Lambert,Actor,343
+community_2,Q230448,Jane Campion,Director,343
+community_2,Q175142,Cybill Shepherd,Actor,343
+community_2,Q788822,Her,Film,343
+community_2,Q271440,Julie Hagerty,Actor,343
+community_2,Q336788,Oscar Isaac,Actor,343
+community_2,Q39075006,Vice,Film,343
+community_2,Q210076,David Patrick Kelly,Actor,343
+community_2,Q66316924,Q66316924,Film,343
+community_2,oscar_best_picture_2020,oscar_best_picture,AwardEvent,343
+community_2,Q164060,Brandi Carlile,Actor,343
+community_2,Q172678,Samuel L. Jackson,Actor,343
+community_2,Q124393045,Frankenstein,Film,343
+community_2,Q4509,Chloë Grace Moretz,Actor,343
+community_2,Q85323337,The Power of the Dog,Film,343
+community_2,Q766656,Christian Carion,Director,343
+community_2,Q2434817,Paul Calderón,Actor,343
+community_2,Q6138447,Media Asia Entertainment Group,Studio,343
+community_2,Q27894574,Bohemian Rhapsody,Film,343
+community_2,Q6984198,Neal Street Productions,Studio,343
+community_2,Q41449,Michael Shannon,Actor,343
+community_2,oscar_best_director_2013,oscar_best_director,AwardEvent,343
+community_2,Q16984664,Blumhouse Productions,Studio,343
+community_2,Q1485801,GK Films,Studio,343
+community_2,Q47300912,Q47300912,Film,343
+community_2,oscar_best_director_2007,oscar_best_director,AwardEvent,343
+community_2,Q201924,Q201924,Film,343
+community_2,Q103474,Q103474,Film,343
+community_2,Q151168,Martin Klebba,Actor,343
+community_2,golden_bear_2005,golden_bear,AwardEvent,343
+community_2,Q1138658,40 Acres & A Mule Filmworks,Studio,343
+community_2,Q62721520,1917,Film,343
+community_2,Q132616,Naomi Watts,Actor,343
+community_2,Q220780,Q220780,Film,343
+community_2,Q113206,Clark Gregg,Actor,343
+community_2,Q2053111,Infinitum Nihil,Studio,343
+community_2,Q3547188,UGC Fox Distribution,Studio,343
+community_2,Q51566,Spike Lee,Actor,343
+community_2,Q172975,Q172975,Film,343
+community_2,Q193504,Vincent Cassel,Actor,343
+community_2,Q329734,Brad Dourif,Actor,343
+community_2,Q14918344,The Imitation Game,Film,343
+community_2,Q42759035,Joker,Film,343
+community_2,Q751382,Wild at Heart (film),Film,343
+community_2,bafta_best_film_2015,bafta_best_film,AwardEvent,343
+community_2,golden_globe_comedy_2012,golden_globe_comedy,AwardEvent,343
+community_2,Q300323,A Band Apart,Studio,343
+community_2,Q2858710,Appian Way Productions,Studio,343
+community_2,Q205707,Bradley Cooper,Actor,343
+community_2,Q107069,Chris O'Donnell,Actor,343
+community_2,Q62681,Elisabeth Röhm,Actor,343
+community_2,Q571032,Django Unchained,Film,343
+community_2,Q42581,Keira Knightley,Actor,343
+community_2,Q237781,Alison Pill,Actor,343
+community_2,pga_best_theatrical_2014,pga_best_theatrical,AwardEvent,343
+community_2,Q191074,Babel,Film,343
+community_2,Q953520,Richard Rush,Director,343
+community_2,Q320073,David Bradley,Actor,343
+community_2,Q433893,James Mangold,Director,343
+community_2,Q623443,Wag the Dog,Film,343
+community_2,Q132444203,Q132444203,Actor,343
+community_2,Q5061074,Central Films,Studio,343
+community_2,golden_globe_drama_2019,golden_globe_drama,AwardEvent,343
+community_2,Q117392,Malcolm McDowell,Actor,343
+community_2,Q3425142,Morten Tyldum,Director,343
+community_2,Q1563838,Emil Sitka,Actor,343
+community_2,Q321561,Scent of a Woman,Film,343
+community_2,Q132444199,Q132444199,Actor,343
+community_2,Q210120,Julia Stiles,Actor,343
+community_2,Q170572,Alec Baldwin,Actor,343
+community_2,Q132444201,Q132444201,Actor,343
+community_2,Q45772,Christian Bale,Actor,343
+community_2,Q315763,Bill Pullman,Actor,343
+community_2,Q232757,Gabrielle Anwar,Actor,343
+community_2,Q15869,Freddie Mercury,Actor,343
+community_2,Q17305126,Michael De Luca Productions,Studio,343
+community_2,Q18002795,The Revenant,Film,343
+community_2,Q557268,Douglas Rain,Actor,343
+community_3,Q155299,Gian-Carlo Coppola,Actor,320
+community_3,oscar_best_picture_1973,oscar_best_picture,AwardEvent,320
+community_3,Q51559,Sidney Lumet,Director,320
+community_3,oscar_best_picture_1975,oscar_best_picture,AwardEvent,320
+community_3,Q320588,Q320588,Film,320
+community_3,Q270097,Michael Mann,Director,320
+community_3,Q295420,Mikhail Baryshnikov,Actor,320
+community_3,Q271883,Melinda Dillon,Actor,320
+community_3,Q128599,Eileen Essell,Actor,320
+community_3,Q679746,The Goodbye Girl,Film,320
+community_3,Q464353,Justin Henry,Actor,320
+community_3,Q918866,Troy Garity,Actor,320
+community_3,Q187765,Henry Miller,Actor,320
+community_3,Q233873,Teri Garr,Actor,320
+community_3,Q238919,Eileen Brennan,Actor,320
+community_3,Q51582,William Friedkin,Director,320
+community_3,Q354873,Peter Coyote,Actor,320
+community_3,golden_globe_drama_1957,golden_globe_drama,AwardEvent,320
+community_3,Q88577,Elisabeth Neumann-Viertel,Actor,320
+community_3,Q242717,Jane Alexander,Actor,320
+community_3,Q55303,John Schlesinger,Director,320
+community_3,Q213844,Judith Malina,Actor,320
+community_3,Q451558,The Turning Point,Film,320
+community_3,Q95008,John Carpenter,Actor,320
+community_3,Q235302,Carol Kane,Actor,320
+community_3,Q1353441,All That Jazz (film),Film,320
+community_3,oscar_best_director_1983,oscar_best_director,AwardEvent,320
+community_3,Q158250,Peter Bogdanovich,Actor,320
+community_3,Q323503,Hamilton Camp,Actor,320
+community_3,Q41342,Mary Tyler Moore,Actor,320
+community_3,Q498420,M. Emmet Walsh,Actor,320
+community_3,Q188652,Rocky,Film,320
+community_3,Q106743,Fernando Rey,Actor,320
+community_3,Q597239,Reds,Film,320
+community_3,Q183532,Anne Bancroft,Actor,320
+community_3,oscar_best_director_1970,oscar_best_director,AwardEvent,320
+community_3,Q178348,Chris Evans,Actor,320
+community_3,bafta_best_film_1975,bafta_best_film,AwardEvent,320
+community_3,Q56094,Francis Ford Coppola,Actor,320
+community_3,Q118763,David Clennon,Actor,320
+community_3,Q313727,Robert Shaw,Actor,320
+community_3,Q256531,Iman,Actor,320
+community_3,Q374540,James Kahn,Actor,320
+community_3,Q151892,Ariana Grande,Actor,320
+community_3,Q637180,Heaven Can Wait,Film,320
+community_3,Q1111542,Joanne Woodward,Actor,320
+community_3,Q230131,Cloris Leachman,Actor,320
+community_3,Q286738,Jack Klugman,Actor,320
+community_3,Q446717,Dabney Coleman,Actor,320
+community_3,Q69640,Katharina Thalbach,Actor,320
+community_3,Q443982,Inga Swenson,Actor,320
+community_3,Q51519,Alan J. Pakula,Director,320
+community_3,Q41136,Arthur Penn,Director,320
+community_3,palme_dor_1982,palme_dor,AwardEvent,320
+community_3,oscar_best_picture_1995,oscar_best_picture,AwardEvent,320
+community_3,Q1348264,Hollywood Pictures,Studio,320
+community_3,Q55163,Robert Altman,Director,320
+community_3,Q230390,Erika Eleniak,Actor,320
+community_3,Q692979,Keir Dullea,Actor,320
+community_3,Q62665,The Sting,Film,320
+community_3,Q51522,Sydney Pollack,Actor,320
+community_3,Q185051,Christopher Walken,Actor,320
+community_3,Q1350623,Frank Perry,Director,320
+community_3,oscar_best_director_1972,oscar_best_director,AwardEvent,320
+community_3,Q1389313,Marcel Bozzuffi,Actor,320
+community_3,bafta_best_film_1973,bafta_best_film,AwardEvent,320
+community_3,oscar_best_picture_1971,oscar_best_picture,AwardEvent,320
+community_3,golden_globe_drama_1971,golden_globe_drama,AwardEvent,320
+community_3,Q1424258,Nashville,Film,320
+community_3,Q918363,Cabaret,Film,320
+community_3,Q2345,12 Angry Men,Film,320
+community_3,Q2278256,Shepperton Studios,Studio,320
+community_3,Q172653,Q172653,Actor,320
+community_3,Q703809,Richard Lynch,Actor,320
+community_3,Q237809,JoBeth Williams,Actor,320
+community_3,Q11621,Q11621,Film,320
+community_3,Q89368,Karlheinz Hackl,Actor,320
+community_3,Q287536,The Miracle Worker,Film,320
+community_3,Q1242830,Sándor Pécsi,Actor,320
+community_3,Q1779938,Alice's Restaurant,Film,320
+community_3,Q232538,Patty Duke,Actor,320
+community_3,Q3849457,Mark Colleano,Actor,320
+community_3,dga_outstanding_directing_1971,dga_outstanding_directing,AwardEvent,320
+community_3,Q266391,Sally Kellerman,Actor,320
+community_3,Q221249,Tootsie,Film,320
+community_3,golden_globe_drama_1983,golden_globe_drama,AwardEvent,320
+community_3,Q189505,Q189505,Film,320
+community_3,Q17335573,FilmColony,Studio,320
+community_3,Q3149951,ITC Entertainment,Studio,320
+community_3,Q100361490,Don't Look Up,Film,320
+community_3,Q40026,Sylvester Stallone,Actor,320
+community_3,Q3298971,Warner Bros.-Seven Arts,Studio,320
+community_3,Q39982,Bud Cort,Actor,320
+community_3,Q263095,Andrew Prine,Actor,320
+community_3,Q1427849,Music Box,Film,320
+community_3,Q651722,Quiz Show,Film,320
+community_3,Q310324,Timothy Hutton,Actor,320
+community_3,Q41163,Al Pacino,Actor,320
+community_3,Q312161,Adam Baldwin,Actor,320
+community_3,Q1099681,Miklós Jancsó,Actor,320
+community_3,Q439216,Neva Patterson,Actor,320
+community_3,Q167520,Jon Voight,Actor,320
+community_3,Q211144,Ellen Burstyn,Actor,320
+community_3,Q776052,Tony Lo Bianco,Actor,320
+community_3,oscar_best_director_2000,oscar_best_director,AwardEvent,320
+community_3,oscar_best_director_1963,oscar_best_director,AwardEvent,320
+community_3,Q150943,Gene Hackman,Actor,320
+community_3,Q165392,Gosford Park,Film,320
+community_3,Q348351,Lee J. Cobb,Actor,320
+community_3,Q328604,Pat Quinn,Actor,320
+community_3,Q4212,Ned Beatty,Actor,320
+community_3,Q202148,Burt Reynolds,Actor,320
+community_3,palme_dor_1973,palme_dor,AwardEvent,320
+community_3,golden_globe_comedy_1986,golden_globe_comedy,AwardEvent,320
+community_3,Q503027,Powers Boothe,Actor,320
+community_3,Q3194103,Kathryn Witt,Actor,320
+community_3,Q1161600,Mafilm,Studio,320
+community_3,Q8877,Steven Spielberg,Actor,320
+community_3,Q55277,John Boorman,Director,320
+community_3,Q208590,Kristin Scott Thomas,Actor,320
+community_3,Q467348,American Zoetrope,Studio,320
+community_3,Q451603,On Golden Pond,Film,320
+community_3,Q1171440,The Last Detail,Film,320
+community_3,Q400985,Missing (1982 film),Film,320
+community_3,Q47703,The Godfather,Film,320
+community_3,Q5262185,Derek McGrath,Actor,320
+community_3,Q192912,Stephen Fry,Actor,320
+community_3,oscar_best_director_1977,oscar_best_director,AwardEvent,320
+community_3,Q259434,Sylvia Miles,Actor,320
+community_3,Q1044291,Carolco Pictures,Studio,320
+community_3,Q55208,Andrei Konchalovsky,Director,320
+community_3,Q236434,Q236434,Actor,320
+community_3,palme_dor_1980,palme_dor,AwardEvent,320
+community_3,Q358370,Hal Ashby,Director,320
+community_3,Q165627,Sophie's Choice,Film,320
+community_3,Q330353,Hurd Hatfield,Actor,320
+community_3,Q63523,Helmut Griem,Actor,320
+community_3,Q218911,Zoltán Fábri,Director,320
+community_3,Q59129,Michael Cimino,Director,320
+community_3,Q77581,Fritz Wepper,Actor,320
+community_3,Q314805,Elliott Gould,Actor,320
+community_3,Q232000,Butch Cassidy and the Sundance Kid,Film,320
+community_3,Q5035871,Capitol Films,Studio,320
+community_3,Q83287,Selena Gomez,Actor,320
+community_3,Q935852,Jerry Schatzberg,Director,320
+community_3,Q268542,Wendy Schaal,Actor,320
+community_3,Q1137213,Runaway Train,Film,320
+community_3,Q173585,Jessica Lange,Actor,320
+community_3,Q191966,Gene Wilder,Actor,320
+community_3,Q26424,Calista Flockhart,Actor,320
+community_3,Q1475800,The Boys of Paul Street,Film,320
+community_3,Q177150,Christopher Murray,Actor,320
+community_3,Q711415,Herbert Ross,Director,320
+community_3,Q232851,Rebecca De Mornay,Actor,320
+community_3,Q234997,Bonnie Bedelia,Actor,320
+community_3,Q95030,Warren Beatty,Actor,320
+community_3,Q51570,George Roy Hill,Director,320
+community_3,Q273740,Leah Ayres,Actor,320
+community_3,Q240658,Brenda Vaccaro,Actor,320
+community_3,oscar_best_director_1982,oscar_best_director,AwardEvent,320
+community_3,Q41871,Paul Newman,Actor,320
+community_3,Q249865,John Savage,Actor,320
+community_3,Q1631771,Howard da Silva,Actor,320
+community_3,Q183347,Lloyd Kaufman,Actor,320
+community_3,Q2756484,Monogram Pictures,Studio,320
+community_3,Q525065,Michael Rooker,Actor,320
+community_3,Q16758,Ed O'Neill,Actor,320
+community_3,Q296698,Costa-Gavras,Director,320
+community_3,golden_globe_comedy_2022,golden_globe_comedy,AwardEvent,320
+community_3,Q259461,Valerie Perrine,Actor,320
+community_3,Q42930,Q42930,Actor,320
+community_3,Q181776,Bonnie and Clyde,Film,320
+community_3,Q201674,Q201674,Film,320
+community_3,Q164117,Armin Mueller-Stahl,Actor,320
+community_3,oscar_best_director_1958,oscar_best_director,AwardEvent,320
+community_3,Q208266,Out of Africa,Film,320
+community_3,Q266942,Lorraine Gary,Actor,320
+community_3,Q78561,Helmut Berger,Actor,320
+community_3,Q312077,Lance Henriksen,Actor,320
+community_3,oscar_best_picture_1977,oscar_best_picture,AwardEvent,320
+community_3,Q5603,Andy Warhol,Actor,320
+community_3,Q274167,The Exorcist,Film,320
+community_3,bafta_best_film_1983,bafta_best_film,AwardEvent,320
+community_3,oscar_best_intl_feature_1969,oscar_best_intl_feature,AwardEvent,320
+community_3,Q108622,Talia Shire,Actor,320
+community_3,oscar_best_director_1979,oscar_best_director,AwardEvent,320
+community_3,Q1623002,Lenny,Film,320
+community_3,golden_globe_drama_1974,golden_globe_drama,AwardEvent,320
+community_3,Q533647,Jan Miner,Actor,320
+community_3,oscar_best_director_2019,oscar_best_director,AwardEvent,320
+community_3,oscar_best_director_1976,oscar_best_director,AwardEvent,320
+community_3,Q296177,John Cazale,Actor,320
+community_3,Q1114683,Coming Home,Film,320
+community_3,oscar_best_director_1968,oscar_best_director,AwardEvent,320
+community_3,Q61696,Midnight Cowboy,Film,320
+community_3,Q490347,Clifton James,Actor,320
+community_3,Q232541,Estelle Parsons,Actor,320
+community_3,Q999332,Buck Henry,Director,320
+community_3,golden_globe_drama_1969,golden_globe_drama,AwardEvent,320
+community_3,oscar_best_picture_1983,oscar_best_picture,AwardEvent,320
+community_3,Q2819002,ABC Entertainment,Studio,320
+community_3,Q53002,François Truffaut,Actor,320
+community_3,golden_globe_drama_1973,golden_globe_drama,AwardEvent,320
+community_3,Q463832,The Insider,Film,320
+community_3,Q202326,The Godfather Part III,Film,320
+community_3,oscar_best_picture_2005,oscar_best_picture,AwardEvent,320
+community_3,Q1240192,Donald Moffat,Actor,320
+community_3,Q244441,Pete Seeger,Actor,320
+community_3,Q572165,Network,Film,320
+community_3,Q1379571,John Moulder-Brown,Actor,320
+community_3,Q225509,Susannah York,Actor,320
+community_3,Q67899,Ralf Wolter,Actor,320
+community_3,Q14441,Liza Minnelli,Actor,320
+community_3,palme_dor_1974,palme_dor,AwardEvent,320
+community_3,Q814778,Deliverance,Film,320
+community_3,Q235221,Sally Kirkland,Actor,320
+community_3,oscar_best_picture_1980,oscar_best_picture,AwardEvent,320
+community_3,Q223830,Q223830,Actor,320
+community_3,Q260125,John G. Avildsen,Director,320
+community_3,Q203545,Michael Gambon,Actor,320
+community_3,palme_dor_1979,palme_dor,AwardEvent,320
+community_3,Q102301,Joe Frazier,Actor,320
+community_3,Q718691,James Broderick,Actor,320
+community_3,oscar_best_director_1973,oscar_best_director,AwardEvent,320
+community_3,Q453876,Mari Törőcsik,Actor,320
+community_3,Q1218959,The Last Picture Show,Film,320
+community_3,Q168450,Gretchen Egolf,Actor,320
+community_3,Q235211,Marsha Mason,Actor,320
+community_3,Q456220,Quinn Cummings,Actor,320
+community_3,Q83851,Ben Shenkman,Actor,320
+community_3,Q28151,John Shea,Actor,320
+community_3,Q311314,Sam Elliott,Actor,320
+community_3,Q273128,Mary Jackson,Actor,320
+community_3,Q28497,Marc Forster,Director,320
+community_3,Q184768,The Godfather Part II,Film,320
+community_3,Q552925,Arlo Guthrie,Actor,320
+community_3,Q451233,Elżbieta Czyżewska,Actor,320
+community_3,Q267029,Severn Darden,Actor,320
+community_3,Q39989,Ronny Cox,Actor,320
+community_3,Q238924,Mary Kay Place,Actor,320
+community_3,palme_dor_1970,palme_dor,AwardEvent,320
+community_3,Q232837,Katharine Ross,Actor,320
+community_3,Q272505,Kathleen Freeman,Actor,320
+community_3,Q1009788,The Conversation,Film,320
+community_3,golden_bear_1957,golden_bear,AwardEvent,320
+community_3,Q55951008,Associated Film Distribution,Studio,320
+community_3,Q1033465,The Cannon Group,Studio,320
+community_3,Q187038,David Carradine,Actor,320
+community_3,Q775923,"Rachel, Rachel",Film,320
+community_3,Q494085,M*A*S*H (film),Film,320
+community_3,Q59215,Robert Redford,Actor,320
+community_3,Q209186,James Mason,Actor,320
+community_3,dga_outstanding_directing_1973,dga_outstanding_directing,AwardEvent,320
+community_3,Q34012,Marlon Brando,Actor,320
+community_3,Q503313,Ordinary People,Film,320
+community_3,Q162554,Diane Venora,Actor,320
+community_3,Q91608,Rudolf Schündler,Actor,320
+community_3,dga_outstanding_directing_1972,dga_outstanding_directing,AwardEvent,320
+community_3,Q220735,The French Connection,Film,320
+community_3,Q128541,Terry Kiser,Actor,320
+community_3,Q78533,Klaus Maria Brandauer,Actor,320
+community_3,Q1169380,Crimes of the Heart,Film,320
+community_3,Q232280,Linda Blair,Actor,320
+community_3,Q183178,Clive Owen,Actor,320
+community_3,Q207969,Eric Roberts,Actor,320
+community_3,Q313256,Bob Fosse,Actor,320
+community_3,Q95043,James Caan,Actor,320
+community_3,Q233868,Elizabeth McGovern,Actor,320
+community_3,Q7965932,Walter Reade,Studio,320
+community_3,oscar_best_picture_1958,oscar_best_picture,AwardEvent,320
+community_3,oscar_best_picture_1972,oscar_best_picture,AwardEvent,320
+community_3,Q41142,Jane Fonda,Actor,320
+community_3,Q176248,Charles Cioffi,Actor,320
+community_3,Q203215,Max von Sydow,Actor,320
+community_3,Q953627,Mark Rydell,Director,320
+community_3,Q181799,Richard Dreyfuss,Actor,320
+community_3,Q262674,Maryam d'Abo,Actor,320
+community_3,Q533585,Bound for Glory,Film,320
+community_3,Q102642,Diane Keaton,Actor,320
+community_3,Q643472,Otis Young,Actor,320
+community_3,Q198638,Jonathan Banks,Actor,320
+community_3,Q216569,Roy Scheider,Actor,320
+community_3,Q104067,Eli Wallach,Actor,320
+community_3,Q83694,Carmen Argenziano,Actor,320
+community_3,Q313198,Red Buttons,Actor,320
+community_3,Q1250354,Dorothy Tristan,Actor,320
+community_3,Q225657,Henry Gibson,Actor,320
+community_3,Q258064,Dee Wallace,Actor,320
+community_3,Q250539,Edward Bunker,Actor,320
+community_3,Q873,Q873,Actor,320
+community_3,Q725374,Nicol Williamson,Actor,320
+community_3,Q6694988,Luana Anders,Actor,320
+community_3,golden_globe_drama_1985,golden_globe_drama,AwardEvent,320
+community_3,Q435669,Janet Margolin,Actor,320
+community_3,Q316955,Michael Dorn,Actor,320
+community_3,Q193577,Kramer vs. Kramer,Film,320
+community_3,Q533449,David and Lisa,Film,320
+community_3,Q81328,Harrison Ford,Actor,320
+community_3,Q236396,Geraldine Fitzgerald,Actor,320
+community_3,Q182692,Apocalypse Now,Film,320
+community_3,Q1140171,"They Shoot Horses, Don't They?",Film,320
+community_3,Q469454,Beah Richards,Actor,320
+community_3,Q181413,Julie Christie,Actor,320
+community_3,Q8043977,Xfinity Streampix,Studio,320
+community_3,Q208204,Finding Neverland,Film,320
+community_3,bafta_best_film_1958,bafta_best_film,AwardEvent,320
+community_3,Q90847,Günther Maria Halmer,Actor,320
+community_3,Q350405,Adam McKay,Director,320
+community_3,Q458656,Dog Day Afternoon,Film,320
+community_3,Q17305146,Alfran Productions,Studio,320
+community_3,Q2623393,Mirage Studios,Studio,320
+community_3,Q229009,Debra Winger,Actor,320
+community_3,Q103784,Donald Sutherland,Actor,320
+community_3,Q294583,Sam Shepard,Actor,320
+community_3,Q164624,George Dzundza,Actor,320
+community_3,Q263798,Alexandra Danilova,Actor,320
+community_3,Q271288,Sandahl Bergman,Actor,320
+community_3,golden_bear_1990,golden_bear,AwardEvent,320
+community_3,Q1344329,Scarecrow (1973 film),Film,320
+community_3,Q236688,Dyan Cannon,Actor,320
+community_4,Q976149,Laura,Film,294
+community_4,oscar_best_director_1944,oscar_best_director,AwardEvent,294
+community_4,Q83807,Ed Sullivan,Actor,294
+community_4,Q219640,Vincent Price,Actor,294
+community_4,Q78469,Romy Schneider,Actor,294
+community_4,Q95148,Joseph Cotten,Actor,294
+community_4,Q189895,Jennifer Jones,Actor,294
+community_4,Q94123,Jack Lemmon,Actor,294
+community_4,Q450738,Doris Dowling,Actor,294
+community_4,oscar_best_director_1955,oscar_best_director,AwardEvent,294
+community_4,Q229232,Gloria Swanson,Actor,294
+community_4,Q200299,All About Eve,Film,294
+community_4,Q1193261,5 Fingers,Film,294
+community_4,Q102813,Yul Brynner,Actor,294
+community_4,Q434841,20th Century Studios,Studio,294
+community_4,Q234900,Linda Darnell,Actor,294
+community_4,Q229251,Dorothy Dandridge,Actor,294
+community_4,Q264713,Cathleen Nesbitt,Actor,294
+community_4,Q231221,Agnes Moorehead,Actor,294
+community_4,Q68654,Wolfgang Preiss,Actor,294
+community_4,Q267803,Spring Byington,Actor,294
+community_4,Q313545,Brian Dennehy,Actor,294
+community_4,Q264879,David Lewis,Actor,294
+community_4,Q272068,Heather Angel,Actor,294
+community_4,Q1043659,Carmen Jones,Film,294
+community_4,Q271782,Betty Buckley,Actor,294
+community_4,Q520824,Cecil Cunningham,Actor,294
+community_4,Q230555,Gene Tierney,Actor,294
+community_4,Q114683,Martin Kosleck,Actor,294
+community_4,Q669749,The Song of Bernadette,Film,294
+community_4,Q275771,Nella Walker,Actor,294
+community_4,golden_globe_comedy_1985,golden_globe_comedy,AwardEvent,294
+community_4,Q43247,Ingrid Bergman,Actor,294
+community_4,palme_dor_1946,palme_dor,AwardEvent,294
+community_4,Q7374,Alfred Hitchcock,Actor,294
+community_4,Q180098,Ben-Hur,Film,294
+community_4,Q72267,Cecil B. DeMille,Actor,294
+community_4,golden_globe_drama_1953,golden_globe_drama,AwardEvent,294
+community_4,Q83812,Edward G. Robinson,Actor,294
+community_4,Q450061,Isobel Elsom,Actor,294
+community_4,oscar_best_director_1953,oscar_best_director,AwardEvent,294
+community_4,Q80739,Charlton Heston,Actor,294
+community_4,Q240233,Diahann Carroll,Actor,294
+community_4,Q49492,Michael Chekhov,Actor,294
+community_4,Q478209,Double Indemnity,Film,294
+community_4,Q1139023,The Robe,Film,294
+community_4,Q70309,Charles Régnier,Actor,294
+community_4,Q181407,Robert Middleton,Actor,294
+community_4,Q515572,For Whom the Bell Tolls,Film,294
+community_4,Q268695,Signe Hasso,Actor,294
+community_4,Q51583,Joseph L. Mankiewicz,Director,294
+community_4,Q365633,Dana Andrews,Actor,294
+community_4,Q237864,Vera Miles,Actor,294
+community_4,Q746733,The Ten Commandments,Film,294
+community_4,Q215511,Otto Waldis,Actor,294
+community_4,oscar_best_director_1949,oscar_best_director,AwardEvent,294
+community_4,Q1198860,The Pride of the Yankees,Film,294
+community_4,Q898840,Gentleman's Agreement,Film,294
+community_4,Q1620639,Since You Went Away,Film,294
+community_4,Q263022,Edmund Goulding,Director,294
+community_4,Q309989,Tyrone Power,Actor,294
+community_4,Q87042,Oskar Karlweis,Actor,294
+community_4,Q234149,Danielle Darrieux,Actor,294
+community_4,Q1113987,Tender Mercies,Film,294
+community_4,Q1348309,John Cromwell,Director,294
+community_4,Q1806583,Robert D. Webb,Director,294
+community_4,Q1358712,William Gargan,Actor,294
+community_4,Q77342,Hardy Krüger,Actor,294
+community_4,Q628664,The Magnificent Ambersons,Film,294
+community_4,Q205314,Janet Leigh,Actor,294
+community_4,golden_lion_1951,golden_lion,AwardEvent,294
+community_4,Q129885,Lewis Martin,Actor,294
+community_4,Q91709,Erwin Kalser,Actor,294
+community_4,oscar_best_picture_1976,oscar_best_picture,AwardEvent,294
+community_4,oscar_best_director_1945,oscar_best_director,AwardEvent,294
+community_4,Q104109,Mary Pickford,Actor,294
+community_4,Q204212,Rebecca,Film,294
+community_4,Q118184,Mario Siletti,Actor,294
+community_4,Q356309,Fred MacMurray,Actor,294
+community_4,Q259581,Jan Sterling,Actor,294
+community_4,Q122950093,Otto Preminger Film,Studio,294
+community_4,Q405036,Aileen Pringle,Actor,294
+community_4,Q471716,Barry Lyndon,Film,294
+community_4,oscar_best_picture_1957,oscar_best_picture,AwardEvent,294
+community_4,Q449220,Bruce Beresford,Director,294
+community_4,Q98965,Gertrude W. Hoffmann,Actor,294
+community_4,Q344750,Edmund Gwenn,Actor,294
+community_4,Q759322,The Razor's Edge,Film,294
+community_4,Q271877,Martha Hyer,Actor,294
+community_4,Q85474,Ilka Grüning,Actor,294
+community_4,Q55994,Mike Farrell,Actor,294
+community_4,Q1620455,The Pied Piper,Film,294
+community_4,Q1018487,Bye Bye Birdie,Film,294
+community_4,Q213812,Babe Ruth,Actor,294
+community_4,Q5684820,Hawk Films,Studio,294
+community_4,Q1439574,Johnny Belinda,Film,294
+community_4,Q1334264,Hugh Marlowe,Actor,294
+community_4,Q310295,Dick Van Dyke,Actor,294
+community_4,Q232059,Ann-Margret,Actor,294
+community_4,Q510641,Battle of Neretva,Film,294
+community_4,Q1619977,Alexander's Ragtime Band,Film,294
+community_4,Q464889,Herbert Rawlinson,Actor,294
+community_4,Q286104,Jean Negulesco,Director,294
+community_4,Q86348,Ludwig Stössel,Actor,294
+community_4,Q72984,Bing Crosby,Actor,294
+community_4,Q638085,The Bells of St. Mary's,Film,294
+community_4,Q439588,Torin Thatcher,Actor,294
+community_4,Q1166180,Julia,Film,294
+community_4,Q457861,Florence Bates,Actor,294
+community_4,Q124735,Charles Williams,Actor,294
+community_4,Q1345327,Decision Before Dawn,Film,294
+community_4,Q57584,Curd Jürgens,Actor,294
+community_4,Q1105463,Q1105463,Film,294
+community_4,Q211373,Q211373,Film,294
+community_4,Q55419,Klaus Kinski,Actor,294
+community_4,Q30203425,The Post,Film,294
+community_4,Q4616,Marilyn Monroe,Actor,294
+community_4,Q282820,Bernie Hamilton,Actor,294
+community_4,Q235299,Gladys Cooper,Actor,294
+community_4,Q738883,Loews Cineplex Entertainment,Studio,294
+community_4,Q659843,The Snake Pit,Film,294
+community_4,oscar_best_picture_1944,oscar_best_picture,AwardEvent,294
+community_4,Q78817,Alexander Granach,Actor,294
+community_4,Q104027,Kirk Douglas,Actor,294
+community_4,Q78508,Erich von Stroheim,Actor,294
+community_4,Q94002,Barbara Stanwyck,Actor,294
+community_4,Q177922,To Kill a Mockingbird,Film,294
+community_4,Q272719,Alice Ghostley,Actor,294
+community_4,Q275485,Victoria Horne,Actor,294
+community_4,Q108366,Gregory Peck,Actor,294
+community_4,Q269505,Henry King,Director,294
+community_4,Q287688,Mary Anderson,Actor,294
+community_4,oscar_best_picture_1946,oscar_best_picture,AwardEvent,294
+community_4,Q116983,Robert Donat,Actor,294
+community_4,Q145627,John Gavin,Actor,294
+community_4,oscar_best_director_1938,oscar_best_director,AwardEvent,294
+community_4,Q288337,George Seaton,Director,294
+community_4,Q270510,The Apartment,Film,294
+community_4,Q155279,Dolores Costello,Actor,294
+community_4,Q471309,Dean Jagger,Actor,294
+community_4,Q186514,Marilyn Horne,Actor,294
+community_4,Q171736,Robert Duvall,Actor,294
+community_4,Q221874,Dorothy Comingore,Actor,294
+community_4,Q213581,Anatole Litvak,Director,294
+community_4,Q966420,Gene Evans,Actor,294
+community_4,Q115735,Lambert Wilson,Actor,294
+community_4,Q848388,Foreign Correspondent,Film,294
+community_4,Q606928,Wilson,Film,294
+community_4,Q1467214,Miracle on 34th Street,Film,294
+community_4,Q24815,Citizen Kane,Film,294
+community_4,Q448534,Una O'Connor,Actor,294
+community_4,Q540122,Selznick International Pictures,Studio,294
+community_4,bafta_best_film_1979,bafta_best_film,AwardEvent,294
+community_4,Q497311,Spellbound,Film,294
+community_4,Q272214,Grace Lee Whitney,Actor,294
+community_4,Q1619866,In Old Chicago,Film,294
+community_4,Q229266,Thelma Ritter,Actor,294
+community_4,golden_globe_drama_1977,golden_globe_drama,AwardEvent,294
+community_4,Q33866,Theodore Roosevelt,Actor,294
+community_4,Q465442,Robert Guillaume,Actor,294
+community_4,Q237134,The Lost Weekend,Film,294
+community_4,Q214767,Louis V. Arco,Actor,294
+community_4,Q255815,Tallulah Bankhead,Actor,294
+community_4,Q537252,Paul Gleason,Actor,294
+community_4,Q321943,Richard Wattis,Actor,294
+community_4,Q332530,Leo McCarey,Studio,294
+community_4,Q64150,Albert Bassermann,Actor,294
+community_4,Q927439,David Miller,Director,294
+community_4,Q436750,Collin Wilcox,Actor,294
+community_4,Q272445,Q272445,Actor,294
+community_4,Q72291,David O. Selznick,Director,294
+community_4,Q434790,Tsai Chin,Actor,294
+community_4,Q1440194,Three Coins in the Fountain,Film,294
+community_4,Q230841,Maureen Stapleton,Actor,294
+community_4,Q443044,Tess Harper,Actor,294
+community_4,Q88997,Ferdy Mayne,Actor,294
+community_4,Q456294,The Mirisch Company,Studio,294
+community_4,Q162389,Tony Curtis,Actor,294
+community_4,palme_dor_1952,palme_dor,AwardEvent,294
+community_4,golden_globe_drama_1954,golden_globe_drama,AwardEvent,294
+community_4,Q9960,Ronald Reagan,Actor,294
+community_4,Q255842,Mary Carr,Actor,294
+community_4,Q212957,Celeste Holm,Actor,294
+community_4,Q229234,Ellen Barkin,Actor,294
+community_4,Q94081,Bob Hope,Actor,294
+community_4,oscar_best_picture_1941,oscar_best_picture,AwardEvent,294
+community_4,Q57604,Hildegard Knef,Actor,294
+community_4,Q1668336,Irving Pichel,Director,294
+community_4,Q1419980,Sleuth,Film,294
+community_4,Q254603,Alice Faye,Actor,294
+community_4,Q714941,Love Is a Many-Splendored Thing,Film,294
+community_4,Q1471328,Kitty Foyle,Film,294
+community_4,Q153372,Charles Stevens,Actor,294
+community_4,Q467785,Robert Mulligan,Director,294
+community_4,Q230128,Katina Paxinou,Actor,294
+community_4,Q67723,Hans Christian Blech,Actor,294
+community_4,oscar_best_director_1951,oscar_best_director,AwardEvent,294
+community_4,Q433403,Joan Shawlee,Actor,294
+community_4,Q152493,Sabrina,Film,294
+community_4,Q190086,Some Like It Hot,Film,294
+community_4,Q325695,Clara Blandick,Actor,294
+community_4,Q55245,Laurence Olivier,Actor,294
+community_4,golden_globe_comedy_1954,golden_globe_comedy,AwardEvent,294
+community_4,Q153018,Maximilian Schell,Actor,294
+community_4,Q283988,Roddy McDowall,Actor,294
+community_4,Q235989,Angie Dickinson,Actor,294
+community_4,Q178602,Laurence Payne,Actor,294
+community_4,Q355781,George Macready,Actor,294
+community_4,Q182104,Jessica Tandy,Actor,294
+community_4,Q85232,Celia Lovsky,Actor,294
+community_4,Q1620416,Kings Row,Film,294
+community_4,Q1170179,Lifeboat,Film,294
+community_4,Q234117,Kathryn Grayson,Actor,294
+community_4,Q2704454,Othello (1951 film),Film,294
+community_4,Q55190,Sergei Bondarchuk,Actor,294
+community_4,golden_globe_comedy_1963,golden_globe_comedy,AwardEvent,294
+community_4,Q228906,Anne Baxter,Actor,294
+community_4,Q274169,Kathryn Crosby,Actor,294
+community_4,Q344758,Gig Young,Actor,294
+community_4,Q38302,Wolf Albach-Retty,Actor,294
+community_4,Q737065,The Cardinal,Film,294
+community_4,Q131188668,Q131188668,Studio,294
+community_4,oscar_best_intl_feature_1970,oscar_best_intl_feature,AwardEvent,294
+community_4,Q105221,Dan Aykroyd,Actor,294
+community_4,Q449753,Fay Compton,Actor,294
+community_4,Q442909,Mercury Theatre,Studio,294
+community_4,Q113328,Walter Slezak,Actor,294
+community_4,Q51547,Billy Wilder,Director,294
+community_4,Q52997,Otto Preminger,Actor,294
+community_4,oscar_best_director_1941,oscar_best_director,AwardEvent,294
+community_4,Q85467,Josef Meinrad,Actor,294
+community_4,Q267757,Mary Badham,Actor,294
+community_4,oscar_best_picture_1984,oscar_best_picture,AwardEvent,294
+community_4,Q457269,Sam Wood,Director,294
+community_4,Q1443899,Frank Orth,Actor,294
+community_4,Q344735,Jack Albertson,Actor,294
+community_4,Q562339,Gary Merrill,Actor,294
+community_4,Q1545826,Ace in the Hole,Film,294
+community_4,Q265422,Jean Acker,Actor,294
+community_4,Q139712,John Le Mesurier,Actor,294
+community_4,Q465224,American International Pictures,Studio,294
+community_4,Q276097,Jean Heather,Actor,294
+community_4,Q166000,Gregg Toland,Actor,294
+community_4,Q156532,Peter Graves,Actor,294
+community_4,Q1035124,"Captain Newman, M.D.",Film,294
+community_4,Q1292174,Edward F. Cline,Director,294
+community_4,Q86907,Felix Basch,Actor,294
+community_4,Q155116,Dorothy McGuire,Actor,294
+community_4,Q34414,Q34414,Film,294
+community_4,Q95076,Joan Fontaine,Actor,294
+community_4,Q1213396,The Inn of the Sixth Happiness,Film,294
+community_4,Q214959,Harry Belafonte,Actor,294
+community_4,oscar_best_picture_1943,oscar_best_picture,AwardEvent,294
+community_4,Q1509470,Suspicion,Film,294
+community_4,oscar_best_director_1943,oscar_best_director,AwardEvent,294
+community_4,Q1305546,Heaven Can Wait,Film,294
+community_4,Q270324,Patti LuPone,Actor,294
+community_4,Q180377,Raymond Chandler,Actor,294
+community_4,Q960050,Henry Travers,Actor,294
+community_4,Q85689,Tala Birell,Actor,294
+community_4,Q78919,Fritz Kortner,Actor,294
+community_4,Q763065,Frank Cady,Actor,294
+community_4,Q182580,Shirley Temple,Actor,294
+community_4,Q86977,Diana Körner,Actor,294
+community_4,oscar_best_picture_1949,oscar_best_picture,AwardEvent,294
+community_4,Q542988,Anchors Aweigh,Film,294
+community_4,Q310413,Don Ameche,Actor,294
+community_4,Q95055,Jane Wyman,Actor,294
+community_4,Q258393,Jill Esmond,Actor,294
+community_4,Q193146,Anthony Perkins,Actor,294
+community_4,Q76943,Gert Fröbe,Actor,294
+community_4,Q163038,Psycho,Film,294
+community_4,Q230415,Judith Anderson,Actor,294
+community_4,Q108989,Tonio Selwart,Actor,294
+community_4,Q104127,Douglas Fairbanks,Actor,294
+community_4,Q630981,George Sidney,Director,294
+community_4,golden_globe_drama_1964,golden_globe_drama,AwardEvent,294
+community_4,Q3951435,Scalera Film,Studio,294
+community_4,Q24829,Orson Welles,Actor,294
+community_4,Q1348110,Tay Garnett,Director,294
+community_4,Q1194888,Twelve O'Clock High,Film,294
+community_4,Q1281569,Veljko Bulajić,Director,294
+community_4,Q204750,Barbara Bates,Actor,294
+community_4,Q129087,Ethel Merman,Actor,294
+community_4,Q78298,Alfred Zeisler,Actor,294
+community_4,Q59651,Ruth Roman,Actor,294
+community_4,Q1474572,Percy Stow,Director,294
+community_4,Q254588,Natalie Schafer,Actor,294
+community_4,Q243005,Jean Peters,Actor,294
+community_4,Q1621402,Friendly Persuasion (1956 film),Film,294
+community_4,Q177347,Paul Picerni,Actor,294
+community_4,Q988004,A Letter to Three Wives,Film,294
+community_4,Q373306,Alan Napier,Actor,294
+community_4,Q641061,The Greatest Show on Earth,Film,294
+community_5,Q1621909,The Alamo,Film,252
+community_5,Q309545,Judgment at Nuremberg,Film,252
+community_5,Q50714,Stagecoach,Film,252
+community_5,golden_globe_comedy_1991,golden_globe_comedy,AwardEvent,252
+community_5,Q202144,Shelley Winters,Actor,252
+community_5,oscar_best_director_1948,oscar_best_director,AwardEvent,252
+community_5,Q1384550,George Marshall,Director,252
+community_5,Q84489,Oskar Werner,Actor,252
+community_5,Q40531,John Wayne,Actor,252
+community_5,Q95823,Kaaren Verne,Actor,252
+community_5,Q1283810,"One, Two, Three",Film,252
+community_5,Q1031821,Can-Can,Film,252
+community_5,Q40912,Frank Sinatra,Actor,252
+community_5,Q1001943,"Buffalo Bill and the Indians, or Sitting Bull's History Lesson",Film,252
+community_5,Q196933,The Talk of the Town,Film,252
+community_5,Q524281,Robert Blake,Actor,252
+community_5,Q180251,Paddy Chayefsky,Actor,252
+community_5,Q756882,The Guns of Navarone,Film,252
+community_5,Q637835,You Can't Take It With You,Film,252
+community_5,Q188389,Irene Worth,Actor,252
+community_5,Q470560,The Quiet Man,Film,252
+community_5,Q69444,Karl Michael Vogler,Actor,252
+community_5,Q349166,Ben Johnson,Actor,252
+community_5,Q133313,Jake Gyllenhaal,Actor,252
+community_5,Q181917,David Niven,Actor,252
+community_5,Q271885,Marisa Pavan,Actor,252
+community_5,Q55420,Fred Zinnemann,Actor,252
+community_5,Q42745,Rita Hayworth,Actor,252
+community_5,Q350690,Charles Coburn,Actor,252
+community_5,oscar_best_picture_1962,oscar_best_picture,AwardEvent,252
+community_5,Q295257,Michel Piccoli,Actor,252
+community_5,Q1218318,The Professionals,Film,252
+community_5,Q707986,The Diary of Anne Frank,Film,252
+community_5,Q311068,Wallace Shawn,Actor,252
+community_5,Q3925,Grace Kelly,Actor,252
+community_5,Q669068,The Front Page,Film,252
+community_5,golden_globe_comedy_1969,golden_globe_comedy,AwardEvent,252
+community_5,Q273118,Virginia Grey,Actor,252
+community_5,Q95691,Richard Münch,Actor,252
+community_5,Q4573,Sean Connery,Actor,252
+community_5,Q102551,Ernest Borgnine,Actor,252
+community_5,Q285421,The Four Days of Naples,Film,252
+community_5,Q671718,The Search,Film,252
+community_5,Q1198545,The Sundowners,Film,252
+community_5,Q107006,Claudia Cardinale,Actor,252
+community_5,Q55392,Louis Malle,Director,252
+community_5,Q270560,Paul Mazursky,Actor,252
+community_5,oscar_best_director_1959,oscar_best_director,AwardEvent,252
+community_5,Q85174,Leon Askin,Actor,252
+community_5,Q756329,Atlantic City,Film,252
+community_5,Q72229,Edward Dmytryk,Director,252
+community_5,bafta_best_film_1961,bafta_best_film,AwardEvent,252
+community_5,Q355125,Harry Morgan,Actor,252
+community_5,Q78924,Bernhard Wicki,Director,252
+community_5,Q456979,J. Lee Thompson,Director,252
+community_5,Q1620244,Our Town,Film,252
+community_5,oscar_best_picture_1961,oscar_best_picture,AwardEvent,252
+community_5,Q312098,José Ferrer,Actor,252
+community_5,oscar_best_picture_1953,oscar_best_picture,AwardEvent,252
+community_5,golden_globe_drama_1960,golden_globe_drama,AwardEvent,252
+community_5,Q696057,Around the World in 80 Days,Film,252
+community_5,Q774682,Republic Pictures,Studio,252
+community_5,Q259537,Ed Wynn,Actor,252
+community_5,Q105702,Dr. Strangelove,Film,252
+community_5,Q468484,The Longest Day,Film,252
+community_5,Q325398,Phil Brown,Actor,252
+community_5,Q55796,Peter Ustinov,Actor,252
+community_5,Q346280,Alan Ladd,Actor,252
+community_5,Q193102,Montgomery Clift,Actor,252
+community_5,Q230626,Wendy Hiller,Actor,252
+community_5,Q142501,Ray Barrett,Actor,252
+community_5,Q107656,Jean Simmons,Actor,252
+community_5,Q4980924,Bryna Productions,Studio,252
+community_5,Q237116,Marty (film),Film,252
+community_5,golden_globe_comedy_1960,golden_globe_comedy,AwardEvent,252
+community_5,Q168355,Don Beddoe,Actor,252
+community_5,Q60876,Heinz Rühmann,Actor,252
+community_5,Q1368948,Glenn Strange,Actor,252
+community_5,Q718135,Scott Wilson,Actor,252
+community_5,Q316957,Gerd Oswald,Director,252
+community_5,Q19155,Henry Fonda,Actor,252
+community_5,Q51503,Franklin J. Schaffner,Director,252
+community_5,Q200460,Jayne Meadows,Actor,252
+community_5,Q432316,Donald Sinden,Actor,252
+community_5,Q160528,Burt Lancaster,Actor,252
+community_5,Q232879,Lila Kedrova,Actor,252
+community_5,golden_bear_1976,golden_bear,AwardEvent,252
+community_5,Q2750,Bourvil,Actor,252
+community_5,Q56093,Blake Edwards,Actor,252
+community_5,Q273944,Louise Platt,Actor,252
+community_5,Q120215,Ernest Thesiger,Actor,252
+community_5,Q90045,Hellmut Lange,Actor,252
+community_5,Q186485,Billy Crystal,Actor,252
+community_5,Q1306726,An Unmarried Woman,Film,252
+community_5,Q95026,Shirley MacLaine,Actor,252
+community_5,Q329456,William Prince,Actor,252
+community_5,Q75760,Curt Lowens,Actor,252
+community_5,Q1340156,Wendell Corey,Actor,252
+community_5,Q475529,Mr. Deeds Goes to Town,Film,252
+community_5,Q230636,Geraldine Chaplin,Actor,252
+community_5,Q539685,Michael Anderson,Director,252
+community_5,Q233832,Jo Van Fleet,Actor,252
+community_5,Q364342,Darryl F. Zanuck,Director,252
+community_5,oscar_best_picture_1979,oscar_best_picture,AwardEvent,252
+community_5,Q734950,Julius Caesar,Film,252
+community_5,Q244448,How Green Was My Valley,Film,252
+community_5,Q1400299,Nestor Paiva,Actor,252
+community_5,Q1199357,The Long Voyage Home,Film,252
+community_5,Q676039,The Grapes of Wrath,Film,252
+community_5,Q315217,John Forsythe,Actor,252
+community_5,Q56011,Anna Magnani,Actor,252
+community_5,Q269796,Walter Lang,Director,252
+community_5,Q237247,Kelly Bishop,Actor,252
+community_5,oscar_best_picture_1954,oscar_best_picture,AwardEvent,252
+community_5,Q436784,Joel McCrea,Actor,252
+community_5,Q470818,Ken Annakin,Director,252
+community_5,Q235478,Shelley Duvall,Actor,252
+community_5,Q2891393,Batjac Productions,Studio,252
+community_5,Q180338,Christopher Lee,Actor,252
+community_5,Q175759,Patti Page,Actor,252
+community_5,Q186941,Columbia Pictures,Studio,252
+community_5,Q262373,Raymond Walburn,Actor,252
+community_5,oscar_best_director_1961,oscar_best_director,AwardEvent,252
+community_5,Q448430,Jeff Corey,Actor,252
+community_5,Q273271,Dorris Bowdon,Actor,252
+community_5,Q238070,Sara Allgood,Actor,252
+community_5,Q634694,The Rose Tattoo,Film,252
+community_5,Q193278,Lee Van Cleef,Actor,252
+community_5,Q51490,George Stevens,Actor,252
+community_5,Q51114,John Ford,Director,252
+community_5,Q51703,Dina Merrill,Actor,252
+community_5,oscar_best_director_1962,oscar_best_director,AwardEvent,252
+community_5,Q230159,Jane Darwell,Actor,252
+community_5,Q101884,Albert Lieven,Actor,252
+community_5,Q460968,Joe Sawyer,Actor,252
+community_5,Q233850,Claire Trevor,Actor,252
+community_5,bafta_best_film_1954,bafta_best_film,AwardEvent,252
+community_5,Q53004,Vittorio De Sica,Actor,252
+community_5,Q247662,Aline MacMahon,Actor,252
+community_5,Q205321,The Killers,Film,252
+community_5,Q270038,Delbert Mann,Director,252
+community_5,Q1332957,Elmer Gantry,Film,252
+community_5,Q133050,Susan Sarandon,Actor,252
+community_5,Q508182,Michael Gordon,Director,252
+community_5,Q1045165,Shane,Film,252
+community_5,oscar_best_intl_feature_1963,oscar_best_intl_feature,AwardEvent,252
+community_5,Q512475,Nicholas and Alexandra,Film,252
+community_5,Q2861046,Argosy Pictures,Studio,252
+community_5,Q53023,Nanni Loy,Director,252
+community_5,Q818710,Zorba the Greek,Film,252
+community_5,Q450047,Ann Doran,Actor,252
+community_5,Q448923,Mala Powers,Actor,252
+community_5,Q1620549,The More the Merrier,Film,252
+community_5,Q1169951,Ship of Fools,Film,252
+community_5,oscar_best_director_1960,oscar_best_director,AwardEvent,252
+community_5,Q330840,Charles McGraw,Actor,252
+community_5,Q1303837,Ron Underwood,Director,252
+community_5,Q547495,John Farrow,Director,252
+community_5,Q3791677,John and James Woolf,Studio,252
+community_5,Q3129183,Hecht-Hill-Lancaster Productions,Studio,252
+community_5,Q733627,A Place in the Sun,Film,252
+community_5,Q350680,Robert Ryan,Actor,252
+community_5,Q351838,Arthur Kennedy,Actor,252
+community_5,Q433709,Jarmila Novotná,Actor,252
+community_5,Q108297,Spartacus,Film,252
+community_5,bafta_best_film_1965,bafta_best_film,AwardEvent,252
+community_5,Q520819,Lex Barker,Actor,252
+community_5,Q1660701,The Shoes of the Fisherman,Film,252
+community_5,Q1161658,Daniel Mann,Director,252
+community_5,Q83484,Anthony Quinn,Actor,252
+community_5,Q204013,Otto Kruger,Actor,252
+community_5,Q320036,Richard Widmark,Actor,252
+community_5,Q290666,Barry Fitzgerald,Actor,252
+community_5,Q119935,Edmond O'Brien,Actor,252
+community_5,Q1508611,Moulin Rouge,Film,252
+community_5,Q166114,Leslie Brooks,Actor,252
+community_5,Q339358,Enzo Cannavale,Actor,252
+community_5,Q240217,Mildred Natwick,Actor,252
+community_5,oscar_best_director_1957,oscar_best_director,AwardEvent,252
+community_5,Q266416,Betsy Blair,Actor,252
+community_5,Q97622,Siegfried Rauch,Actor,252
+community_5,Q3161448,James Tinling,Director,252
+community_5,Q36980,George Peppard,Actor,252
+community_5,Q276116,Ethel Griffies,Actor,252
+community_5,Q437034,Linda Cristal,Actor,252
+community_5,Q1520037,Separate Tables,Film,252
+community_5,dga_outstanding_directing_1981,dga_outstanding_directing,AwardEvent,252
+community_5,Q164487,Ava Gardner,Actor,252
+community_5,Q77566,Werner Klemperer,Actor,252
+community_5,Q421707,Jerry Orbach,Actor,252
+community_5,Q84679,Eric Pohlmann,Actor,252
+community_5,Q1621174,Mister Roberts,Film,252
+community_5,Q266313,Diane Baker,Actor,252
+community_5,Q434342,Richard Brooks,Director,252
+community_5,Q162518,How the West Was Won,Film,252
+community_5,Q196977,Witness for the Prosecution,Film,252
+community_5,Q1168227,The Secret of Santa Vittoria,Film,252
+community_5,Q317110,Gian Maria Volonte,Actor,252
+community_5,Q386917,Moses Znaimer,Actor,252
+community_5,Q309160,Alan Bates,Actor,252
+community_5,Q123688,Duke Kahanamoku,Actor,252
+community_5,Q275543,Virginia Christine,Actor,252
+community_5,Q104146,Deborah Kerr,Actor,252
+community_5,Q229338,Jean Arthur,Actor,252
+community_5,Q374045,Laurence Harvey,Actor,252
+community_5,Q94256,Gusti Huber,Actor,252
+community_5,Q364434,Ivan Jandl,Actor,252
+community_5,Q16297,Q16297,Actor,252
+community_5,dga_outstanding_directing_1951,dga_outstanding_directing,AwardEvent,252
+community_5,Q73136,Stanley Kramer,Director,252
+community_5,Q229276,Maureen O'Hara,Actor,252
+community_5,Q1122534,Mogambo,Film,252
+community_5,Q361670,John Sturges,Director,252
+community_5,Q51498,Robert Siodmak,Director,252
+community_5,Q219400,United Artists,Studio,252
+community_5,Q153332,Mae Marsh,Actor,252
+community_5,oscar_best_director_1956,oscar_best_director,AwardEvent,252
+community_5,Q1722631,In Cold Blood,Film,252
+community_5,Q217220,Patton,Film,252
+community_5,Q955708,Bruce Bennett,Actor,252
+community_5,Q14972,Bill Raisch,Actor,252
+community_5,Q1172062,Titanus,Studio,252
+community_5,Q193653,Jack Palance,Actor,252
+community_5,Q207588,From Here to Eternity,Film,252
+community_5,Q230563,Irene Papas,Actor,252
+community_5,Q315374,Michael Cacoyannis,Director,252
+community_5,Q5435430,The Caine Mutiny,Film,252
+community_5,Q45553,Robert J. Wilke,Actor,252
+community_5,Q70276,Karl-Otto Alberty,Actor,252
+community_5,Q289020,Lea Massari,Actor,252
+community_5,Q94992,Karl Malden,Actor,252
+community_5,Q228891,Yeardley Smith,Actor,252
+community_5,Q784181,Cyrano de Bergerac,Film,252
+community_5,Q1426269,The Ox-Bow Incident,Film,252
+community_5,Q1094020,City Slickers,Film,252
+community_5,palme_dor_1955,palme_dor,AwardEvent,252
+community_5,Q272994,Isabelle Collin Dufresne,Actor,252
+community_5,oscar_best_director_1947,oscar_best_director,AwardEvent,252
+community_5,Q43252,Sophia Loren,Actor,252
+community_5,Q245208,High Noon,Film,252
+community_5,Q230665,Jill Clayburgh,Actor,252
+community_5,Q86638,Friedrich von Ledebur,Actor,252
+community_5,Q356924,Yorgo Voyagis,Actor,252
+community_5,Q374945,Adriana Facchetti,Actor,252
+community_5,Q312878,John Carradine,Actor,252
+community_5,Q938137,Quo Vadis,Film,252
+community_5,Q1232912,A Double Life,Film,252
+community_5,Q224540,Duke R. Lee,Actor,252
+community_5,Q76895,Lee Marvin,Actor,252
+community_5,Q257756,Margaret Hamilton,Actor,252
+community_5,Q364083,Louis Jourdan,Actor,252
+community_5,Q16472,Robert Mitchum,Actor,252
+community_6,golden_lion_1993,golden_lion,AwardEvent,172
+community_6,Q40572,Heath Ledger,Actor,172
+community_6,golden_globe_comedy_2003,golden_globe_comedy,AwardEvent,172
+community_6,Q58065,David Kross,Actor,172
+community_6,Q3521099,The Grand Budapest Hotel,Film,172
+community_6,Q200841,Jim Caviezel,Actor,172
+community_6,Q236527,Maya Rudolph,Actor,172
+community_6,golden_bear_1999,golden_bear,AwardEvent,172
+community_6,Q949779,Melbourne,Studio,172
+community_6,Q1339579,John Robinson,Actor,172
+community_6,Q19864603,Manchester by the Sea,Film,172
+community_6,Q28493,Ralph Fiennes,Actor,172
+community_6,Q24357,Lyndsey Marshal,Actor,172
+community_6,Q38160,Waris Ahluwalia,Actor,172
+community_6,Q157044,The Hours,Film,172
+community_6,Q16205070,Matthew Tennyson,Actor,172
+community_6,Q215488,Lucas Grabeel,Actor,172
+community_6,Q36301,Anne Hathaway,Actor,172
+community_6,Q80938,John Travolta,Actor,172
+community_6,Q29250,Bill Murray,Actor,172
+community_6,Q31549,Brent Corrigan,Actor,172
+community_6,Q244257,The Tree of Life (film),Film,172
+community_6,Q897115,Brady Corbet,Director,172
+community_6,Q7752106,The Montecito Picture Company,Studio,172
+community_6,Q168721,Faye Dunaway,Actor,172
+community_6,Q2720543,James Marsh,Director,172
+community_6,Q17714,Stephen Hawking,Actor,172
+community_6,Q851515,Akira,Actor,172
+community_6,Q101112656,The Brutalist,Film,172
+community_6,Q235721,Jennifer Ehle,Actor,172
+community_6,Q662081,HBO Films,Studio,172
+community_6,Q55367,Zbigniew Zamachowski,Actor,172
+community_6,Q78791889,RP Productions,Studio,172
+community_6,Q122741016,Q122741016,Film,172
+community_6,Q86767,Erwin Leder,Actor,172
+community_6,Q43416,Keanu Reeves,Actor,172
+community_6,oscar_best_intl_feature_2005,oscar_best_intl_feature,AwardEvent,172
+community_6,Q313506,Stephen Daldry,Director,172
+community_6,Q1108255,Film4,Studio,172
+community_6,Q28310,Scott Adkins,Actor,172
+community_6,Q100706708,Babelsberg Film GmbH,Studio,172
+community_6,Q97500,Wanja Mues,Actor,172
+community_6,Q6187642,Jessie Buckley,Actor,172
+community_6,Q7158172,Pearl Street Films,Studio,172
+community_6,Q1322641,France 3,Studio,172
+community_6,Q66563,Claudia Jung,Actor,172
+community_6,Q270730,Casey Affleck,Actor,172
+community_6,Q28288,Eddie Redmayne,Actor,172
+community_6,Q62676,Götz Otto,Actor,172
+community_6,Q118393,Leonard Carow,Actor,172
+community_6,Q2702789,Relativity Media,Studio,172
+community_6,Q256395,Q256395,Actor,172
+community_6,golden_globe_drama_1975,golden_globe_drama,AwardEvent,172
+community_6,Q229535,Emily Watson,Actor,172
+community_6,Q18938,Thomas Jane,Actor,172
+community_6,Q29577693,Budapest Film,Studio,172
+community_6,Q234080,Diane Ladd,Actor,172
+community_6,Q78476123,Liberator Productions,Studio,172
+community_6,golden_globe_drama_2025,golden_globe_drama,AwardEvent,172
+community_6,golden_globe_drama_unknown,golden_globe_drama,AwardEvent,172
+community_6,Q3614056,American Empirical Pictures,Studio,172
+community_6,Q107270,Lost in Translation,Film,172
+community_6,Q215478,Terrence Malick,Director,172
+community_6,Q133730,Lars von Trier,Director,172
+community_6,oscar_best_director_2003,oscar_best_director,AwardEvent,172
+community_6,bafta_best_film_2005,bafta_best_film,AwardEvent,172
+community_6,Q102036245,Licorice Pizza,Film,172
+community_6,palme_dor_2003,palme_dor,AwardEvent,172
+community_6,Q55389,Maciej Kozłowski,Actor,172
+community_6,Q160392,Evangeline Lilly,Actor,172
+community_6,Q28234,Les Misérables,Film,172
+community_6,oscar_best_picture_2003,oscar_best_picture,AwardEvent,172
+community_6,oscar_best_director_1975,oscar_best_director,AwardEvent,172
+community_6,Q1032540,Canal+,Studio,172
+community_6,bafta_best_film_1993,bafta_best_film,AwardEvent,172
+community_6,Q212790,David Thewlis,Actor,172
+community_6,Q15079318,The Theory of Everything,Film,172
+community_6,Q78792088,Heritage Films,Studio,172
+community_6,oscar_best_picture_2006,oscar_best_picture,AwardEvent,172
+community_6,bafta_best_film_2004,bafta_best_film,AwardEvent,172
+community_6,Q129591,Q129591,Actor,172
+community_6,oscar_best_picture_2004,oscar_best_picture,AwardEvent,172
+community_6,Q4975132,Brookstreet Pictures,Studio,172
+community_6,Q644987,Chinatown,Film,172
+community_6,Q255268,Gretchen Mol,Actor,172
+community_6,Q64823,Florian Lukas,Actor,172
+community_6,Q201687,Milk,Film,172
+community_6,Q446089,Joanna Going,Actor,172
+community_6,golden_lion_unknown,golden_lion,AwardEvent,172
+community_6,Q968840,Kenneth Lonergan,Director,172
+community_6,Q160618,Brokeback Mountain,Film,172
+community_6,Q28755,Matthew Broderick,Actor,172
+community_6,Q350424,Alessandro Nivola,Actor,172
+community_6,bafta_best_film_2009,bafta_best_film,AwardEvent,172
+community_6,Q3992245,Tohokushinsha Film,Studio,172
+community_6,Q1163943,Elephant (2003 film),Film,172
+community_6,Q102450,Axel Prahl,Actor,172
+community_6,Q104514,Adrien Brody,Actor,172
+community_6,Q44221,Sean Penn,Actor,172
+community_6,Q51552,Roman Polanski,Actor,172
+community_6,Q234447,Felicity Jones,Actor,172
+community_6,Q313042,Stephen Rea,Actor,172
+community_6,Q106418,Catherine Deneuve,Actor,172
+community_6,Q25186,Gus Van Sant,Actor,172
+community_6,Q214223,Jason Isaacs,Actor,172
+community_6,Q191158,Zentropa,Studio,172
+community_6,Q5610650,Grosvenor Park Productions,Studio,172
+community_6,Q2748604,Film i Väst,Studio,172
+community_6,palme_dor_2002,palme_dor,AwardEvent,172
+community_6,Q152531,Zero Dark Thirty,Film,172
+community_6,Q435468,Jonathan Hyde,Actor,172
+community_6,Q1167725,The End of the Affair,Film,172
+community_6,Q55428,Neil Jordan,Director,172
+community_6,Q106514,River Phoenix,Actor,172
+community_6,Q218589,Q218589,Film,172
+community_6,Q159063,The Reader,Film,172
+community_6,Q302650,Tate Donovan,Actor,172
+community_6,Q295912,Tom Hooper,Director,172
+community_6,Q605226,Short Cuts,Film,172
+community_6,Q80405,Julianne Moore,Actor,172
+community_6,Q21078321,Chloé Zhao,Director,172
+community_6,Q223745,Guy Pearce,Actor,172
+community_6,Q183066,Q183066,Film,172
+community_6,Q483941,Q483941,Film,172
+community_6,golden_lion_2005,golden_lion,AwardEvent,172
+community_6,Q6520861,Leleti Khumalo,Actor,172
+community_6,Q715646,Alex Frost,Actor,172
+community_6,palme_dor_2011,palme_dor,AwardEvent,172
+community_6,Q296370,David Morse,Actor,172
+community_6,Q150804,The Pianist (2002 film),Film,172
+community_6,oscar_best_picture_1994,oscar_best_picture,AwardEvent,172
+community_6,Q85330,Maximilian Brückner,Actor,172
+community_6,Q77035,Udo Kier,Actor,172
+community_6,Q17415951,Indian Paintbrush,Studio,172
+community_6,Q97010,Rainer Bock,Actor,172
+community_6,Q223687,Wes Anderson,Director,172
+community_6,Q4275790,Elias McConnell,Actor,172
+community_6,Q221491,The Thin Red Line,Film,172
+community_6,Q156796,Michelle Williams,Actor,172
+community_6,Q78792108,Runteam Productions,Studio,172
+community_6,Q1416899,Fine Line Features,Studio,172
+community_6,Q273788,Édgar Ramírez,Actor,172
+community_6,Q1679545,Yesterday,Film,172
+community_6,Q63967,Matthias Habich,Actor,172
+community_6,Q861494,Matt Malloy,Actor,172
+community_6,Q4491,Anna Faris,Actor,172
+community_6,Q3368732,Pathé Distribution,Studio,172
+community_6,Q100706048,Company of Wolves,Studio,172
+community_6,golden_lion_1991,golden_lion,AwardEvent,172
+community_6,Q61099,Karoline Herfurth,Actor,172
+community_6,Q336486,Ian Hart,Actor,172
+community_6,Q649649,Focus Features,Studio,172
+community_6,Q1125451,My Own Private Idaho,Film,172
+community_6,Q42455,Björk,Actor,172
+community_6,Q705676,Babelsberg Studio,Studio,172
+community_6,Q229313,Jessica Chastain,Actor,172
+community_6,palme_dor_2000,palme_dor,AwardEvent,172
+community_6,Q1305044,Timothy Bottoms,Actor,172
+community_6,golden_globe_drama_2008,golden_globe_drama,AwardEvent,172
+community_6,oscar_best_picture_2009,oscar_best_picture,AwardEvent,172
+community_6,Q5582745,Good Machine,Studio,172
+community_6,Q16231541,Jack Shalloo,Actor,172
+community_6,Q34816,Kathryn Bigelow,Director,172
+community_6,Q16672882,River Road Entertainment,Studio,172
+community_6,Q110365,Dancer in the Dark,Film,172
+community_6,oscar_best_director_2009,oscar_best_director,AwardEvent,172
+community_6,golden_globe_drama_1999,golden_globe_drama,AwardEvent,172
+community_6,Q3016485,Darrell Roodt,Director,172
+community_6,Q78475820,Trust Film Svenska,Studio,172
+community_6,Q24632,John Barrowman,Actor,172
+community_6,Q5241188,David Wilmot,Actor,172
+community_6,Q57614,Thomas Kretschmann,Actor,172
+community_7,Q240872,Lawrence Kasdan,Director,171
+community_7,Q131380,Kim Basinger,Actor,171
+community_7,Q105825,William Hurt,Actor,171
+community_7,Q1125282,Man on the Moon,Film,171
+community_7,Q202725,Mia Farrow,Actor,171
+community_7,Q229034,Edie Falco,Actor,171
+community_7,Q297816,Sammy Davis Jr.,Actor,171
+community_7,Q229197,Lisa Edelstein,Actor,171
+community_7,Q229957,Mary-Louise Parker,Actor,171
+community_7,oscar_best_picture_1990,oscar_best_picture,AwardEvent,171
+community_7,Q1004531,Bullets Over Broadway,Film,171
+community_7,Q40337,Sandra Oh,Actor,171
+community_7,Q538608,Héctor Babenco,Director,171
+community_7,Q1387617,Phil Alden Robinson,Director,171
+community_7,Q21729773,Fantasy Films Productions,Studio,171
+community_7,oscar_best_director_1990,oscar_best_director,AwardEvent,171
+community_7,Q221594,As Good as It Gets,Film,171
+community_7,golden_globe_comedy_1996,golden_globe_comedy,AwardEvent,171
+community_7,Q182372,Louise Fletcher,Actor,171
+community_7,Q675937,Sideways,Film,171
+community_7,Q313566,Alexander Payne,Director,171
+community_7,Q325082,Charles Rocket,Actor,171
+community_7,Q210148,Peter Fonda,Actor,171
+community_7,Q891732,Orion Pictures,Studio,171
+community_7,Q238993,Sônia Braga,Actor,171
+community_7,Q217573,Dianne Wiest,Actor,171
+community_7,Q113069,Dan Haggerty,Actor,171
+community_7,Q238327,Lois Chiles,Actor,171
+community_7,Q233464,Annie Hall,Film,171
+community_7,Q228650,Geraldine Page,Actor,171
+community_7,Q214801,The Truman Show,Film,171
+community_7,Q228725,Cynthia Nixon,Actor,171
+community_7,golden_bear_1997,golden_bear,AwardEvent,171
+community_7,Q1992112,Nildo Parente,Actor,171
+community_7,Q40504,Jim Carrey,Actor,171
+community_7,Q202056,Hank Azaria,Actor,171
+community_7,Q39792,Jack Nicholson,Actor,171
+community_7,Q1542548,Grand Canyon,Film,171
+community_7,golden_globe_drama_1984,golden_globe_drama,AwardEvent,171
+community_7,Q102711,Dennis Hopper,Actor,171
+community_7,Q206124,Midnight in Paris,Film,171
+community_7,Q203960,James Earl Jones,Actor,171
+community_7,Q845057,Hannah and Her Sisters,Film,171
+community_7,Q118116,Dexter Gordon,Actor,171
+community_7,Q750077,The People vs. Larry Flynt,Film,171
+community_7,oscar_best_picture_1978,oscar_best_picture,AwardEvent,171
+community_7,Q339876,L.A. Confidential,Film,171
+community_7,Q169889,American Broadcasting Company,Studio,171
+community_7,Q273497,Debra Mooney,Actor,171
+community_7,golden_globe_comedy_1999,golden_globe_comedy,AwardEvent,171
+community_7,Q106706,Jeff Goldblum,Actor,171
+community_7,Q202449,David Ogden Stiers,Actor,171
+community_7,Q112973,Sandy Baron,Actor,171
+community_7,golden_bear_1992,golden_bear,AwardEvent,171
+community_7,Q208649,Paul Giamatti,Actor,171
+community_7,oscar_best_director_1986,oscar_best_director,AwardEvent,171
+community_7,Q109324,Christopher Lloyd,Actor,171
+community_7,Q242763,Melora Walters,Actor,171
+community_7,Q17738,Star Wars: Episode IV – A New Hope,Film,171
+community_7,Q83338,Robin Williams,Actor,171
+community_7,Q1506909,Gracie Films,Studio,171
+community_7,Q1215865,Kiss of the Spider Woman,Film,171
+community_7,Q105817,Kevin Kline,Actor,171
+community_7,Q185071,Terms of Endearment,Film,171
+community_7,Q299314,Danny Aiello,Actor,171
+community_7,Q214677,Nora Ephron,Actor,171
+community_7,Q357001,Bruce Dern,Actor,171
+community_7,Q460664,Prizzi's Honor,Film,171
+community_7,sag_outstanding_cast_1997,sag_outstanding_cast,AwardEvent,171
+community_7,Q51525,Miloš Forman,Director,171
+community_7,bafta_best_film_1990,bafta_best_film,AwardEvent,171
+community_7,Q276425,Billy Boyd,Actor,171
+community_7,Q4028,Paul Simon,Actor,171
+community_7,Q108941,Carrie Fisher,Actor,171
+community_7,golden_bear_2000,golden_bear,AwardEvent,171
+community_7,Q315039,Tom Hulce,Actor,171
+community_7,Q2829696,Alain Cuniot,Director,171
+community_7,Q311615,Thomas Haden Church,Actor,171
+community_7,Q1198794,The Big Chill,Film,171
+community_7,Q496241,José Lewgoy,Actor,171
+community_7,Q161916,Owen Wilson,Actor,171
+community_7,Q1125384,Q1125384,Film,171
+community_7,oscar_best_director_2004,oscar_best_director,AwardEvent,171
+community_7,Q317228,Kurtwood Smith,Actor,171
+community_7,Q187545,Tantoo Cardinal,Actor,171
+community_7,Q223839,Larry Flynt,Actor,171
+community_7,Q25089,Woody Allen,Actor,171
+community_7,Q436638,Van Johnson,Actor,171
+community_7,Q170574,Helen Hunt,Actor,171
+community_7,Q1539062,Broadcast News,Film,171
+community_7,Q5046954,Carson Entertainment,Studio,171
+community_7,Q2429494,Television of Catalonia,Studio,171
+community_7,Q143945,Carla Bruni,Actor,171
+community_7,Q130549,Tracey Ullman,Actor,171
+community_7,Q192021,Simon Baker,Actor,171
+community_7,oscar_best_director_1998,oscar_best_director,AwardEvent,171
+community_7,dga_outstanding_directing_1969,dga_outstanding_directing,AwardEvent,171
+community_7,Q143369,Alice Drummond,Actor,171
+community_7,Q193160,Robert Sean Leonard,Actor,171
+community_7,pga_best_theatrical_2004,pga_best_theatrical,AwardEvent,171
+community_7,Q317654,Raul Julia,Actor,171
+community_7,Q171669,Q171669,Film,171
+community_7,Q315090,Stacy Keach,Actor,171
+community_7,Q213793,Phil Spector,Actor,171
+community_7,Q1160005,Q1160005,Film,171
+community_7,Q190998,Anjelica Huston,Actor,171
+community_7,Q207596,Daryl Hannah,Actor,171
+community_7,Q180252,Lewis Black,Actor,171
+community_7,Q181936,F. Murray Abraham,Actor,171
+community_7,Q651454,TriStar Pictures,Studio,171
+community_7,Q105660,Holly Hunter,Actor,171
+community_7,Q237659,Penny Marshall,Director,171
+community_7,Q189729,Philip Glass,Actor,171
+community_7,Q1643954,Majestic Films International,Studio,171
+community_7,Q123351,Michael Caine,Actor,171
+community_7,Q284876,Sam Waterston,Actor,171
+community_7,Q190956,Amadeus,Film,171
+community_7,Q3337646,Nebraska,Film,171
+community_7,Q313462,Joseph Morgan,Actor,171
+community_7,Q1319744,Will Forte,Actor,171
+community_7,Q729026,Broadway Danny Rose,Film,171
+community_7,Q4732569,Allied Filmmakers,Studio,171
+community_7,Q3100842,Mediapro,Studio,171
+community_7,Q178166,Vin Diesel,Actor,171
+community_7,bafta_best_film_1976,bafta_best_film,AwardEvent,171
+community_7,Q16473,Steve Martin,Actor,171
+community_7,Q181555,Crimes and Misdemeanors,Film,171
+community_7,Q520144,Devin Ratray,Actor,171
+community_7,Q132058,Jon Kasdan,Actor,171
+community_7,oscar_best_director_2012,oscar_best_director,AwardEvent,171
+community_7,Q503638,Easy Rider,Film,171
+community_7,Q888178,Bob Odenkirk,Actor,171
+community_7,Q106175,John Cusack,Actor,171
+community_7,Q122950110,Jack Rollins & Charles H. Joffe Productions,Studio,171
+community_7,Q517958,Field of Dreams,Film,171
+community_7,Q3177524,Jersey Films,Studio,171
+community_7,Q2384316,Tig Productions,Studio,171
+community_7,Q106316,Q106316,Film,171
+community_7,Q912729,The Purple Rose of Cairo,Film,171
+community_7,Q961403,Interiors,Film,171
+community_7,Q117500,Mary McDonnell,Actor,171
+community_7,Q25144,Kevin Spacey,Actor,171
+community_7,Q164328,David Koechner,Actor,171
+community_7,Q55424,Peter Weir,Director,171
+community_7,Q222008,Kathleen Turner,Actor,171
+community_7,Q65533,Dana Vávrová,Actor,171
+community_7,Q971446,BBC Film,Studio,171
+community_7,Q3010012,Samuel Goldwyn Films,Studio,171
+community_7,Q263486,Curtis Hanson,Director,171
+community_7,Q842073,Q842073,Film,171
+community_7,Q95125,James L. Brooks,Director,171
+community_7,Q16056309,Embrafilme,Studio,171
+community_7,Q129817,Russell Crowe,Actor,171
+community_7,Q229784,Virginia Madsen,Actor,171
+community_7,Q236705,Meg Tilly,Actor,171
+community_7,Q185079,Jim Broadbent,Actor,171
+community_7,Q119966,Patrick Gallagher,Actor,171
+community_7,Q248289,The Accidental Tourist,Film,171
+community_7,Q540590,Mutual Film Corporation,Studio,171
+community_7,Q333190,Vincent Schiavelli,Actor,171
+community_7,golden_globe_drama_2003,golden_globe_drama,AwardEvent,171
+community_7,Q26806,Danny DeVito,Actor,171
+community_7,Q8927,Marion Cotillard,Actor,171
+community_7,Q242707,Paul Bettany,Actor,171
+community_7,Q271460,Mary Beth Hurt,Actor,171
+community_7,oscar_best_picture_1986,oscar_best_picture,AwardEvent,171
+community_7,Q223281,Laura Linney,Actor,171
+community_7,Q11930,Kevin Costner,Actor,171
+community_7,Q11887890,Phoenix Pictures,Studio,171
+community_7,Q20456,Dances with Wolves,Film,171
+community_7,Q311169,Graham Greene,Actor,171
+community_8,Q230188,Olympia Dukakis,Actor,162
+community_8,Q8016302,Warner Bros. Pictures,Studio,162
+community_8,Q309592,Greg Grunberg,Actor,162
+community_8,Q117085614,Q117085614,Film,162
+community_8,Q173637,Ice Cube,Actor,162
+community_8,Q269692,Barry Levinson,Actor,162
+community_8,Q206922,Andy Serkis,Actor,162
+community_8,Q182763,Forest Whitaker,Actor,162
+community_8,Q53120,Dylan McDermott,Actor,162
+community_8,Q329131,Jerry Maguire,Film,162
+community_8,Q262862,Laura Ramsey,Actor,162
+community_8,Q49001,Whoopi Goldberg,Actor,162
+community_8,Q40096,Will Smith,Actor,162
+community_8,Q130296939,Blacksmith,Studio,162
+community_8,Q155378,Jim Beaver,Actor,162
+community_8,Q353501,Rob Marshall,Director,162
+community_8,Q4863766,Barris Industries,Studio,162
+community_8,Q220955,Erin Brockovich,Film,162
+community_8,Q37079,Tom Cruise,Actor,162
+community_8,golden_lion_2010,golden_lion,AwardEvent,162
+community_8,Q258246,Lois Smith,Actor,162
+community_8,Q1336107,Moonstruck,Film,162
+community_8,oscar_best_picture_2026,oscar_best_picture,AwardEvent,162
+community_8,Q4827381,Ava DuVernay,Director,162
+community_8,Q40523,Julia Roberts,Actor,162
+community_8,Q4879144,Bedford Falls Productions,Studio,162
+community_8,Q896103,Boyz n the Hood,Film,162
+community_8,Q710131,Mike Figgis,Director,162
+community_8,Q162578,Holly Marie Combs,Actor,162
+community_8,Q280918,Leaving Las Vegas,Film,162
+community_8,palme_dor_1989,palme_dor,AwardEvent,162
+community_8,Q7298403,Raybert Productions,Studio,162
+community_8,Q208558,Andie MacDowell,Actor,162
+community_8,Q133861009,Proximity Media,Studio,162
+community_8,Q1073959,Kirk Wise,Director,162
+community_8,Q192643,Aaron Eckhart,Actor,162
+community_8,Q49004,Patrick Swayze,Actor,162
+community_8,Q273075,Robin Bartlett,Actor,162
+community_8,Q84203429,King Richard,Film,162
+community_8,Q51814,Dale Dye,Actor,162
+community_8,Q7893586,United Talent Agency,Agency,162
+community_8,Q103946,Kiefer Sutherland,Actor,162
+community_8,Q60837652,Coralie Fargeat,Director,162
+community_8,Q241085,Bugsy,Film,162
+community_8,Q232120,Angela Bassett,Actor,162
+community_8,dga_outstanding_directing_2000,dga_outstanding_directing,AwardEvent,162
+community_8,Q269212,Nathaniel Arcand,Actor,162
+community_8,Q7383978,Ryan Coogler,Director,162
+community_8,Q693730,Mubi,Studio,162
+community_8,Q17335612,Vinyl Films,Studio,162
+community_8,Q39972,Ed Lauter,Actor,162
+community_8,Q345259,Steven Brill,Actor,162
+community_8,Q261796,Erin Cummings,Actor,162
+community_8,Q48410,Richard Gere,Actor,162
+community_8,Q122127,Michael Bond,Actor,162
+community_8,Q471159,Born on the Fourth of July,Film,162
+community_8,Q125106,Salma Hayek,Actor,162
+community_8,oscar_best_director_1988,oscar_best_director,AwardEvent,162
+community_8,Q235141,Regina Hall,Actor,162
+community_8,golden_globe_drama_1992,golden_globe_drama,AwardEvent,162
+community_8,Q1367548,"Sex, Lies, and Videotape",Film,162
+community_8,Q87336,Stefan Schnabel,Actor,162
+community_8,Q175392,Akosua Busia,Actor,162
+community_8,Q43044,Demi Moore,Actor,162
+community_8,Q228943,Elle Fanning,Actor,162
+community_8,oscar_best_director_2001,oscar_best_director,AwardEvent,162
+community_8,Q72077,Ellie Kemper,Actor,162
+community_8,golden_globe_drama_1970,golden_globe_drama,AwardEvent,162
+community_8,Q1152051,Gary Trousdale,Director,162
+community_8,Q179673,Beauty and the Beast,Film,162
+community_8,Q505135,Green Card,Film,162
+community_8,Q309486,Martin Freeman,Actor,162
+community_8,Q173158,Ben Kingsley,Actor,162
+community_8,golden_globe_comedy_unknown,golden_globe_comedy,AwardEvent,162
+community_8,Q271635,Beth Grant,Actor,162
+community_8,Q193048,Laurence Fishburne,Actor,162
+community_8,Q190643,Platoon,Film,162
+community_8,Q230199,Anne Archer,Actor,162
+community_8,Q103939,Charlie Sheen,Actor,162
+community_8,Q189889,Q189889,Film,162
+community_8,Q231726,Hailee Steinfeld,Actor,162
+community_8,golden_bear_1989,golden_bear,AwardEvent,162
+community_8,Q23780734,Black Panther,Film,162
+community_8,Q4227,James Coburn,Actor,162
+community_8,Q142292,Q142292,Film,162
+community_8,Q363666,Jerry Zucker,Director,162
+community_8,Q193628,Sofia Coppola,Director,162
+community_8,oscar_best_picture_1991,oscar_best_picture,AwardEvent,162
+community_8,Q188845,Rain Man,Film,162
+community_8,Q348066,Jack O'Connell,Actor,162
+community_8,Q6184876,Jersey Group,Studio,162
+community_8,Q27044648,Reinaldo Marcus Green,Director,162
+community_8,Q224754,Tony Goldwyn,Actor,162
+community_8,Q203804,Tim Roth,Actor,162
+community_8,Q288680,Omar Benson Miller,Actor,162
+community_8,Q232333,Karen Black,Actor,162
+community_8,Q232985,Bebe Neuwirth,Actor,162
+community_8,Q73362,Benjamin Bratt,Actor,162
+community_8,Q42869,Nicolas Cage,Actor,162
+community_8,Q7352433,Robin Greer,Actor,162
+community_8,oscar_best_picture_1988,oscar_best_picture,AwardEvent,162
+community_8,Q181900,Stan Lee,Actor,162
+community_8,oscar_best_director_1992,oscar_best_director,AwardEvent,162
+community_8,Q229577,Marg Helgenberger,Actor,162
+community_8,Q309900,Peter Gallagher,Actor,162
+community_8,Q229112,Michelle Monaghan,Actor,162
+community_8,Q231717,Emily Procter,Actor,162
+community_8,Q119798,Michael Douglas,Actor,162
+community_8,Q296928,James Spader,Actor,162
+community_8,Q1116991,Five Easy Pieces,Film,162
+community_8,Q314208,Buddy Guy,Actor,162
+community_8,Q17346715,Baltimore Pictures,Studio,162
+community_8,Q122614,Renée Zellweger,Actor,162
+community_8,Q615141,Outlaw Productions,Studio,162
+community_8,Q179497,Oliver Stone,Actor,162
+community_8,Q230268,Jane Krakowski,Actor,162
+community_8,Q504157,Fatal Attraction,Film,162
+community_8,Q259441,Sally Struthers,Actor,162
+community_8,oscar_best_picture_1992,oscar_best_picture,AwardEvent,162
+community_8,Q136209,Cuba Gooding Jr.,Actor,162
+community_8,Q741823,JFK,Film,162
+community_8,Q318287,Cameron Crowe,Director,162
+community_8,Q17183770,Selma,Film,162
+community_8,Q220308,Seth Rogen,Actor,162
+community_8,Q367466,Marvel Studios,Studio,162
+community_8,Q3002407,Creative Artists Agency,Agency,162
+community_8,Q113380226,The Substance,Film,162
+community_8,Q3675641,Christian Erickson,Actor,162
+community_8,Q1551573,The Player,Film,162
+community_8,Q373474,Adrian Lyne,Director,162
+community_8,Q363005,John Singleton,Director,162
+community_8,Q3299723,Matthew Géczy,Actor,162
+community_8,Q188375,Lucy Liu,Actor,162
+community_8,oscar_best_picture_2001,oscar_best_picture,AwardEvent,162
+community_8,Q1047410,Walt Disney Animation Studios,Studio,162
+community_8,Q108946,A Few Good Men,Film,162
+community_8,Q1338368,Somewhere,Film,162
+community_8,golden_globe_drama_1986,golden_globe_drama,AwardEvent,162
+community_8,Q223299,Q223299,Film,162
+community_8,Q125473145,Sinners,Film,162
+community_8,Q141619,Tyra Ferrell,Actor,162
+community_8,Q1412037,Silkwood,Film,162
+community_8,Q287607,Rob Reiner,Director,162
+community_8,Q207852,Elisabeth Shue,Actor,162
+community_8,Q3784765,Hemdale films,Studio,162
+community_8,Q103917,Steven Soderbergh,Director,162
+community_8,Q223110,John C. Reilly,Actor,162
+community_8,Q37175,Johnny Depp,Actor,162
+community_8,Q242889,Toni Basil,Actor,162
+community_8,Q362616,Jon Bernthal,Actor,162
+community_8,Q49003,Q49003,Film,162
+community_8,Q232019,Erin Brockovich,Actor,162
+community_8,Q234220,Laura San Giacomo,Actor,162
+community_8,Q12003,Cher,Actor,162
+community_8,Q222833,Fred Gwynne,Actor,162
+community_8,Q60422,Joshua Malina,Actor,162
+community_8,Q95039,Bob Rafelson,Actor,162
+community_8,Q193668,Benicio del Toro,Actor,162
+community_8,Q219546,Albert Finney,Actor,162
+community_8,Q230710,Valeria Golino,Actor,162
+community_8,Q55800,Oprah Winfrey,Actor,162
+community_8,Q47664,Catherine Zeta-Jones,Actor,162
+community_9,Q211322,Tom Wilkinson,Actor,153
+community_9,Q67469,Wolf Kahler,Actor,153
+community_9,golden_bear_1994,golden_bear,AwardEvent,153
+community_9,Q357627,Pete Docter,Director,153
+community_9,Q245648,Camilla Rutherford,Actor,153
+community_9,golden_lion_2025,golden_lion,AwardEvent,153
+community_9,Q3604746,Q3604746,Film,153
+community_9,Q91329074,Redwave Films,Studio,153
+community_9,Q184805,Tom Waits,Actor,153
+community_9,Q107710009,Q107710009,Film,153
+community_9,Q356986,Levon Helm,Actor,153
+community_9,Q124364048,Father Mother Sister Brother,Film,153
+community_9,Q363659,Bryan Brown,Actor,153
+community_9,Q102124,Sigourney Weaver,Actor,153
+community_9,Q82085,Sam Worthington,Actor,153
+community_9,Q114179,Scott Glenn,Actor,153
+community_9,Q1005887,Fórum Hungary,Studio,153
+community_9,Q82430214,Nightmare Alley,Film,153
+community_9,Q108935,Mary Steenburgen,Actor,153
+community_9,oscar_best_director_2010,oscar_best_director,AwardEvent,153
+community_9,Q163286,Hugh Grant,Actor,153
+community_9,Q190162,Zoe Saldaña,Actor,153
+community_9,Q42204,Q42204,Actor,153
+community_9,Q3634702,Reliance Entertainment,Studio,153
+community_9,Q230113,Gabourey Sidibe,Actor,153
+community_9,Q174311,Christopher Reeve,Actor,153
+community_9,pga_best_theatrical_1998,pga_best_theatrical,AwardEvent,153
+community_9,Q42574,Q42574,Actor,153
+community_9,Q174811,Up,Film,153
+community_9,Q312712,Mark Strong,Actor,153
+community_9,Q775450,Lightstorm Entertainment,Studio,153
+community_9,Q236708,Julie Harris,Actor,153
+community_9,Q201819,District 9,Film,153
+community_9,Q44578,Titanic,Film,153
+community_9,Q775970,The Full Monty,Film,153
+community_9,Q168724,Emma Thompson,Actor,153
+community_9,Q41351,Jodie Foster,Actor,153
+community_9,dga_outstanding_directing_1991,dga_outstanding_directing,AwardEvent,153
+community_9,Q314892,Ciarán Hinds,Actor,153
+community_9,Q40299,Nelsan Ellis,Actor,153
+community_9,Q16455,John Rhys-Davies,Actor,153
+community_9,Q1285467,Coal Miner's Daughter,Film,153
+community_9,Q184219,Michelle Rodriguez,Actor,153
+community_9,Q2522116,Vicky Krieps,Actor,153
+community_9,Q3809639,John Sumner,Actor,153
+community_9,Q61238,Nina Hoss,Actor,153
+community_9,Q499644,Julian Glover,Actor,153
+community_9,Q24871,Q24871,Film,153
+community_9,Q740682,Bob Peterson,Director,153
+community_9,Q170587,Tommy Lee Jones,Actor,153
+community_9,oscar_best_picture_2002,oscar_best_picture,AwardEvent,153
+community_9,dga_outstanding_directing_2026,dga_outstanding_directing,AwardEvent,153
+community_9,Q133654,The Silence of the Lambs,Film,153
+community_9,Q89552,Danny Nucci,Actor,153
+community_9,Q229137,Karen Allen,Actor,153
+community_9,Q151945,In the Bedroom,Film,153
+community_9,Q166389,Daniel Day-Lewis,Actor,153
+community_9,Q21043034,Universal Subscription,Studio,153
+community_9,Q371430,Iain Glen,Actor,153
+community_9,Q229169,Mo'Nique,Actor,153
+community_9,Q242446,Lucasfilm,Studio,153
+community_9,Q588420,Magnolia,Film,153
+community_9,Q80966,Cate Blanchett,Actor,153
+community_9,Q1966424,Nathalie Boltt,Actor,153
+community_9,oscar_best_picture_2010,oscar_best_picture,AwardEvent,153
+community_9,Q2639828,Tate Taylor,Director,153
+community_9,Q350717,Michael Apted,Director,153
+community_9,Q191755,Jim Jarmusch,Director,153
+community_9,golden_bear_1996,golden_bear,AwardEvent,153
+community_9,Q721195,Kevin J. O'Connor,Actor,153
+community_9,Q1372770,William Sanderson,Actor,153
+community_9,Q65932,Anthony Hopkins,Actor,153
+community_9,oscar_best_director_1994,oscar_best_director,AwardEvent,153
+community_9,Q41076,Mariah Carey,Actor,153
+community_9,Q49017,Hugh Laurie,Actor,153
+community_9,Q190994,Sissy Spacek,Actor,153
+community_9,Q217137,Pete Postlethwaite,Actor,153
+community_9,Q231093,Mayim Bialik,Actor,153
+community_9,Q289931,Celia Weston,Actor,153
+community_9,Q244315,Q244315,Film,153
+community_9,Q17371327,Lee Daniels Entertainment,Studio,153
+community_9,Q925680,Jed Brophy,Actor,153
+community_9,Q270622,Harriet Sansom Harris,Actor,153
+community_9,Q2059493,Paul F. Tompkins,Actor,153
+community_9,Q55429,Jim Sheridan,Director,153
+community_9,Q48987,Jonathan Demme,Director,153
+community_9,Q646968,Ingenious Media,Studio,153
+community_9,oscar_best_director_2026,oscar_best_director,AwardEvent,153
+community_9,Q4465,Peter Jackson,Actor,153
+community_9,Q343616,Paul Dano,Actor,153
+community_9,Q51577,James Ivory,Director,153
+community_9,Q2647961,Allan Corduner,Actor,153
+community_9,Q51511,George A. Romero,Actor,153
+community_9,Q106481,Alan Rickman,Actor,153
+community_9,Q86682687,Walt Disney Studios Sony Pictures Releasing,Studio,153
+community_9,Q131074,Q131074,Film,153
+community_9,Q3569323,WingNut Films,Studio,153
+community_9,oscar_best_picture_1982,oscar_best_picture,AwardEvent,153
+community_9,Q234679,Charlotte Rampling,Actor,153
+community_9,Q257293,Gina McKee,Actor,153
+community_9,oscar_best_picture_2022,oscar_best_picture,AwardEvent,153
+community_9,Q40122,Mike Vogel,Actor,153
+community_9,Q25132,Paul Thomas Anderson,Director,153
+community_9,Q512353,Sharlto Copley,Actor,153
+community_9,Q555460,Lee Daniels,Director,153
+community_9,bafta_best_film_2002,bafta_best_film,AwardEvent,153
+community_9,Q194032,Debra Wilson,Actor,153
+community_9,Q28871365,Cirko Film,Studio,153
+community_9,Q444410,Lesley Manville,Actor,153
+community_9,Q5371838,Fandango,Studio,153
+community_9,golden_globe_drama_1988,golden_globe_drama,AwardEvent,153
+community_9,Q127367,Q127367,Film,153
+community_9,Q28840386,Phantom Thread,Film,153
+community_9,Q304074,In the Name of the Father,Film,153
+community_9,Q207307,Robert Carlyle,Actor,153
+community_9,Q232419,Saffron Burrows,Actor,153
+community_9,Q108649516,Tár,Film,153
+community_9,Q2994941,Constantin Alexandrov,Actor,153
+community_9,Q174284,Q174284,Film,153
+community_9,Q5235554,David James,Actor,153
+community_9,oscar_best_picture_2023,oscar_best_picture,AwardEvent,153
+community_9,golden_globe_drama_2010,golden_globe_drama,AwardEvent,153
+community_9,Q1891982,Nordisk Film,Studio,153
+community_9,Q233213,Paula Patton,Actor,153
+community_9,Q2407366,Merchant Ivory Productions,Studio,153
+community_9,Q643263,Sense and Sensibility,Film,153
+community_9,Q670296,Todd Field,Director,153
+community_9,Q79202,New Line Cinema,Studio,153
+community_9,Q18153385,QED International,Studio,153
+community_9,Q531629,Emily Woof,Actor,153
+community_9,Q235725,Brooke Smith,Actor,153
+community_9,golden_globe_drama_2023,golden_globe_drama,AwardEvent,153
+community_9,Q234551,Beverly D'Angelo,Actor,153
+community_9,dga_outstanding_directing_2009,dga_outstanding_directing,AwardEvent,153
+community_9,Q458252,Lesley Sharp,Actor,153
+community_9,Q202765,Kate Winslet,Actor,153
+community_9,Q110374,Bill Paxton,Actor,153
+community_9,Q2012913,Harpo Productions,Studio,153
+community_9,Q224081,Giovanni Ribisi,Actor,153
+community_9,Q78158792,Hell's Kitchen Productions,Studio,153
+community_9,Q715838,Neill Blomkamp,Director,153
+community_9,Q1241761,Peter Cattaneo,Director,153
+community_9,Q204374,The Help,Film,153
+community_9,Q180224,Lenny Kravitz,Actor,153
+community_9,Q127552,Pixar,Studio,153
+community_9,Q269331,Precious,Film,153
+community_9,Q164963,Q164963,Film,153
+community_9,Q1625242,Q1625242,Film,153
+community_9,Q44467,Orlando Bloom,Actor,153
+community_9,Q342430,Mark Addy,Actor,153
+community_9,Q22079339,Amblin Partners,Studio,153
+community_9,Q1012216,Gorillas in the Mist,Film,153
+community_9,Q260528,British Film Institute,Studio,153
+community_10,Q232588,Miyoshi Umeki,Actor,131
+community_10,Q232109,Mary Astor,Actor,131
+community_10,Q189407,Gloria Stuart,Actor,131
+community_10,Q206113,Patric Knowles,Actor,131
+community_10,Q918769,Extremely Loud and Incredibly Close,Film,131
+community_10,Q979726,Mildred Pierce,Film,131
+community_10,Q505141,Joshua Logan,Director,131
+community_10,Q42047,Q42047,Film,131
+community_10,Q93188,Errol Flynn,Actor,131
+community_10,Q83359,James Dean,Actor,131
+community_10,Q965379,Robert Morley,Actor,131
+community_10,Q382545,Alfonso Bedoya,Actor,131
+community_10,Q61552,Walter Gotell,Actor,131
+community_10,Q1425815,Captain Blood,Film,131
+community_10,Q3431326,Richard Whorf,Actor,131
+community_10,Q1321622,Yankee Doodle Dandy,Film,131
+community_10,Q3565697,Walter Brooke,Actor,131
+community_10,Q963435,One Foot in Heaven,Film,131
+community_10,oscar_best_director_1965,oscar_best_director,AwardEvent,131
+community_10,Q336865,Basil Rathbone,Actor,131
+community_10,Q618616,George Bancroft,Actor,131
+community_10,Q583525,Here Comes Mr. Jordan,Film,131
+community_10,Q366956,Robert Montgomery,Actor,131
+community_10,Q726398,James Gleason,Actor,131
+community_10,Q44662,42nd Street,Film,131
+community_10,Q1171247,Hold Back the Dawn,Film,131
+community_10,bafta_best_film_1956,bafta_best_film,AwardEvent,131
+community_10,Q1602612,"All This, and Heaven Too",Film,131
+community_10,Q108510,James Garner,Actor,131
+community_10,Q186798,Billy Gilbert,Actor,131
+community_10,Q156309,The Fugitive,Film,131
+community_10,golden_globe_drama_1956,golden_globe_drama,AwardEvent,131
+community_10,Q614864,Sayonara,Film,131
+community_10,Q1790788,Pat O'Brien,Actor,131
+community_10,Q16970789,American Sniper,Film,131
+community_10,Q78505,Peter Lorre,Actor,131
+community_10,Q2092903,William Keighley,Director,131
+community_10,Q94041,James Cagney,Actor,131
+community_10,Q174315,Aisling O'Sullivan,Actor,131
+community_10,Q318734,Claude Rains,Actor,131
+community_10,oscar_best_director_1939,oscar_best_director,AwardEvent,131
+community_10,Q215721,Theodore Bikel,Actor,131
+community_10,Q201234,The Adventures of Robin Hood,Film,131
+community_10,Q191224,Walt Disney Pictures,Studio,131
+community_10,Q706678,Lloyd Bacon,Director,131
+community_10,Q1305647,Anthony Adverse,Film,131
+community_10,Q949642,Flirtation Walk,Film,131
+community_10,golden_lion_1996,golden_lion,AwardEvent,131
+community_10,Q184378,Rock Hudson,Actor,131
+community_10,Q66479,Curt Bois,Actor,131
+community_10,Q276130,Mitchell Leisen,Director,131
+community_10,Q255808,Maria Ouspenskaya,Actor,131
+community_10,Q70692,Paul Panzer,Actor,131
+community_10,Q508226,Coral Browne,Actor,131
+community_10,Q109116,The Great Dictator,Film,131
+community_10,Q1395728,Fanny,Film,131
+community_10,Q259600,May Robson,Actor,131
+community_10,Q384397,The African Queen,Film,131
+community_10,Q238895,Carolyn Jones,Actor,131
+community_10,Q467968,Mary Gordon,Actor,131
+community_10,Q435778,Lane Sisters,Actor,131
+community_10,Q126399,Warner Bros. Entertainment,Studio,131
+community_10,Q287977,Dick Powell,Actor,131
+community_10,Q725060,Robert Stevenson,Director,131
+community_10,Q323243,Irving Rapper,Director,131
+community_10,Q458513,Emma Dunn,Actor,131
+community_10,Q7736023,The Geffen Film Company,Studio,131
+community_10,Q236394,Martha Scott,Actor,131
+community_10,Q1620069,Love Affair,Film,131
+community_10,Q3555709,Vera Lewis,Actor,131
+community_10,Q524997,Angels with Dirty Faces,Film,131
+community_10,Q275587,Patricia Owens,Actor,131
+community_10,Q433583,Jane Randolph,Actor,131
+community_10,Q65557474,Q65557474,Studio,131
+community_10,Q162621,Walter Huston,Actor,131
+community_10,Q132689,Casablanca,Film,131
+community_10,Q1097348,InterCom,Studio,131
+community_10,Q781608,The Nun's Story,Film,131
+community_10,Q618741,Jezebel,Film,131
+community_10,Q3506794,Syd Saylor,Actor,131
+community_10,oscar_best_director_1942,oscar_best_director,AwardEvent,131
+community_10,Q1143753,Here Comes the Navy,Film,131
+community_10,Q2579784,Gravity,Film,131
+community_10,Q669592,Giant,Film,131
+community_10,Q3502454,Bobby Connelly,Director,131
+community_10,Q105987,Charles Boyer,Actor,131
+community_10,Q201215,My Fair Lady,Film,131
+community_10,Q1305191,A Midsummer Night's Dream,Film,131
+community_10,Q249968,Lester Matthews,Actor,131
+community_10,Q82284,Frank McHugh,Actor,131
+community_10,Q468463,Peggy Cass,Actor,131
+community_10,Q78639,Max Reinhardt,Director,131
+community_10,Q16390,Humphrey Bogart,Actor,131
+community_10,Q430535,Michael Collins,Film,131
+community_10,golden_globe_drama_1955,golden_globe_drama,AwardEvent,131
+community_10,Q185048,Dodsworth,Film,131
+community_10,Q253328,Evelyn Keyes,Actor,131
+community_10,Q95068,Olivia de Havilland,Actor,131
+community_10,oscar_best_picture_1965,oscar_best_picture,AwardEvent,131
+community_10,Q510642,Connie Gilchrist,Actor,131
+community_10,Q221462,The Maltese Falcon,Film,131
+community_10,Q940924,Lionel Jeffries,Actor,131
+community_10,Q255577,Bebe Daniels,Actor,131
+community_10,Q260318,Joan Leslie,Actor,131
+community_10,Q209170,Mary Poppins,Film,131
+community_10,Q251559,The Treasure of the Sierra Madre,Film,131
+community_10,Q14681732,Charlie Chaplin Studios,Studio,131
+community_10,Q1219582,Auntie Mame,Film,131
+community_10,Q242460,Gladys George,Actor,131
+community_10,Q367053,John Garfield,Actor,131
+community_10,Q95050,Paulette Goddard,Actor,131
+community_10,Q1292160,Edward Everett Horton,Actor,131
+community_10,Q771927,Dark Victory,Film,131
+community_10,Q17335591,Charles Chaplin Film Corporation,Studio,131
+community_10,Q272092,Ruby Keeler,Actor,131
+community_10,Q242785,Carole Landis,Actor,131
+community_10,Q1968780,Alexander Hall,Director,131
+community_10,Q51491,Michael Curtiz,Director,131
+community_10,Q58801,Conrad Veidt,Actor,131
+community_10,Q233848,Ann Sheridan,Actor,131
+community_10,oscar_best_picture_1942,oscar_best_picture,AwardEvent,131
+community_10,Q283123,Frank Puglia,Actor,131
+community_10,Q60539,Horst Buchholz,Actor,131
+community_10,Q882,Charlie Chaplin,Actor,131
+community_10,Q1129778,East of Eden,Film,131
+community_10,Q95444,Sig Arno,Actor,131
+community_10,Q1536746,Four Daughters,Film,131
+community_10,Q84232,Veronica Lake,Actor,131
+community_10,Q3493013,Spencer Charters,Actor,131
+community_10,Q51575,John Huston,Actor,131
+community_10,Q466781,All the President's Men,Film,131
+community_11,Q691672,Q691672,Film,124
+community_11,Q27903045,Paramount+,Studio,124
+community_11,Q221586,Mystic River,Film,124
+community_11,Q119844480,Toho-Towa,Studio,124
+community_11,Q178654,Patricia Hayes,Actor,124
+community_11,Q1127184,Q1127184,Film,124
+community_11,Q235328,Alison Brie,Actor,124
+community_11,dga_outstanding_directing_2001,dga_outstanding_directing,AwardEvent,124
+community_11,Q187364,Robert Zemeckis,Director,124
+community_11,Q355049,Owain Yeoman,Actor,124
+community_11,Q5383759,MGM+,Studio,124
+community_11,Q466186,A Fish Called Wanda,Film,124
+community_11,Q4740856,Amazon Prime Video,Studio,124
+community_11,Q107630578,New Republic Pictures,Studio,124
+community_11,Q25014,John Cleese,Actor,124
+community_11,Q272952,Bonnie Hunt,Actor,124
+community_11,Q442300,Mark Moses,Actor,124
+community_11,Q1983457,PolyGram Filmed Entertainment,Studio,124
+community_11,Q11891723,SF Film,Studio,124
+community_11,Q2263,Tom Hanks,Actor,124
+community_11,Q19190,Rupert Grint,Actor,124
+community_11,Q3486445,Skydance Media,Studio,124
+community_11,Q678058,1492 Pictures,Studio,124
+community_11,Q229268,Patricia Clarkson,Actor,124
+community_11,Q219655,Carey Mulligan,Actor,124
+community_11,Q564960,Constantin Film,Studio,124
+community_11,Q31202708,Q31202708,Film,124
+community_11,Q7135332,Paramount Home Entertainment,Studio,124
+community_11,Q25022235,Pluto TV,Studio,124
+community_11,Q120406,Riki Lindhome,Actor,124
+community_11,Q230534,Rebecca Hall,Actor,124
+community_11,Q103578,Macaulay Culkin,Actor,124
+community_11,Q134773,Q134773,Film,124
+community_11,Q1203,John Lennon,Actor,124
+community_11,Q208263,The Green Mile,Film,124
+community_11,Q727753,Charles Crichton,Director,124
+community_11,Q2703264,Malpaso Productions,Studio,124
+community_11,Q48337,Morgan Freeman,Actor,124
+community_11,Q312129,Eugene Levy,Actor,124
+community_11,Q4488,Clancy Brown,Actor,124
+community_11,Q310944,Q310944,Actor,124
+community_11,Q683235,Ryan Carnes,Actor,124
+community_11,Q362277,Kazunari Ninomiya,Actor,124
+community_11,Q14446,Hanna R. Hall,Actor,124
+community_11,Q35912,Emmy Rossum,Actor,124
+community_11,Q106775,Q106775,Actor,124
+community_11,Q183101,Bill Erwin,Actor,124
+community_11,Q62595383,Promising Young Woman,Film,124
+community_11,Q65563041,TC Productions,Studio,124
+community_11,Q5450883,Finnkino,Studio,124
+community_11,Q38222,George Lucas,Director,124
+community_11,Q5448895,FilmNation Entertainment,Studio,124
+community_11,Q460987,Roxanne Hart,Actor,124
+community_11,Q191084,Val Kilmer,Actor,124
+community_11,Q587891,Dead Man Walking,Film,124
+community_11,Q119812038,NOS Audiovisuais,Studio,124
+community_11,Q4293,Jon Abrahams,Actor,124
+community_11,pga_best_theatrical_2002,pga_best_theatrical,AwardEvent,124
+community_11,Q184255,Q184255,Film,124
+community_11,Q179555,Babaloo Mandel,Actor,124
+community_11,Q17295769,Great Oaks Productions,Studio,124
+community_11,Q182946,Joe Spano,Actor,124
+community_11,Q275187,Q275187,Film,124
+community_11,Q38119,Daniel Radcliffe,Actor,124
+community_11,Q12594195,Lotte Entertainment,Studio,124
+community_11,dga_outstanding_directing_2008,dga_outstanding_directing,AwardEvent,124
+community_11,Q96316,Mido Hamada,Actor,124
+community_11,golden_globe_comedy_1990,golden_globe_comedy,AwardEvent,124
+community_11,Q93187,Hilary Swank,Actor,124
+community_11,Q622848,Castle Rock Entertainment,Studio,124
+community_11,Q375855,American Graffiti,Film,124
+community_11,Q43203,Clint Eastwood,Actor,124
+community_11,Q103343,Jennifer Connelly,Actor,124
+community_11,golden_globe_drama_1995,golden_globe_drama,AwardEvent,124
+community_11,Q1321379,Lakeshore Entertainment,Studio,124
+community_11,oscar_best_director_1978,oscar_best_director,AwardEvent,124
+community_11,Q230278,Jennifer Coolidge,Actor,124
+community_11,Q40067,Candy Clark,Actor,124
+community_11,Q111240,Jim Lovell,Actor,124
+community_11,Q172241,Q172241,Film,124
+community_11,Q16207879,Emerald Fennell,Director,124
+community_11,Q35011,Frances Fisher,Actor,124
+community_11,Q264946,Marnette Patterson,Actor,124
+community_11,Q102438,Q102438,Film,124
+community_11,Q104137,Unforgiven,Film,124
+community_11,Q2444076,Joseph Kosinski,Director,124
+community_11,golden_globe_comedy_1984,golden_globe_comedy,AwardEvent,124
+community_11,Q180272,Gary Sinise,Actor,124
+community_11,oscar_best_picture_1974,oscar_best_picture,AwardEvent,124
+community_11,oscar_best_director_1995,oscar_best_director,AwardEvent,124
+community_11,Q622668,Village Roadshow Pictures,Studio,124
+community_11,Q257317,Margo Martindale,Actor,124
+community_11,Q2415769,Heyday Films,Studio,124
+community_11,Q73930,Lochlyn Munro,Actor,124
+community_11,dga_outstanding_directing_1985,dga_outstanding_directing,AwardEvent,124
+community_11,oscar_best_picture_1996,oscar_best_picture,AwardEvent,124
+community_11,Q218532,John Candy,Actor,124
+community_11,Q39983,Anthony Rapp,Actor,124
+community_11,Q152542,William Sadler,Actor,124
+community_11,Q1474307,United International Pictures,Studio,124
+community_11,Q31073,Walter Cronkite,Actor,124
+community_11,Q103646,Ron Howard,Actor,124
+community_11,Q73612,Fiona Shaw,Actor,124
+community_11,Q75079,Chris Columbus,Director,124
+community_11,Q298276,Michael Sheen,Actor,124
+community_11,Q105031,Q105031,Film,124
+community_11,dga_outstanding_directing_1995,dga_outstanding_directing,AwardEvent,124
+community_11,Q95048,Tim Robbins,Actor,124
+community_11,Q233365,Catherine O'Hara,Actor,124
+community_11,Q295445,Frank Darabont,Director,124
+community_11,Q211553,Ken Watanabe,Actor,124
+community_11,pga_best_theatrical_1996,pga_best_theatrical,AwardEvent,124
+community_11,Q104791,Ed Harris,Actor,124
+community_11,Q22080095,Tencent Pictures,Studio,124
+community_11,sag_outstanding_cast_1996,sag_outstanding_cast,AwardEvent,124
+community_11,Q106428,Q106428,Film,124
+community_11,Q39476,Emma Watson,Actor,124
+community_11,Q103157,Kurt Russell,Actor,124
+community_11,oscar_best_director_1974,oscar_best_director,AwardEvent,124
+community_11,oscar_best_director_1989,oscar_best_director,AwardEvent,124
+community_11,Q235519,Connie Britton,Actor,124
+community_11,Q53651,Josh Lucas,Actor,124
+community_11,Q9582,Gerald Ford,Actor,124
+community_11,Q164103,Q164103,Film,124
+community_12,Q17632773,I Wonder Pictures,Studio,109
+community_12,Q17335645,The Saul Zaentz Company,Studio,109
+community_12,bafta_best_film_1997,bafta_best_film,AwardEvent,109
+community_12,Q304488,The Grifters,Film,109
+community_12,Q192165,Danny Glover,Actor,109
+community_12,Q13576980,Brad Hawkins,Actor,109
+community_12,Q461691,Frank McRae,Actor,109
+community_12,Q16728806,Ellar Coltrane,Actor,109
+community_12,Q1152955,Lorimar Television,Studio,109
+community_12,Q187884,Jan Rubeš,Actor,109
+community_12,Q234356,Janelle Monáe,Actor,109
+community_12,Q220423,Chocolat,Film,109
+community_12,Q162492,Colin Firth,Actor,109
+community_12,Q171745,Jeremy Irons,Actor,109
+community_12,Q17386257,Laurence Mark Productions,Studio,109
+community_12,Q238052,Swoosie Kurtz,Actor,109
+community_12,Q7134149,Paradigm Talent Agency,Agency,109
+community_12,Q166272,Geoffrey Rush,Actor,109
+community_12,Q262898,Michelle Fairley,Actor,109
+community_12,Q36153,Q36153,Actor,109
+community_12,Q208685,Rupert Everett,Actor,109
+community_12,oscar_best_picture_1997,oscar_best_picture,AwardEvent,109
+community_12,Q130118681,Marty Supreme,Film,109
+community_12,Q545573,Taylor Hackford,Director,109
+community_12,oscar_best_director_1991,oscar_best_director,AwardEvent,109
+community_12,Q59073,Places in the Heart,Film,109
+community_12,Q156586,Naomie Harris,Actor,109
+community_12,golden_globe_drama_1982,golden_globe_drama,AwardEvent,109
+community_12,Q488041,Witness,Film,109
+community_12,Q56604143,Josh Safdie,Director,109
+community_12,Q4103201,Boyhood,Film,109
+community_12,Q182944,Q182944,Film,109
+community_12,Q21527875,Q21527875,Film,109
+community_12,Q3339760,Nick Krause,Actor,109
+community_12,Q229147,Kelly McGillis,Actor,109
+community_12,oscar_best_picture_1999,oscar_best_picture,AwardEvent,109
+community_12,Q28054,Judi Dench,Actor,109
+community_12,Q234204,Linda Cardellini,Actor,109
+community_12,Q40035,Richard Linklater,Director,109
+community_12,Q2411441,Iqbal Theba,Actor,109
+community_12,oscar_best_director_2017,oscar_best_director,AwardEvent,109
+community_12,Q261797,Lisa Eilbacher,Actor,109
+community_12,Q192410,Jennifer Hudson,Actor,109
+community_12,Q1368300,Peter Farrelly,Director,109
+community_12,Q48673898,Q48673898,Film,109
+community_12,Q26821227,Barry Jenkins,Director,109
+community_12,Q171363,Viggo Mortensen,Actor,109
+community_12,Q329056,Dreamgirls,Film,109
+community_12,Q229134,Christine Baranski,Actor,109
+community_12,Q63026,The English Patient,Film,109
+community_12,Q484615,Ethan Hawke,Actor,109
+community_12,Q5120868,Cineplex Odeon Films,Studio,109
+community_12,Q232104,Kerry Washington,Actor,109
+community_12,Q61356,Jürgen Prochnow,Actor,109
+community_12,Q230632,Fran Drescher,Actor,109
+community_12,Q190519,Felicity Huffman,Actor,109
+community_12,Q166871,Q166871,Actor,109
+community_12,Q242552,Grace Zabriskie,Actor,109
+community_12,Q276182,Anna Maxwell Martin,Actor,109
+community_12,Q64260,Uta Hagen,Actor,109
+community_12,Q797242,Ray,Film,109
+community_12,Q1132575,An Officer and a Gentleman,Film,109
+community_12,Q231395,Annabella Sciorra,Actor,109
+community_12,Q108270,Warwick Davis,Actor,109
+community_12,Q187033,Sally Field,Actor,109
+community_12,Q4754805,André Holland,Actor,109
+community_12,Q34460,Gwyneth Paltrow,Actor,109
+community_12,Q171905,Jamie Foxx,Actor,109
+community_12,Q235219,Amy Madigan,Actor,109
+community_12,Q165911,Usher,Actor,109
+community_12,Q125017,Uma Thurman,Actor,109
+community_12,Q361336,Bill Condon,Director,109
+community_12,Q316051,Lasse Hallström,Director,109
+community_12,Q106275,Juliette Binoche,Actor,109
+community_12,Q51516,John Madden,Director,109
+community_12,Q917869,Bristol Bay Productions,Studio,109
+community_12,Q4717178,Alex R. Hibbert,Actor,109
+community_12,Q167635,Q167635,Actor,109
+community_12,dga_outstanding_directing_1997,dga_outstanding_directing,AwardEvent,109
+community_12,Q172261,John Malkovich,Actor,109
+community_12,Q263663,Lisa Blount,Actor,109
+community_12,Q439358,Brian Stepanek,Actor,109
+community_12,dga_outstanding_directing_1980,dga_outstanding_directing,AwardEvent,109
+community_12,golden_globe_drama_1996,golden_globe_drama,AwardEvent,109
+community_12,Q206890,Carrie-Anne Moss,Actor,109
+community_12,oscar_best_director_1997,oscar_best_director,AwardEvent,109
+community_12,Q360531,Mahershala Ali,Actor,109
+community_12,oscar_best_director_2005,oscar_best_director,AwardEvent,109
+community_12,Q504627,Barbet Schroeder,Director,109
+community_12,Q234544,Regina King,Actor,109
+community_12,Q59085,Robert Benton,Director,109
+community_12,Q215976,Patricia Arquette,Actor,109
+community_12,Q55258,Stephen Frears,Director,109
+community_12,oscar_best_director_1985,oscar_best_director,AwardEvent,109
+community_12,oscar_best_picture_1989,oscar_best_picture,AwardEvent,109
+community_12,Q228862,Lena Olin,Actor,109
+community_12,Q1419066,Norma Rae,Film,109
+community_12,Q43874,Eddie Murphy,Actor,109
+community_12,Q235189,Mare Winningham,Actor,109
+community_12,Q165283,Pat Hingle,Actor,109
+community_12,Q1210973,Reversal of Fortune,Film,109
+community_12,Q188726,Anthony Minghella,Director,109
+community_12,Q830553,Dangerous Liaisons,Film,109
+community_12,Q316709,Steve Coogan,Actor,109
+community_12,Q202295,Q202295,Actor,109
+community_12,Q465449,Miramax,Studio,109
+community_12,Q3838997,Lucky Red Distribuzione,Studio,109
+community_12,Q3381163,Philomena,Film,109
+community_12,oscar_best_director_1999,oscar_best_director,AwardEvent,109
+community_13,Q213287,Marlee Matlin,Actor,98
+community_13,Q1138674,Jesse Plemons,Actor,98
+community_13,Q232282,Piper Laurie,Actor,98
+community_13,Q352180,Bradley Whitford,Actor,98
+community_13,Q434502,Mae Questel,Actor,98
+community_13,Q370026,Percy Herbert,Actor,98
+community_13,Q335855,Jake LaMotta,Actor,98
+community_13,Q4353408,EMI Films,Studio,98
+community_13,Q1300420,Picnic,Film,98
+community_13,Q164858,A Majority of One,Film,98
+community_13,Q433113,Robert Rossen,Director,98
+community_13,bafta_best_film_1962,bafta_best_film,AwardEvent,98
+community_13,Q230832,Peggy Ashcroft,Actor,98
+community_13,Q95002,William Holden,Actor,98
+community_13,oscar_best_picture_1985,oscar_best_picture,AwardEvent,98
+community_13,Q925567,Peter Hermann,Actor,98
+community_13,Q817159,All the King's Men,Film,98
+community_13,oscar_best_director_2018,oscar_best_director,AwardEvent,98
+community_13,Q454200,Jackie Gleason,Actor,98
+community_13,Q16762370,LaKeith Stanfield,Actor,98
+community_13,Q275458,Anne Seymour,Actor,98
+community_13,Q140017,Mercedes McCambridge,Actor,98
+community_13,Q182349,Broderick Crawford,Actor,98
+community_13,Q945586,Monsoon Wedding,Film,98
+community_13,Q15408068,Grandon Rhodes,Actor,98
+community_13,Q25136235,Get Out,Film,98
+community_13,Q307882,Judy Davis,Actor,98
+community_13,Q1189740,Max Martini,Actor,98
+community_13,Q935217,Cheyenne Jackson,Actor,98
+community_13,golden_lion_2001,golden_lion,AwardEvent,98
+community_13,Q151567,James Donald,Actor,98
+community_13,Q2302213,Summertime,Film,98
+community_13,Q212879,Kim Novak,Actor,98
+community_13,Q1132632,Corey Johnson,Actor,98
+community_13,Q104686893,Q104686893,Film,98
+community_13,Q16954085,Bron Studios,Studio,98
+community_13,Q73536766,Judas and the Black Messiah,Film,98
+community_13,Q509865,Mari Aldon,Actor,98
+community_13,Q103894,Alec Guinness,Actor,98
+community_13,Q457722,Emmanuelle Laborit,Actor,98
+community_13,Q469945,Naseeruddin Shah,Actor,98
+community_13,Q510970,Daniel Kaluuya,Actor,98
+community_13,Q26062,Robert Bolt,Actor,98
+community_13,Q3195676,Kevin Chapman,Actor,98
+community_13,Q20745672,Claire Carleton,Actor,98
+community_13,Q230378,Catherine Keener,Actor,98
+community_13,Q104728627,Shaka King,Director,98
+community_13,Q677439,Kulbhushan Kharbanda,Actor,98
+community_13,Q23633,HBO,Studio,98
+community_13,Q240250,Joanne Dru,Actor,98
+community_13,Q255934,Verna Felton,Actor,98
+community_13,Q7506788,Siân Héder,Director,98
+community_13,Q182450,George C. Scott,Actor,98
+community_13,Q16730400,Emilia Jones,Actor,98
+community_13,Q1628810,Lillete Dubey,Actor,98
+community_13,Q282804,United 93,Film,98
+community_13,Q2937646,Captain Phillips,Film,98
+community_13,Q7841714,Trigger Street Productions,Studio,98
+community_13,Q89996,Gerard Tichy,Actor,98
+community_13,oscar_best_picture_1956,oscar_best_picture,AwardEvent,98
+community_13,oscar_best_director_1950,oscar_best_director,AwardEvent,98
+community_13,Q461477,Isa Miranda,Actor,98
+community_13,golden_globe_drama_1965,golden_globe_drama,AwardEvent,98
+community_13,Q1323132,A Passage to India,Film,98
+community_13,Q1189389,Chris Mulkey,Actor,98
+community_13,Q323827,Doctor Zhivago,Film,98
+community_13,Q3508016,Troy Kotsur,Actor,98
+community_13,Q242550,Olivia Thirlby,Actor,98
+community_13,Q291628,Erika Alexander,Actor,98
+community_13,Q55260,David Lean,Actor,98
+community_13,Q19667486,Darrell Britt-Gibson,Actor,98
+community_13,Q110154,Q110154,Actor,98
+community_13,Q228186,Lawrence of Arabia,Film,98
+community_13,Q32452,Roshan Seth,Actor,98
+community_13,Q82746,Tanya Lopert,Actor,98
+community_13,Q2536001,Randa Haines,Director,98
+community_13,Q5903471,Horizon Pictures,Studio,98
+community_13,Q188718,The Bridge on the River Kwai,Film,98
+community_13,Q466320,Mira Nair,Actor,98
+community_13,Q7796279,Thorn EMI Plc,Studio,98
+community_13,Q395494,John Ireland,Actor,98
+community_13,Q3371986,Jordan Peele,Director,98
+community_13,Q26118,Jack Hawkins,Actor,98
+community_13,Q233854,Rosalind Russell,Actor,98
+community_13,oscar_best_picture_1987,oscar_best_picture,AwardEvent,98
+community_13,Q464320,Stephen Root,Actor,98
+community_13,Q253298,Judy Holliday,Actor,98
+community_13,Q356275,Paul Greengrass,Director,98
+community_13,Q3304492,Eugenio Derbez,Actor,98
+community_13,Q729572,David Rasche,Actor,98
+community_13,Q1292127,Philip Bosco,Actor,98
+community_13,Q1323446,Children of a Lesser God,Film,98
+community_13,Q141668183,Robert Rossen Productions,Studio,98
+community_13,Q1130084,The Hustler,Film,98
+community_13,Q375594,Born Yesterday,Film,98
+community_13,Q310012,James Fox,Actor,98
+community_13,Q275276,Madlyn Rhue,Actor,98
+community_13,Q184572,Martin Sheen,Actor,98
+community_14,golden_bear_1980,golden_bear,AwardEvent,87
+community_14,Q386297,Barney Martin,Actor,87
+community_14,Q271848,Diane Varsi,Actor,87
+community_14,Q669045,Harry Beaumont,Director,87
+community_14,Q710538,Charles Bickford,Actor,87
+community_14,Q200768,Dennis Quaid,Actor,87
+community_14,Q107391544,Curtleigh Productions,Studio,87
+community_14,Q285928,Lewis Milestone,Actor,87
+community_14,Q95143,Carol Reed,Director,87
+community_14,Q239301,Hope Lange,Actor,87
+community_14,Q343037,Trevor Howard,Actor,87
+community_14,Q271865,Terry Moore,Actor,87
+community_14,Q283342,Anita Page,Actor,87
+community_14,Q136646,ZaSu Pitts,Actor,87
+community_14,Q270079,P. J. Soles,Actor,87
+community_14,Q1622751,Sounder,Film,87
+community_14,Q2453153,Kevin Hooks,Actor,87
+community_14,Q446120,Marie Prevost,Actor,87
+community_14,Q1559143,Ralph Nelson,Actor,87
+community_14,Q268084,James Best,Actor,87
+community_14,Q265531,Betty Field,Actor,87
+community_14,Q200840,Noel Purcell,Actor,87
+community_14,Q219521,Walter Brennan,Actor,87
+community_14,Q3431106,Richard Pearce,Director,87
+community_14,Q275803,Amy Wright,Actor,87
+community_14,Q334735,Lilies of the Field,Film,87
+community_14,Q104049,Sidney Poitier,Actor,87
+community_14,Q1063525,The Defiant Ones,Film,87
+community_14,Q443121,Yvette Vickers,Actor,87
+community_14,Q391663,Mary Boland,Actor,87
+community_14,Q314841,Jackie Earle Haley,Actor,87
+community_14,Q235622,Claire Bloom,Actor,87
+community_14,Q266368,Barbara Barrie,Actor,87
+community_14,oscar_best_director_1964,oscar_best_director,AwardEvent,87
+community_14,Q353023,Taj Mahal,Actor,87
+community_14,Q240238,Bessie Love,Actor,87
+community_14,Q260337,Carla Laemmle,Actor,87
+community_14,Q860223,Charles King,Actor,87
+community_14,Q59084,Mutiny on the Bounty,Film,87
+community_14,Q1532392,Peyton Place,Film,87
+community_14,Q1402558,Heartland,Film,87
+community_14,Q1304355,Ruggles of Red Gap,Film,87
+community_14,Q1209826,Dick Van Patten,Actor,87
+community_14,Q238081,Cicely Tyson,Actor,87
+community_14,oscar_best_picture_1964,oscar_best_picture,AwardEvent,87
+community_14,Q463620,The Broadway Melody,Film,87
+community_14,Q344576,Paul Winfield,Actor,87
+community_14,Q69159,Wolfgang Staudte,Actor,87
+community_14,Q313522,Rip Torn,Actor,87
+community_14,oscar_best_picture_1930,oscar_best_picture,AwardEvent,87
+community_14,Q1620093,Of Mice and Men,Film,87
+community_14,Q314301,Peter Yates,Director,87
+community_14,Q2468264,Edward Dillon,Actor,87
+community_14,golden_globe_drama_1968,golden_globe_drama,AwardEvent,87
+community_14,Q350905,Sam De Grasse,Actor,87
+community_14,Q17386674,Stanley Kramer Productions,Studio,87
+community_14,Q7894895,University Press of Mississippi,Studio,87
+community_14,Q343633,Burgess Meredith,Actor,87
+community_14,Q1159067,Dan Frazer,Actor,87
+community_14,golden_globe_drama_1958,golden_globe_drama,AwardEvent,87
+community_14,Q191027,Patricia Neal,Actor,87
+community_14,Q113672,Lilia Skala,Actor,87
+community_14,bafta_best_film_1959,bafta_best_film,AwardEvent,87
+community_14,Q888266,Bob Steele,Actor,87
+community_14,Q5120874,Cinerama Releasing Corporation,Studio,87
+community_14,Q357363,Louis Wolheim,Actor,87
+community_14,Q272599,All Quiet on the Western Front,Film,87
+community_14,Q61954995,Paul Helmick,Director,87
+community_14,Q1067502,Charly,Film,87
+community_14,Q1198073,Hud,Film,87
+community_14,Q31225,Mark Robson,Director,87
+community_14,Q287451,Martin Ritt,Director,87
+community_14,oscar_best_picture_1963,oscar_best_picture,AwardEvent,87
+community_14,Q3125893,Hal Roach Studios,Studio,87
+community_14,Q181899,Cliff Robertson,Actor,87
+community_14,Q310934,Hugh Griffith,Actor,87
+community_14,Q1434610,The Racket,Film,87
+community_14,Q1371212,Roland Young,Actor,87
+community_14,oscar_best_director_1980,oscar_best_director,AwardEvent,87
+community_14,Q312084,Melvyn Douglas,Actor,87
+community_14,Q7599424,Stanley Adams,Actor,87
+community_14,Q201034,Lana Turner,Actor,87
+community_14,Q318261,Lon Chaney Jr.,Actor,87
+community_14,Q746520,Barry Primus,Actor,87
+community_14,Q329156,Whit Bissell,Actor,87
+community_14,Q232304,Conchata Ferrell,Actor,87
+community_14,Q731082,Breaking Away,Film,87
+community_15,Q282693,Tutte Lemkow,Actor,86
+community_15,Q228928,Eva Marie Saint,Actor,86
+community_15,golden_globe_comedy_1958,golden_globe_comedy,AwardEvent,86
+community_15,Q562596,David Alan Grier,Actor,86
+community_15,Q212129,A Streetcar Named Desire,Film,86
+community_15,Q366399,Ewen Montagu,Actor,86
+community_15,Q211372,On the Waterfront,Film,86
+community_15,Q180780,Paul Mann,Actor,86
+community_15,golden_globe_comedy_1980,golden_globe_comedy,AwardEvent,86
+community_15,Q309214,Norman Jewison,Director,86
+community_15,Q177984,Peter Sellers,Actor,86
+community_15,oscar_best_picture_1952,oscar_best_picture,AwardEvent,86
+community_15,Q898465,Jesus Christ Superstar,Film,86
+community_15,oscar_best_picture_1955,oscar_best_picture,AwardEvent,86
+community_15,Q2267853,Stephen McKinley Henderson,Actor,86
+community_15,Q122950069,Walter Wanger Production,Studio,86
+community_15,Q1622379,A Thousand Clowns,Film,86
+community_15,Q555246,Alan Young,Actor,86
+community_15,Q521947,André Morell,Actor,86
+community_15,Q42101,Q42101,Actor,86
+community_15,Q281621,John Glover,Actor,86
+community_15,Q273215,Rod Steiger,Actor,86
+community_15,Q1630304,Hulu,Studio,86
+community_15,Q205868,Vernon Dobtcheff,Actor,86
+community_15,Q2287751,Simon Oakland,Actor,86
+community_15,Q31013,Patti LaBelle,Actor,86
+community_15,oscar_best_picture_1967,oscar_best_picture,AwardEvent,86
+community_15,golden_globe_comedy_1974,golden_globe_comedy,AwardEvent,86
+community_15,Q547640,Russell Hornsby,Actor,86
+community_15,Q459294,Jessie Matthews,Actor,86
+community_15,Q741555,Mykelti Williamson,Actor,86
+community_15,Q542943,Phil Bruns,Actor,86
+community_15,Q1305109,Robert H. Harris,Actor,86
+community_15,Q1168402,Fred Coe,Director,86
+community_15,Q711129,Terry-Thomas,Actor,86
+community_15,Q731331,George Pal,Director,86
+community_15,Q460090,Ronald Neame,Director,86
+community_15,Q257182,Yvonne Elliman,Actor,86
+community_15,Q1809616,I Want to Live!,Film,86
+community_15,Q269809,Barbara Harris,Actor,86
+community_15,Q583434,Salem Ludwig,Actor,86
+community_15,Q729991,Love Story,Film,86
+community_15,oscar_best_director_1971,oscar_best_director,AwardEvent,86
+community_15,Q370181,William Daniels,Actor,86
+community_15,Q530733,Robert Flemyng,Actor,86
+community_15,Q376182,Wings Hauser,Actor,86
+community_15,Q1215857,"The Russians Are Coming, the Russians Are Coming",Film,86
+community_15,Q314290,Harry Dean Stanton,Actor,86
+community_15,Q455043,Arthur Hiller,Director,86
+community_15,Q1624196,A Soldier's Story,Film,86
+community_15,oscar_best_picture_1966,oscar_best_picture,AwardEvent,86
+community_15,Q59824,Kim Hunter,Actor,86
+community_15,Q1419410,Melvin and Howard,Film,86
+community_15,Q311671,James Patterson,Actor,86
+community_15,Q1217057,America America,Film,86
+community_15,Q218605,Michael V. Gazzo,Actor,86
+community_15,Q1122037,Tom Thumb,Film,86
+community_15,Q1348564,Frank Wolff,Actor,86
+community_15,Q389728,Nick Dennis,Actor,86
+community_15,Q433493,Raymond Bailey,Actor,86
+community_15,Q20991226,Sumar Productions,Studio,86
+community_15,Q25136220,Fences,Film,86
+community_15,Q312107,Martin Balsam,Actor,86
+community_15,Q272923,Ryan O'Neal,Actor,86
+community_15,Q229983,Ali MacGraw,Actor,86
+community_15,Q303715,Leonard Frey,Actor,86
+community_15,Q273905,Elaine Edwards,Actor,86
+community_15,Q946196,John Marley,Actor,86
+community_15,Q728677,Paul Thomas,Actor,86
+community_15,Q809029,Barry Dennen,Actor,86
+community_15,Q961297,Josh Mostel,Actor,86
+community_15,bafta_best_film_1957,bafta_best_film,AwardEvent,86
+community_15,Q229181,Viola Davis,Actor,86
+community_15,Q1195373,The Man Who Never Was,Film,86
+community_15,Q248837,Susan Hayward,Actor,86
+community_15,Q969468,Carl Anderson,Actor,86
+community_15,Q132167,Johnny Whitaker,Actor,86
+community_15,Q365292,Adolph Caesar,Actor,86
+community_15,Q934036,Fiddler on the Roof,Film,86
+community_15,Q72717,Elia Kazan,Director,86
+community_15,Q296630,Jason Robards,Actor,86
+community_15,Q4538,Jonathan Winters,Actor,86
+community_15,Q622240,In the Heat of the Night,Film,86
+community_15,Q59314,Gloria Grahame,Actor,86
+community_15,Q526928,Suzanna Leigh,Actor,86
+community_15,Q271763,Pamela Reed,Actor,86
+community_16,Q357206,Ian Thompson,Actor,83
+community_16,Q325643,Who's Afraid of Virginia Woolf?,Film,83
+community_16,Q713979,Cat on a Hot Tin Roof,Film,83
+community_16,Q151973,Richard Burton,Actor,83
+community_16,Q239376,Emmanuelle Arsan,Actor,83
+community_16,oscar_best_director_1966,oscar_best_director,AwardEvent,83
+community_16,Q5369517,Embassy Pictures,Studio,83
+community_16,Q447892,Paul Sorvino,Actor,83
+community_16,oscar_best_director_1984,oscar_best_director,AwardEvent,83
+community_16,Q59821,Robert Wise,Director,83
+community_16,Q1351492,Peter Glenville,Director,83
+community_16,Q273704,West Side Story,Film,83
+community_16,Q950865,Doctor Dolittle,Film,83
+community_16,Q176028,Martin Benson,Actor,83
+community_16,Q159347,Steve McQueen,Actor,83
+community_16,Q180919,Natalie Wood,Actor,83
+community_16,Q27149,The King and I,Film,83
+community_16,Q26231,Corey Stoll,Actor,83
+community_16,Q51506,Richard Attenborough,Actor,83
+community_16,Q524325,Norma Varden,Actor,83
+community_16,Q29092,Desmond Llewelyn,Actor,83
+community_16,Q465582,Cec Linder,Actor,83
+community_16,golden_globe_comedy_2021,golden_globe_comedy,AwardEvent,83
+community_16,Q266520,Nicholas Hammond,Actor,83
+community_16,Q230151,Rita Moreno,Actor,83
+community_16,Q370417,Lawrence Turman,Studio,83
+community_16,Q318607,Richard Crenna,Actor,83
+community_16,Q453549,Ned Glass,Actor,83
+community_16,Q190523,Christopher Plummer,Actor,83
+community_16,Q182408,Glenda Jackson,Actor,83
+community_16,Q1955147,Brian d'Arcy James,Actor,83
+community_16,Q735410,Ivanhoe,Film,83
+community_16,Q231385,Samantha Eggar,Actor,83
+community_16,Q161819,Julie Andrews,Actor,83
+community_16,Q216748,Richard Thorpe,Director,83
+community_16,Q77298,Terence Stamp,Actor,83
+community_16,Q813724,Becket,Film,83
+community_16,Q711561,Richard Beymer,Actor,83
+community_16,Q633222,Kenneth More,Actor,83
+community_16,Q106942,Candice Bergen,Actor,83
+community_16,oscar_best_picture_1968,oscar_best_picture,AwardEvent,83
+community_16,Q1758264,Alan Mowbray,Actor,83
+community_16,Q1622883,A Touch of Class,Film,83
+community_16,oscar_best_director_1967,oscar_best_director,AwardEvent,83
+community_16,oscar_best_picture_1959,oscar_best_picture,AwardEvent,83
+community_16,Q126183,Working Girl,Film,83
+community_16,Q482846,Ana Isabelle,Actor,83
+community_16,Q587641,Jamie Harris,Actor,83
+community_16,Q372959,The Towering Inferno,Film,83
+community_16,Q627157,The Collector,Film,83
+community_16,Q103876,Peter O'Toole,Actor,83
+community_16,Q40128,Ricki Lake,Actor,83
+community_16,Q4355153,KCET,Studio,83
+community_16,Q239691,Sandy Dennis,Actor,83
+community_16,Q237778,Siân Phillips,Actor,83
+community_16,Q336841,George Chakiris,Actor,83
+community_16,Q204685,John Gielgud,Actor,83
+community_16,Q916287,The Sand Pebbles,Film,83
+community_16,Q34851,Elizabeth Taylor,Actor,83
+community_16,Q353019,Jerome Robbins,Director,83
+community_16,Q370108,Angelo Rossitto,Actor,83
+community_16,Q139341,Zach Grenier,Actor,83
+community_16,Q44473,O. J. Simpson,Actor,83
+community_16,Q1284684,Edina Ronay,Actor,83
+community_16,Q275324,Madeleine Sherwood,Actor,83
+community_16,Q41131,Melvin Frank,Director,83
+community_16,Q51537,Mike Nichols,Director,83
+community_16,Q237399,Eleanor Parker,Actor,83
+community_16,Q217627,The Graduate,Film,83
+community_16,Q253813,Victor Spinetti,Actor,83
+community_16,Q63643994,Q63643994,Film,83
+community_16,Q181887,Rex Harrison,Actor,83
+community_16,Q315723,Burl Ives,Actor,83
+community_16,Q266445,Peggy Wood,Actor,83
+community_16,Q1943941,Mona Washbourne,Actor,83
+community_16,Q18971,Arthur P. Jacobs,Studio,83
+community_16,Q60072,The Sound of Music,Film,83
+community_16,Q137489,John Guillermin,Director,83
+community_16,Q297384,Jeremy Brett,Actor,83
+community_16,Q119564,Carl Jaffe,Actor,83
+community_16,Q4430,Cleopatra,Film,83
+community_16,Q449900,George Segal,Actor,83
+community_16,Q262735,Richard Fleischer,Director,83
+community_17,Q69645,Fritz Feld,Actor,79
+community_17,Q1779,Louis Armstrong,Actor,79
+community_17,Q246618,Shelly Manne,Actor,79
+community_17,Q450012,Amanda Blake,Actor,79
+community_17,golden_globe_comedy_1959,golden_globe_comedy,AwardEvent,79
+community_17,Q62845,Jeroen Krabbé,Actor,79
+community_17,Q235467,Anne Francis,Actor,79
+community_17,Q731760,Morton DaCosta,Director,79
+community_17,Q155712,André Previn,Actor,79
+community_17,Q762649,The Music Man,Film,79
+community_17,Q516939,Belita,Actor,79
+community_17,Q207405,Zsa Zsa Gabor,Actor,79
+community_17,Q191753,Cinderella,Film,79
+community_17,Q239818,Tuesday Weld,Actor,79
+community_17,Q280187,Norm Ferguson,Director,79
+community_17,golden_bear_1951,golden_bear,AwardEvent,79
+community_17,Q1308277,Invitation to the Dance,Film,79
+community_17,Q40895,Dumbo,Film,79
+community_17,Q1110062,The Five Pennies,Film,79
+community_17,golden_globe_comedy_1964,golden_globe_comedy,AwardEvent,79
+community_17,Q579241,Clyde Geronimi,Director,79
+community_17,Q3157236,Jack Kinney,Director,79
+community_17,Q263241,Mary Wickes,Actor,79
+community_17,Q451811,Robert Preston,Actor,79
+community_17,Q456270,Eleanor Audley,Actor,79
+community_17,Q350640,Walter Pidgeon,Actor,79
+community_17,Q117479,Melville Shavelson,Director,79
+community_17,Q213425,Danny Kaye,Actor,79
+community_17,Q51535,Vincente Minnelli,Director,79
+community_17,Q113997,Kurt Kasznar,Actor,79
+community_17,palme_dor_1947,palme_dor,AwardEvent,79
+community_17,Q443110,Minta Durfee,Actor,79
+community_17,Q188018,Nick Nolte,Actor,79
+community_17,oscar_best_picture_1970,oscar_best_picture,AwardEvent,79
+community_17,Q228852,Jane Lynch,Actor,79
+community_17,Q170515,Omar Sharif,Actor,79
+community_17,Q355502,Lee Allen,Actor,79
+community_17,Q475293,"Hello, Dolly!",Film,79
+community_17,Q293067,Hermione Gingold,Actor,79
+community_17,Q235632,Nina Foch,Actor,79
+community_17,Q1824959,Lili,Film,79
+community_17,Q596583,The Unsinkable Molly Brown,Film,79
+community_17,Q4636,Barbra Streisand,Actor,79
+community_17,oscar_best_director_1954,oscar_best_director,AwardEvent,79
+community_17,Q318312,Ed Begley,Actor,79
+community_17,Q333475,Mel Ferrer,Actor,79
+community_17,Q40064,Blythe Danner,Actor,79
+community_17,Q100220,Susan Cummings,Actor,79
+community_17,Q953753,Charles Walters,Director,79
+community_17,Q99710,David Hurst,Actor,79
+community_17,Q577757,Gigi,Film,79
+community_17,Q232421,Barbara Bel Geddes,Actor,79
+community_17,Q926614,Hamilton Luske,Director,79
+community_17,Q263696,Debbie Reynolds,Actor,79
+community_17,oscar_best_picture_1969,oscar_best_picture,AwardEvent,79
+community_17,Q7414,The Walt Disney Company,Studio,79
+community_17,Q230023,Leslie Caron,Actor,79
+community_17,Q7295254,Rastar,Studio,79
+community_17,Q443030,Hermione Baddeley,Actor,79
+community_17,golden_bear_1956,golden_bear,AwardEvent,79
+community_17,Q434466,Anna Q. Nilsson,Actor,79
+community_17,Q129681,Corinne Marchand,Actor,79
+community_17,oscar_best_director_1952,oscar_best_director,AwardEvent,79
+community_17,Q3471034,Samuel Armstrong,Director,79
+community_17,Q1385379,Wilfred Jackson,Director,79
+community_17,Q2549739,Ben Sharpsteen,Director,79
+community_17,Q63009,The Prince of Tides,Film,79
+community_17,Q150651,George Carlin,Actor,79
+community_17,Q73089,Gene Kelly,Actor,79
+community_17,Q747570,An American in Paris,Film,79
+community_17,Q2276981,Tamara Toumanova,Actor,79
+community_17,Q594407,Diana Adams,Actor,79
+community_17,Q202172,Walter Matthau,Actor,79
+community_17,Q504461,Andrew Davis,Director,79
+community_17,Q118895680,Chenault Productions,Studio,79
+community_17,Q230218,Shirley Jones,Actor,79
+community_17,Q235928,Eva Gabor,Actor,79
+community_17,Q2903332,Bill Roberts,Director,79
+community_17,Q1364076,Funny Girl,Film,79
+community_18,Q5398867,Esperanto Filmoj,Studio,74
+community_18,Q8049324,Yari Film Group,Studio,74
+community_18,Q65158549,Sound of Metal,Film,74
+community_18,Q8027,Martin Luther King Jr.,Actor,74
+community_18,Q3771988,Glenn Taranto,Actor,74
+community_18,Q27959455,Roma,Film,74
+community_18,Q18933,Rhoda Griffis,Actor,74
+community_18,Q23755544,Hidden Figures,Film,74
+community_18,Q15069963,Olivia Cooke,Actor,74
+community_18,Q9640,Lyndon B. Johnson,Actor,74
+community_18,Q7660609,Sylva Kelegian,Actor,74
+community_18,Q108560833,Fortis Films,Studio,74
+community_18,Q9545,Tony Blair,Actor,74
+community_18,Q17417784,Marc Platt Productions,Studio,74
+community_18,Q314935,Paul Haggis,Director,74
+community_18,Q72397975,The Trial of the Chicago 7,Film,74
+community_18,bafta_best_film_2019,bafta_best_film,AwardEvent,74
+community_18,Q17076072,Lionsgate Films,Studio,74
+community_18,Q734401,Q734401,Studio,74
+community_18,oscar_best_intl_feature_2019,oscar_best_intl_feature,AwardEvent,74
+community_18,Q7153551,Paul Sharma,Actor,74
+community_18,Q3712525,Dog Eat Dog Films,Studio,74
+community_18,Q58902990,Q58902990,Actor,74
+community_18,Q59767307,Kjartan Halvorsen,Actor,74
+community_18,Q4713342,Alcon Entertainment,Studio,74
+community_18,Q176126,Philip Kaufman,Actor,74
+community_18,Q229184,Lily Collins,Actor,74
+community_18,oscar_best_picture_2021,oscar_best_picture,AwardEvent,74
+community_18,Q40791,Sandra Bullock,Actor,74
+community_18,Q6496439,Latin Lover,Actor,74
+community_18,oscar_best_director_2014,oscar_best_director,AwardEvent,74
+community_18,Q19673,Al Gore,Actor,74
+community_18,Q28028,Alfonso Cuarón,Director,74
+community_18,Q18155354,TSG Entertainment,Studio,74
+community_18,Q356487,Tim McGraw,Actor,74
+community_18,Q7327,Yuri Gagarin,Actor,74
+community_18,Q82022,Jan Němec,Actor,74
+community_18,Q355835,Mathieu Amalric,Actor,74
+community_18,Q25310,Robert F. Kennedy,Actor,74
+community_18,Q439364,Donna Gigliotti,Studio,74
+community_18,Q1197185,The Right Stuff,Film,74
+community_18,Q16054364,Amy Warren,Actor,74
+community_18,Q15833967,Marina de Tavira,Actor,74
+community_18,Q1861917,Riz Ahmed,Actor,74
+community_18,Q269894,Kim Dickens,Actor,74
+community_18,Q17335666,Chernin Entertainment,Studio,74
+community_18,Q515869,Starz Entertainment,Studio,74
+community_18,Q5204823,DEJ Productions,Studio,74
+community_18,Q5107732,Chris Perfetti,Actor,74
+community_18,palme_dor_2004,palme_dor,AwardEvent,74
+community_18,Q1805906,Larenz Tate,Actor,74
+community_18,Q206497,The Blind Side,Film,74
+community_18,Q174908,Michael Moore,Director,74
+community_18,Q48093,Nikolai Bulganin,Actor,74
+community_18,Q188000,Q188000,Film,74
+community_18,Q2866566,Ashlyn Sanchez,Actor,74
+community_18,Q1122571,The Unbearable Lightness of Being,Film,74
+community_18,Q1361200,John Lee Hancock,Director,74
+community_18,Q2910457,IFC Films,Studio,74
+community_18,Q21872410,Jennifer Armour,Actor,74
+community_18,Q17126013,MOKÉP,Studio,74
+community_18,Q11975,Britney Spears,Actor,74
+community_18,Q207,George W. Bush,Actor,74
+community_18,golden_lion_2018,golden_lion,AwardEvent,74
+community_18,Q35314,Nikita Khrushchev,Actor,74
+community_18,Q736466,Saul Zaentz,Studio,74
+community_18,Q9696,John F. Kennedy,Actor,74
+community_18,Q221852,Fahrenheit 9/11,Film,74
+community_18,Q19517847,Theodore Melfi,Director,74
+community_18,Q106960242,Caviar Films,Studio,74
+community_18,Q299194,Aaron Sorkin,Director,74
+community_18,Q22665441,Q22665441,Actor,74
+community_18,Q104013227,Darius Marder,Director,74
+community_18,Q714,Stevie Wonder,Actor,74
+community_19,Q234212,Sarah Polley,Director,71
+community_19,Q180011,Brenda Song,Actor,71
+community_19,Q13448549,Bazmark,Studio,71
+community_19,Q6389652,Kennedy Miller Mitchell,Studio,71
+community_19,Q23013699,Lion,Film,71
+community_19,Q491013,Youn Yuh-jung,Actor,71
+community_19,Q133151,Ozzy Osbourne,Actor,71
+community_19,Q130853,Plácido Domingo,Actor,71
+community_19,Q108030443,Women Talking,Film,71
+community_19,Q219512,Jesse Eisenberg,Actor,71
+community_19,Q6514075,Lee Isaac Chung,Director,71
+community_19,Q552176,Steven Yeun,Actor,71
+community_19,oscar_best_director_2021,oscar_best_director,AwardEvent,71
+community_19,Q4762283,Q4762283,Studio,71
+community_19,Q542810,Patrika Darbo,Actor,71
+community_19,Q296328,David Wenham,Actor,71
+community_19,Q434844,Sheila McCarthy,Actor,71
+community_19,Q138327,Catherine McCormack,Actor,71
+community_19,Q350732,Xavier Samuel,Actor,71
+community_19,Q228766,Rooney Mara,Actor,71
+community_19,Q184903,David Fincher,Director,71
+community_19,Q235599,Brittany Byrnes,Actor,71
+community_19,Q162729,Q162729,Film,71
+community_19,Q1320792,Ross Bagley,Actor,71
+community_19,Q65679599,Minari,Film,71
+community_19,Q16516296,ADS Service,Studio,71
+community_19,Q3992514,Tom Pelphrey,Actor,71
+community_19,Q258999,Claire Foy,Actor,71
+community_19,Q193573,Moulin Rouge!,Film,71
+community_19,Q3371239,Paul Fox,Actor,71
+community_19,Q12624268,Han Ye-ri,Actor,71
+community_19,Q720724,Babe,Film,71
+community_19,Q42229,Mel Gibson,Actor,71
+community_19,Q29735,Nathaniel Buzolic,Actor,71
+community_19,Q469954,Austin Butler,Actor,71
+community_19,Q37459,Nicole Kidman,Actor,71
+community_19,Q5443860,Ferdinand Kingsley,Actor,71
+community_19,Q34975,Brian Cox,Actor,71
+community_19,Q342617,Ben Whishaw,Actor,71
+community_19,Q21010856,Hacksaw Ridge,Film,71
+community_19,Q162753,Sophie Marceau,Actor,71
+community_19,Q185846,Chris Noonan,Director,71
+community_19,Q23891,Q23891,Actor,71
+community_19,Q914432,Marshall Napier,Actor,71
+community_19,Q5380451,Entertainment Film Distributors,Studio,71
+community_19,Q3046343,Eagle Pictures,Studio,71
+community_19,Q105847466,Alan S. Kim,Actor,71
+community_19,Q134133,Tommy Flanagan,Actor,71
+community_19,Q110315448,Cinemundo,Studio,71
+community_19,Q185888,The Social Network,Film,71
+community_19,Q73093591,Mank,Film,71
+community_19,Q361400,Will Patton,Actor,71
+community_19,Q299483,James Cromwell,Actor,71
+community_19,Q84362533,Elvis,Film,71
+community_19,oscar_best_director_1996,oscar_best_director,AwardEvent,71
+community_19,Q3898029,Paul Carafotes,Actor,71
+community_19,Q5181377,Craig Robert Young,Actor,71
+community_19,golden_globe_drama_2017,golden_globe_drama,AwardEvent,71
+community_19,Q951774,The Ladd Company,Studio,71
+community_19,Q2995800,Nawazuddin Siddiqui,Actor,71
+community_19,Q107730,Vince Vaughn,Actor,71
+community_19,Q2669403,Icon Productions,Studio,71
+community_19,Q165518,Ewan McGregor,Actor,71
+community_19,Q5448979,VicScreen,Studio,71
+community_19,Q23651358,Garth Davis,Director,71
+community_19,Q361630,Richard Roxburgh,Actor,71
+community_19,Q43432,Q43432,Actor,71
+community_19,Q1445805,Screen Australia,Studio,71
+community_19,Q250545,Baz Luhrmann,Director,71
+community_19,Q245075,Dev Patel,Actor,71
+community_19,Q11998,Kylie Minogue,Actor,71
+community_20,Q182071,The Wedding Banquet,Film,63
+community_20,Q560163,Anupam Kher,Actor,63
+community_20,Q106508,Gérard Depardieu,Actor,63
+community_20,Q48748611,Pathé Live,Studio,63
+community_20,oscar_best_intl_feature_2001,oscar_best_intl_feature,AwardEvent,63
+community_20,Q360927,Irrfan Khan,Actor,63
+community_20,Q292693,Sylvia Chang,Actor,63
+community_20,Q5579784,Golden Screen Cinemas,Studio,63
+community_20,Q57319484,TBA Studios,Studio,63
+community_20,Q27694781,mm2 Entertainment,Studio,63
+community_20,Q697862,Kao Chin Su-mei,Actor,63
+community_20,Q270672,Joan Chen,Actor,63
+community_20,Q160726,Ang Lee,Actor,63
+community_20,Q710548,Winston Chao,Actor,63
+community_20,Q358990,James Hong,Actor,63
+community_20,Q936061,James Saito,Actor,63
+community_20,Q251068,Leehom Wang,Actor,63
+community_20,Q386249,Michael Gaston,Actor,63
+community_20,Q19705703,Diamond Films,Studio,63
+community_20,Q28746830,Dan Kwan,Director,63
+community_20,Q270687,Tang Wei,Actor,63
+community_20,Q445017,Ke Huy Quan,Actor,63
+community_20,oscar_best_director_2023,oscar_best_director,AwardEvent,63
+community_20,golden_horse_best_film_1989,golden_horse_best_film,AwardEvent,63
+community_20,golden_lion_2007,golden_lion,AwardEvent,63
+community_20,Q3072105,Filmin,Studio,63
+community_20,sag_outstanding_cast_2022,sag_outstanding_cast,AwardEvent,63
+community_20,Q716792,Sihung Lung,Actor,63
+community_20,oscar_best_intl_feature_1994,oscar_best_intl_feature,AwardEvent,63
+community_20,Q696905,Eat Drink Man Woman,Film,63
+community_20,Q974846,People Incorporated,Studio,63
+community_20,Q83808444,Q83808444,Film,63
+community_20,Q112918280,Youplanet Pictures,Studio,63
+community_20,oscar_best_intl_feature_1995,oscar_best_intl_feature,AwardEvent,63
+community_20,Q152780,Life of Pi,Film,63
+community_20,Q701002,Yang Kuei-Mei,Actor,63
+community_20,Q28408034,Fubo,Studio,63
+community_20,Q180852,Zhang Ziyi,Actor,63
+community_20,golden_horse_best_film_2007,golden_horse_best_film,AwardEvent,63
+community_20,Q15912204,Full Moon in New York,Film,63
+community_20,Q16928132,Movistar Plus+,Studio,63
+community_20,golden_bear_1993,golden_bear,AwardEvent,63
+community_20,Q104502032,Tanweer Alliances,Studio,63
+community_20,Q18150569,Elevation Pictures,Studio,63
+community_20,Q214289,Michelle Yeoh,Actor,63
+community_20,Q13403877,The Samuel Goldwyn Company,Studio,63
+community_20,Q1431039,Rhythm and Hues Studios,Studio,63
+community_20,Q28746848,Daniel Scheinert,Director,63
+community_20,Q319001,Tony Leung,Actor,63
+community_20,Q111728869,Entract Films,Studio,63
+community_20,Q158233,Tabu,Actor,63
+community_20,Q86755103,AGBO,Studio,63
+community_20,Q181425,Chow Yun-fat,Actor,63
+community_20,Q269513,Cheng Pei-pei,Actor,63
+community_20,Q705995,Stanley Kwan,Director,63
+community_20,Q273978,"Crouching Tiger, Hidden Dragon",Film,63
+community_20,Q348649,Harry Shum Jr.,Actor,63
+community_20,Q106997,Jamie Lee Curtis,Actor,63
+community_20,Q718524,"Lust, Caution",Film,63
+community_20,Q327446,Suraj Sharma,Actor,63
+community_20,Q2496469,Leonine Distribution,Studio,63
+community_20,golden_horse_best_film_2000,golden_horse_best_film,AwardEvent,63
+community_20,golden_horse_best_film_1993,golden_horse_best_film,AwardEvent,63
+community_21,Q27949870,Esteban Bigliardi,Actor,55
+community_21,Q115993222,The Zone of Interest,Film,55
+community_21,Q97440962,Mattel Films,Studio,55
+community_21,Q116025865,Past Lives,Film,55
+community_21,Q2876680,BAC Films,Studio,55
+community_21,Q228603,Saoirse Ronan,Actor,55
+community_21,Q5042507,Carlos Páez Rodríguez,Actor,55
+community_21,Q1747632,Ralph Herforth,Actor,55
+community_21,Q17305153,Di Novi Pictures,Studio,55
+community_21,Q256127,Kristen Cloke,Actor,55
+community_21,Q22814307,Pablo Vierci,Actor,55
+community_21,Q44437,John Cena,Actor,55
+community_21,Q219402,America Ferrera,Actor,55
+community_21,Q6007546,Maximiliano de la Cruz,Actor,55
+community_21,Q271967,Greta Gerwig,Director,55
+community_21,oscar_best_director_2024,oscar_best_director,AwardEvent,55
+community_21,Q27480769,Lady Bird,Film,55
+community_21,Q116286260,Celine Song,Director,55
+community_21,Q6781118,Maryann Plunkett,Actor,55
+community_21,Q218503,Will Ferrell,Actor,55
+community_21,Q242792,Laura Marano,Actor,55
+community_21,Q17325031,Marie Rosa Tietjen,Actor,55
+community_21,Q932019,J. A. Bayona,Director,55
+community_21,Q5660811,Agustín Pardella,Actor,55
+community_21,Q1079558,Christian Friedel,Actor,55
+community_21,Q70003,Sandra Hüller,Actor,55
+community_21,Q55436290,Barbie,Film,55
+community_21,Q16248298,A24,Studio,55
+community_21,Q84266729,LuckyChap Entertainment,Studio,55
+community_21,Q22277803,Florence Pugh,Actor,55
+community_21,Q12071439,Kinomania,Studio,55
+community_21,Q111915684,Access Entertainment,Studio,55
+community_21,Q56881140,Little Women,Film,55
+community_21,Q11317852,Choi Won-young,Actor,55
+community_21,Q6246377,John Magaro,Actor,55
+community_21,Q6167882,Jayne Houdyshell,Actor,55
+community_21,Q19877770,Timothée Chalamet,Actor,55
+community_21,Q5448886,Film4 Productions,Studio,55
+community_21,Q20032472,Instytucja Filmowa „Silesia-Film”,Studio,55
+community_21,Q40266137,Sony Pictures Releasing,Studio,55
+community_21,oscar_best_intl_feature_2024,oscar_best_intl_feature,AwardEvent,55
+community_21,Q193815,Ryan Gosling,Actor,55
+community_21,Q338920,Access Industries,Studio,55
+community_21,Q1703182,Jonathan Glazer,Director,55
+community_21,Q165625,Kathryn Newton,Actor,55
+community_21,Q236711,Laurie Metcalf,Actor,55
+community_21,Q115311765,House Productions,Studio,55
+community_21,Q112252419,Society of the Snow,Film,55
+community_21,Q15990205,James Norton,Actor,55
+community_21,Q69018456,Yoo Teo,Actor,55
+community_21,Q1660211,Imogen Kogge,Actor,55
+community_21,Q56063989,CJ ENM,Studio,55
+community_21,Q19517962,Greta Lee,Actor,55
+community_21,Q96741403,Jonica T. Gibbs,Actor,55
+community_21,Q234058,Rhea Perlman,Actor,55
+community_22,Q980144,Cecilia Loftus,Actor,52
+community_22,Q448255,Marian Marsh,Actor,52
+community_22,Q120541,Alfred Edward Green,Director,52
+community_22,Q516390,Robert Young,Actor,52
+community_22,Q295984,Randolph Scott,Actor,52
+community_22,oscar_best_director_1929,oscar_best_director,AwardEvent,52
+community_22,Q434901,Lionel Belmore,Actor,52
+community_22,Q325661,Sara Haden,Actor,52
+community_22,Q272061,Margaret Lindsay,Actor,52
+community_22,Q253384,Loretta Young,Actor,52
+community_22,Q1126956,Conrad Nagel,Actor,52
+community_22,Q195022,Frank Campeau,Actor,52
+community_22,Q312073,Warner Baxter,Actor,52
+community_22,Q3018900,David Torrence,Actor,52
+community_22,Q434413,Lila Lee,Actor,52
+community_22,Q1057622,East Lynne,Film,52
+community_22,Q259964,Ona Munson,Actor,52
+community_22,Q270390,Ann Harding,Actor,52
+community_22,Q1142877,Weary River,Film,52
+community_22,oscar_best_director_1934,oscar_best_director,AwardEvent,52
+community_22,Q1994999,Alfred L. Werker,Director,52
+community_22,Q1144006,The White Parade,Film,52
+community_22,Q182229,George Arliss,Actor,52
+community_22,Q1188369,First National Pictures,Studio,52
+community_22,Q776337,In Old Arizona,Film,52
+community_22,Q1215836,The House of Rothschild,Film,52
+community_22,Q4725811,Alice Day,Actor,52
+community_22,Q457293,Richard Barthelmess,Actor,52
+community_22,Q727791,Irving Cummings,Director,52
+community_22,Q774800,Disraeli,Film,52
+community_22,oscar_best_director_unknown,oscar_best_director,AwardEvent,52
+community_22,Q276100,Helen Westley,Actor,52
+community_22,Q203219,Boris Karloff,Actor,52
+community_22,Q72756,Raoul Walsh,Director,52
+community_22,Q3265616,Lucien Littlefield,Actor,52
+community_22,Q1101883,Clive Brook,Actor,52
+community_22,Q957202,Sidney Lanfield,Director,52
+community_22,Q1143136,Drag,Film,52
+community_22,Q2852823,Anthony Bushell,Actor,52
+community_22,Q739663,Wally Albright,Actor,52
+community_22,Q753107,Cavalcade,Film,52
+community_22,Q906283,Five Star Final,Film,52
+community_22,Q255846,Betty Compson,Actor,52
+community_22,oscar_best_picture_1934,oscar_best_picture,AwardEvent,52
+community_22,Q272091,Diana Wynyard,Actor,52
+community_22,Q2644123,Fox Film Corporation,Studio,52
+community_22,Q1373430,Ivan Simpson,Actor,52
+community_22,Q271696,Bonita Granville,Actor,52
+community_22,Q952690,Edmund Lowe,Actor,52
+community_22,Q327130,John Boles,Actor,52
+community_22,Q28941,Frank Lloyd,Director,52
+community_22,Q233852,Betty Grable,Actor,52
+community_23,Q116030637,Nickel Boys,Film,40
+community_23,Q558301,Hamish Linklater,Actor,40
+community_23,oscar_best_picture_2025,oscar_best_picture,AwardEvent,40
+community_23,Q461762,Aunjanue Ellis-Taylor,Actor,40
+community_23,Q4250213,Sebastián Lelio,Director,40
+community_23,Q30603559,Neon,Studio,40
+community_23,oscar_best_intl_feature_2013,oscar_best_intl_feature,AwardEvent,40
+community_23,Q2857093,Antonia Zegers,Actor,40
+community_23,oscar_best_intl_feature_2018,oscar_best_intl_feature,AwardEvent,40
+community_23,Q20973977,Daveed Diggs,Actor,40
+community_23,Q104902570,Fred Hechinger,Actor,40
+community_23,Q123185887,Anora,Film,40
+community_23,Q179576,Gael García Bernal,Actor,40
+community_23,Q113445202,All the Beauty and the Bloodshed,Film,40
+community_23,Q5665059,Alejandro Goic,Actor,40
+community_23,Q5668992,Aline Küppenheim,Actor,40
+community_23,palme_dor_2024,palme_dor,AwardEvent,40
+community_23,Q28127580,A Fantastic Woman,Film,40
+community_23,Q19366218,Fabula,Studio,40
+community_23,Q1985090,Pablo Larraín,Director,40
+community_23,Q234279,Nan Goldin,Actor,40
+community_23,Q26923245,Mikey Madison,Actor,40
+community_23,Q3411249,Pyramide Distribution,Studio,40
+community_23,Q5483866,Francisco Reyes Morandé,Actor,40
+community_23,Q4748066,Amparo Noguera,Actor,40
+community_23,Q24035944,Yura Borisov,Actor,40
+community_23,Q3372796,Paulo Brunetti,Actor,40
+community_23,Q3225114,Le Pacte,Studio,40
+community_23,Q4174263,Darya Ekamasova,Actor,40
+community_23,Q65548506,Jimmie Fails,Actor,40
+community_23,Q6499321,Laura Poitras,Director,40
+community_23,Q2620241,No,Film,40
+community_23,Q4740868,Amazon MGM Studios,Studio,40
+community_23,Q2793276,Participant,Studio,40
+community_23,Q2376200,Aleksei Serebryakov,Actor,40
+community_23,Q7441419,Sean Baker,Director,40
+community_23,Q335,Patricio Aylwin,Actor,40
+community_23,Q6834290,Michael Sergio,Actor,40
+community_23,golden_lion_2022,golden_lion,AwardEvent,40
+community_23,Q51808923,RaMell Ross,Director,40
+community_24,golden_lion_1980,golden_lion,AwardEvent,18
+community_24,Q776722,Sonny Landham,Actor,18
+community_24,Q229258,Gena Rowlands,Actor,18
+community_24,Q708153,Seymour Cassel,Actor,18
+community_24,Q470062,Val Avery,Actor,18
+community_24,Q270784,Margaret Abbott,Actor,18
+community_24,Q1306380,A Woman Under the Influence,Film,18
+community_24,golden_bear_1984,golden_bear,AwardEvent,18
+community_24,Q5495013,Fred Draper,Actor,18
+community_24,Q51488,John Cassavetes,Actor,18
+community_24,Q212532,Lawrence Tierney,Actor,18
+community_24,Q2521232,Love Streams,Film,18
+community_24,Q508681,Julie Carmen,Actor,18
+community_24,Q1386966,Matthew Labyorteaux,Actor,18
+community_24,Q627942,Gloria,Film,18
+community_24,Q3183532,Mario Gallo,Actor,18
+community_24,Q484881,Peter Falk,Actor,18
+community_24,Q509192,Diahnne Abbott,Actor,18

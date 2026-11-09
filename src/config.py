@@ -10,7 +10,6 @@ USER_AGENT = "PTMXH-FilmNetworkResearch/0.1 (educational data collection project
 REQUEST_DELAY_SEC = 0.25  # delay between requests to respect rate limits
 SPARQL_BATCH_SIZE = 50    # max number of QIDs per batch in a VALUES clause
 EXTRACT_BATCH_SIZE = 20   # max number of titles per batch when fetching lead text
-MAX_CAST_PER_FILM = 5     # number of top-billed cast members to keep per film
 
 WIKIDATA_FILM_QID = "Q11424"  # "film" on Wikidata
 WIKIDATA_US_QID = "Q30"       # "United States of America" on Wikidata — used to filter to Hollywood scope

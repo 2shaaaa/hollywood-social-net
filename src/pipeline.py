@@ -6,6 +6,7 @@ Run a small pilot:
 """
 import argparse
 import csv
+import shutil
 from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
@@ -120,7 +121,52 @@ def select_balanced_films(award_rows: list[dict], target_films: int) -> set[str]
     return selected
 
 
-def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_films: int | None = None):
+MIN_SHARED_FILMS = 2  # "frequent" collaboration = at least 2 films together
+
+
+def compute_collaboration_edges(session, director_qids: list[str], actor_qids: list[str], verbose: bool = True):
+    """CO_STARRED_WITH / COLLABORATED_WITH between people already in the dataset, counted over their
+    full Wikidata filmographies: counting only inside the 1-3 sampled films per director undercounts
+    a pair's real history (Coen-McDormand: 1 sampled film vs 9 real ones)."""
+    people = sorted(set(director_qids) | set(actor_qids))
+    directed = wd.fetch_works_by_person(session, sorted(director_qids), "P57")
+    cast_in = wd.fetch_works_by_person(session, people, "P161")
+
+    cast_by_work, directors_by_work = defaultdict(set), defaultdict(set)
+    for person, works in cast_in.items():
+        for w in works:
+            cast_by_work[w].add(person)
+    for d, works in directed.items():
+        for w in works:
+            directors_by_work[w].add(d)
+
+    # only a work shared by >=2 dataset people can produce an edge -> type-check just those
+    candidates = {w for w, cast in cast_by_work.items() if len(cast | directors_by_work.get(w, set())) >= 2}
+    films = wd.filter_feature_films(session, candidates)
+
+    costar = defaultdict(lambda: {"weight": 0, "films": set()})
+    collab = defaultdict(lambda: {"weight": 0, "films": set()})
+    for w in films:
+        cast = cast_by_work[w]
+        for a1, a2 in combinations(sorted(cast), 2):
+            costar[(a1, a2)]["weight"] += 1
+            costar[(a1, a2)]["films"].add(w)
+        for d in directors_by_work.get(w, ()):
+            for a in cast - {d}:
+                collab[(d, a)]["weight"] += 1
+                collab[(d, a)]["films"].add(w)
+
+    costar = {k: v for k, v in costar.items() if v["weight"] >= MIN_SHARED_FILMS}
+    collab = {k: v for k, v in collab.items() if v["weight"] >= MIN_SHARED_FILMS}
+    if verbose:
+        print(
+            f"    -> {len(candidates)} works shared by >=2 dataset people, {len(films)} of them are non-documentary films"
+            f" | CO_STARRED_WITH: {len(costar)} | COLLABORATED_WITH: {len(collab)} (>= {MIN_SHARED_FILMS} films together)"
+        )
+    return costar, collab
+
+
+def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_films: int | None = None, films_from: Path | None = None):
     session = get_session()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -145,7 +191,14 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
 
     print(f"    -> {len(all_film_qids)} unique US films before final selection, {len(award_rows)} award rows")
 
-    if pilot and film_limit:
+    if films_from:
+        # reuse an earlier run's film set, so film-level NLP output (REPLACED_IN_ROLE) stays valid,
+        # minus films no current award seed selects (e.g. ones from a seed since removed)
+        with open(films_from, newline="", encoding="utf-8") as f:
+            reused = {r["qid"] for r in csv.DictReader(f)}
+        film_qids = sorted(reused & {r["film_qid"] for r in award_rows})
+        print(f"    -> Reusing {len(film_qids)}/{len(reused)} films from {films_from} (the rest no longer have a seeding award)")
+    elif pilot and film_limit:
         film_qids = all_film_qids[:film_limit]
     elif target_films:
         film_qids = sorted(select_balanced_films(award_rows, target_films))
@@ -155,24 +208,37 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
     award_rows = [r for r in award_rows if r["film_qid"] in film_qid_set]
     print(f"    -> Selected {len(film_qids)} films for this run, {len(award_rows)} related award rows")
 
-    print("[3/8] Fetching film -> director / cast / production / distribution relations (Wikidata)...")
+    print("[3/8] Fetching director / production / distribution (Wikidata) + starring cast (Wikipedia infobox)...")
     director_edges = wd.fetch_relation(session, film_qids, "P57")
-    cast_edges_raw = wd.fetch_relation(session, film_qids, "P161")
     studio_edges = wd.fetch_relation(session, film_qids, "P272")
     genre_edges = wd.fetch_relation(session, film_qids, "P136")
     distributor_edges = wd.fetch_relation(session, film_qids, "P750")
 
-    cast_by_film = defaultdict(list)
-    for film_qid, actor_qid, label in cast_edges_raw:
-        cast_by_film[film_qid].append((actor_qid, label))
+    # Cast = the infobox `starring` field (credited leads, billing order). Wikidata's P161 can't
+    # pick the leads: it has no billing order and also lists uncredited extras.
+    film_titles = wd.fetch_enwiki_titles(session, film_qids)
+    starring_by_title = wapi.fetch_infobox_starring(session, sorted(set(film_titles.values())))
+    starring_titles = sorted({t for lst in starring_by_title.values() for t in lst})
+    starring_qid = wapi.resolve_qids_for_titles(session, starring_titles) if starring_titles else {}
+    p31_subjects = sorted(set(starring_qid.values()) | {s for _, s, _ in studio_edges})
+    humans = {q for q, v, _ in wd.fetch_relation(session, p31_subjects, "P31") if v == "Q5"}
     cast_edges = []
-    for film_qid, lst in cast_by_film.items():
-        for actor_qid, label in lst[: config.MAX_CAST_PER_FILM]:
-            cast_edges.append((film_qid, actor_qid, label))
+    for film_qid in film_qids:
+        kept = set()
+        for title in starring_by_title.get(film_titles.get(film_qid), []):
+            actor_qid = starring_qid.get(title)
+            if actor_qid in humans and actor_qid not in kept:  # links to a band, a duo article, etc. -> drop
+                kept.add(actor_qid)
+                cast_edges.append((film_qid, actor_qid, title))
+    films_without_cast = len(set(film_qids) - {f for f, _, _ in cast_edges})
+
+    # A person recorded as a film's production company is a Wikidata editing error (Leo McCarey
+    # on The Bells of St. Mary's), not a studio.
+    studio_edges = [(f, s, label) for f, s, label in studio_edges if s not in humans]
 
     print(
-        f"    -> DIRECTED: {len(director_edges)} | ACTED_IN (after keeping top-{config.MAX_CAST_PER_FILM}): "
-        f"{len(cast_edges)} | PRODUCED_BY: {len(studio_edges)}"
+        f"    -> DIRECTED: {len(director_edges)} | ACTED_IN (infobox starring): {len(cast_edges)} "
+        f"({films_without_cast} films with no usable starring field) | PRODUCED_BY: {len(studio_edges)}"
     )
 
     award_person_qids = {r["person_qid"] for r in award_rows if r["person_qid"]}
@@ -209,10 +275,26 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
     print("[5/8] Fetching English Wikipedia titles + lead text...")
     distributor_qids = sorted({s for _, s, _ in distributor_edges})
 
+    # Drop chronologically impossible DISTRIBUTED_BY edges: Wikidata's P750 often records a
+    # company's CURRENT streaming-rights holder rather than the film's original distributor (e.g.
+    # classic-era films tagged "Netflix"/"Disney+" because that's who streams them today, even
+    # though neither existed yet). Keep an edge only if the distributor's inception (P571)
+    # predates or matches the film's release year; keep it by default if either date is missing
+    # (common for small/defunct classic-era distributors) rather than risk dropping a real edge.
+    distributor_inception = wd.fetch_min_year(session, distributor_qids, "P571") if distributor_qids else {}
+    _before = len(distributor_edges)
+    distributor_edges = [
+        (f_qid, s_qid, label)
+        for f_qid, s_qid, label in distributor_edges
+        if not (film_years.get(f_qid) and distributor_inception.get(s_qid) and int(film_years[f_qid]) < int(distributor_inception[s_qid]))
+    ]
+    print(f"    -> DISTRIBUTED_BY: dropped {_before - len(distributor_edges)} anachronistic edges (distributor founded after the film's release)")
+
     all_entity_qids = sorted(set(film_qids) | set(all_person_qids) | set(studio_qids) | set(distributor_qids))
     titles_map = wd.fetch_enwiki_titles(session, all_entity_qids)
     unique_titles = sorted(set(titles_map.values()))
     extracts_by_title = wapi.fetch_lead_extracts(session, unique_titles)
+    display_names = wd.fetch_labels(session, sorted(set(film_qids) | set(all_person_qids)))
 
     def extract_for(qid):
         t = titles_map.get(qid)
@@ -244,25 +326,8 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
         elif (subject_qid, r["award_key"], r["year"]) not in won_keys:
             nominated_edges.append((subject_qid, event_id, r["film_qid"]))
 
-    print("[7/8] Computing derived edges: CO_STARRED_WITH, COLLABORATED_WITH (director-actor)...")
-    costar_weight = defaultdict(lambda: {"weight": 0, "films": set()})
-    for film_qid, lst in cast_by_film.items():
-        top_cast = [a for a, _ in lst[: config.MAX_CAST_PER_FILM]]
-        for a1, a2 in combinations(sorted(top_cast), 2):
-            key = (a1, a2)
-            costar_weight[key]["weight"] += 1
-            costar_weight[key]["films"].add(film_qid)
-
-    directors_by_film = defaultdict(list)
-    for f, d, _ in director_edges:
-        directors_by_film[f].append(d)
-    collab_weight = defaultdict(lambda: {"weight": 0, "films": set()})
-    for film_qid in film_qids:
-        for d in directors_by_film.get(film_qid, []):
-            for a, _ in cast_by_film.get(film_qid, [])[: config.MAX_CAST_PER_FILM]:
-                key = (d, a)
-                collab_weight[key]["weight"] += 1
-                collab_weight[key]["films"].add(film_qid)
+    print("[7/8] Computing derived edges: CO_STARRED_WITH, COLLABORATED_WITH over each person's full filmography...")
+    costar_weight, collab_weight = compute_collaboration_edges(session, director_qids, actor_qids)
 
     # ---------------- CSV export ----------------
     def label_map_from_edges(edges):
@@ -286,7 +351,7 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
             w.writerow(
                 [
                     qid,
-                    film_labels.get(qid, ""),
+                    display_names.get(qid) or film_labels.get(qid, ""),
                     film_years.get(qid, ""),
                     "; ".join(sorted(set(country_labels_by_film.get(qid, [])))),
                     "; ".join(sorted(set(genre_by_film.get(qid, [])))),
@@ -299,7 +364,7 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
             w = csv.writer(f)
             w.writerow(["qid", "name", "birth_year", "nationality", "lead_text"])
             for qid in qids:
-                name = director_labels.get(qid) or actor_labels.get(qid) or award_person_labels.get(qid, "")
+                name = display_names.get(qid) or director_labels.get(qid) or actor_labels.get(qid) or award_person_labels.get(qid, "")
                 w.writerow([qid, name, person_birth_years.get(qid, ""), nationality_by_person.get(qid, ""), extract_for(qid)])
 
     write_people_csv(out_dir / "nodes_directors.csv", director_qids)
@@ -346,6 +411,8 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
             w.writerow([d, a, "COLLABORATED_WITH", info["weight"], "|".join(sorted(info["films"]))])
         for p1, p2 in sorted(married_pairs):
             w.writerow([p1, p2, "MARRIED_TO", 1, ""])
+    # src.merge_nlp_edges rebuilds edges.csv from this copy + the NLP edge files
+    shutil.copy2(out_dir / "edges.csv", out_dir / "edges_structured_only.csv")
 
     n_nodes = len(film_qids) + len(director_qids) + len(actor_qids) + len(all_company_qids) + len(events)
     n_edges = (
@@ -377,9 +444,16 @@ def main():
     parser.add_argument("--pilot", action="store_true")
     parser.add_argument("--film-limit", type=int, default=None)
     parser.add_argument("--target-films", type=int, default=None)
+    parser.add_argument("--films-from", type=str, default=None, help="reuse the film set of an existing nodes_films.csv")
     parser.add_argument("--out", type=str, default=str(config.DATA_OUTPUT_DIR / "pilot"))
     args = parser.parse_args()
-    run_pipeline(pilot=args.pilot, film_limit=args.film_limit, out_dir=Path(args.out), target_films=args.target_films)
+    run_pipeline(
+        pilot=args.pilot,
+        film_limit=args.film_limit,
+        out_dir=Path(args.out),
+        target_films=args.target_films,
+        films_from=Path(args.films_from) if args.films_from else None,
+    )
 
 
 if __name__ == "__main__":

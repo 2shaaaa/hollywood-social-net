@@ -1,0 +1,38 @@
+metric,id,name,labels,value
+projection_people,,,,2072
+projection_edges,,,,20529
+people_without_collab_edges,,,,327
+wcc_components,,,,9
+wcc_largest_size,,,,2054
+louvain_communities,,,,13
+louvain_modularity,,,,0.4946
+degree_top10,Q513849,Bess Flowers,Actor,277.0
+degree_top10,Q283123,Frank Puglia,Actor,141.0
+degree_top10,Q312878,John Carradine,Actor,139.0
+degree_top10,Q459786,Frank Faylen,Actor,130.0
+degree_top10,Q353142,Addison Richards,Actor,128.0
+degree_top10,Q461949,Henry O'Neill,Actor,120.0
+degree_top10,Q93957,Gary Cooper,Actor,119.0
+degree_top10,Q346833,Ian Wolfe,Actor,118.0
+degree_top10,Q51491,Michael Curtiz,Director,116.0
+degree_top10,Q152941,George Irving,Actor,114.0
+pagerank_top10,Q513849,Bess Flowers,Actor,8.48616
+pagerank_top10,Q172678,Samuel L. Jackson,Actor,5.317363
+pagerank_top10,Q188772,Willem Dafoe,Actor,5.286596
+pagerank_top10,Q36949,Robert De Niro,Actor,4.875042
+pagerank_top10,Q104061,Steve Buscemi,Actor,4.2414
+pagerank_top10,Q312878,John Carradine,Actor,4.14314
+pagerank_top10,Q283123,Frank Puglia,Actor,4.04319
+pagerank_top10,Q201279,Woody Harrelson,Actor,3.982355
+pagerank_top10,Q459786,Frank Faylen,Actor,3.812732
+pagerank_top10,Q346833,Ian Wolfe,Actor,3.590855
+betweenness_top10,Q513849,Bess Flowers,Actor,93053.260484
+betweenness_top10,Q314290,Harry Dean Stanton,Actor,72515.825861
+betweenness_top10,Q180338,Christopher Lee,Actor,68303.407183
+betweenness_top10,Q312878,John Carradine,Actor,47487.235731
+betweenness_top10,Q123351,Michael Caine,Actor,45522.785921
+betweenness_top10,Q188772,Willem Dafoe,Actor,43341.412762
+betweenness_top10,Q36949,Robert De Niro,Actor,42484.311605
+betweenness_top10,Q83484,Anthony Quinn,Actor,38210.596943
+betweenness_top10,Q172678,Samuel L. Jackson,Actor,37901.063825
+betweenness_top10,Q104081,Mickey Rooney,Actor,37290.036174

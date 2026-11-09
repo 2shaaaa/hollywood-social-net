@@ -51,13 +51,13 @@ transparent about it (in a "not yet achieved" section).
 3. `PRODUCED_BY` (already have)
 4. `WON_AWARD` — split out from the old `WON_OR_NOMINATED` (P166)
 5. `NOMINATED_FOR` — split out separately, additionally sourced via P1411 "nominated for" (previously ignored)
-6. `CO_STARRED_WITH` (already have, derived)
-7. `COLLABORATED_WITH` — **this is exactly the "frequent collaboration"** edge Topic 5 asks for (which director keeps picking which actor) — already have it, keeping as-is but applying a weight≥2 threshold to match the "frequent" meaning
+6. `CO_STARRED_WITH` (derived) — two dataset people both cast (P161) in ≥2 films together
+7. `COLLABORATED_WITH` — **this is exactly the "frequent collaboration"** edge Topic 5 asks for (which director keeps picking which actor): director (P57) and cast member (P161) on ≥2 films together. Both derived edges are counted over each person's **full Wikidata filmography** (non-documentary films only), not just the sampled films — see "Collaboration-edge recount" in section 5c
 8. `DISTRIBUTED_BY` — distribution company (P750), distinct from the production company
 9. `MARRIED_TO` — spouse (P26), kept only where both sides are already actors/directors in this dataset — a genuine social tie not derivable from any other relation here, structured/high-precision, real yield (111 unique pairs out of 2,383 people)
 
 **B. NLP-derived (extracted from text with spaCy — the assignment's actual focus)**
-10. `REPRESENTED_BY` — **"Commercial representation"**: NER detects an ORG entity matching the agency list + dependency parsing finds a "sign/represent/client of" verb phrase near the agency name in the actor/director's bio
+10. `REPRESENTED_BY` — **"Commercial representation"**: NER detects an ORG entity matching the agency list + dependency parsing finds a "sign/represent/client of" verb phrase near the agency name in the actor/director's bio. Scope-filtered to keep only clients who are already actors/directors in this dataset (an agency's "clients" sentence also lists authors, athletes, TV hosts, and its own founders — not relevant to Topic 5)
 11. `REPLACED_IN_ROLE` — **"Conflict/Role replacement"**: scans the "Production"/"Casting" section of a film article for patterns like "replaced by / recast / dropped out / fired from / departed" plus 2 PERSON entities (the person replaced, the replacement), linked to the relevant film
 
 → Totals **11 detailed relation types**, above the required minimum.
@@ -140,16 +140,135 @@ thực thể được gán nhãn sẵn nhưng chưa chắc đúng hết." Schedu
 
 ## 5c. Status: data + NLP stage complete
 
-Final merged numbers in `data/output/run2/`: **3,956 nodes / 18,778 edges / 11 distinct
+Final merged numbers in `data/output/run2/`: **3,952 nodes / 18,204 edges / 11 distinct
 relation types** — all three assignment minimums (≥1,000 nodes, ≥5,000 edges, ≥10 relation
 types) cleared with margin. `REPLACED_IN_ROLE`: 25 edges (714 films scanned, ~3.5% yield).
-`REPRESENTED_BY`: 41 edges / 6 agencies (built by scanning each agency's own Wikipedia article
-for "clients" mentions, not each actor's bio — direct bio-scanning was tested and found ~0%
-yield). `BASED_ON` (P144) was tried and dropped — only 2/714 films yielded an edge after
-restricting the target to films already in-dataset, too thin to justify keeping as a distinct
-type. `MARRIED_TO` (P26) added in its place — structured, near-zero engineering cost (same
-`fetch_relation` helper), 111 unique spouse pairs among the 2,383 actors/directors already
-collected. Next: Neo4j (section 4), then network stats (section 4b), then the report.
+`REPRESENTED_BY`: **12 edges / 5 agencies** (scanning each agency's own Wikipedia article for
+"clients" mentions found 41 raw matches, but 29/41 (71%) named a person outside this dataset's
+actor/director set — authors, athletes, TV hosts, or the agency's own founders/executives, not
+film talent; added a scope filter requiring the person already be a collected actor/director,
+dropping ICM Partners entirely since both of its matches were non-film authors). `BASED_ON`
+(P144) was tried and dropped — only 2/714 films yielded an edge after restricting the target to
+films already in-dataset, too thin to justify keeping as a distinct type. `MARRIED_TO` (P26)
+added in its place — structured, near-zero engineering cost (same `fetch_relation` helper), 111
+unique spouse pairs among the 2,383 actors/directors already collected.
+
+A first NetworkX quick pass (`src/network_stats.py`) surfaced 3 data-quality issues, fixed before
+moving to Neo4j:
+1. 56 QIDs listed in both `nodes_directors.csv` and `nodes_actors.csv` (real dual-role people,
+   e.g. Spielberg/Scorsese also credited as cast) — not fixed in the CSVs themselves (both roles
+   are real), but noted for the Neo4j loader: `MERGE` by `qid` with both labels, don't create 2
+   nodes.
+2. `REPRESENTED_BY` precision gap (above) — fixed.
+3. `DISTRIBUTED_BY` had 545 chronologically impossible edges (e.g. classic 1930s-80s films tagged
+   "distributed by Netflix/Disney+" because Wikidata's P750 records whoever currently holds
+   streaming rights, not the original theatrical distributor) — fixed by requiring the
+   distributor's inception (P571) to predate the film's release year; dropped 3 studios left with
+   zero edges as a result (`Turner Entertainment`, `Warner Bros. Home Entertainment`,
+   `Central Motion Picture Exchange`). Netflix's degree dropped from 512 to 89, no longer an
+   outlier dominating centrality.
+
+## 4. Neo4j — load, done
+
+`src/load_neo4j.py` loads all 6 node CSVs and `edges.csv` via the official `neo4j` driver. Every
+node gets a universal `:Entity {id: ...}` label (the MERGE key) plus its specific type label(s) —
+this is what collapses a dual-role person (the 56 above, plus 1 case found only at load time:
+`Leo McCarey`, tagged as both `Director` and `Studio` since his own name is recorded as the
+production company on some of his films) into one node instead of two.
+
+Loading surfaced one more precision bug: 17/25 `REPLACED_IN_ROLE` edges referenced a person QID
+that had never been collected as an Actor/Director node (`MAX_CAST_PER_FILM=5` only keeps the
+top-billed cast, so a replaced/replacing person past that cutoff was a real person but not yet a
+node) — fixed by resolving and adding those 23 QIDs as Actor nodes. Checking all 25 edges'
+endpoints against Wikidata's P31 (instance of) then found `nlp_role_replacement.py` was missing
+the human-instance filter `nlp_agency_representation.py` already has: 5 edges resolved to a
+non-human entity (2 Wikipedia name-disambiguation pages, 1 bare "hyphenated family name" entity,
+and — the actual bug — 1 case where a **film production company** was mistagged PERSON by
+spaCy's NER and ended up as a "replaced actor"). Added the same P31=Q5 filter to
+`nlp_role_replacement.py` and dropped those 5 edges plus the resulting orphan nodes.
+
+One more upstream data error found at load time: `Leo McCarey` (QID Q332530) showed up as both a
+`Director` and a `Studio` node. Verified against Wikidata directly (not assumed) and against
+external sources — McCarey never owned a studio; his real production company was Rainbow
+Productions. The Wikidata item for the film *The Bells of St. Mary's* simply has his own person
+QID listed as a second P272 "production company" value alongside the correct one (RKO Pictures)
+— a genuine editing error in Wikidata's source data, not something our pipeline introduced.
+Dropped that 1 `PRODUCED_BY` edge and McCarey's `Studio` label.
+
+**Final loaded graph**: 3,911 distinct nodes, 18,193 relationships, 11 types — this is the true
+de-duplicated count (CSV row-sums overlap across files for dual-role people); `REPLACED_IN_ROLE`
+now 20 edges (down from 25, all verified human-to-human).
+
+**Collaboration-edge recount (09/11).** The weight≥2 threshold for `COLLABORATED_WITH` written
+in section 2 was never actually applied in code: 95.6% of `COLLABORATED_WITH` and 98.5% of
+`CO_STARRED_WITH` edges had weight 1. Applying the threshold as-is would have left only 158 / 104
+edges, because the weight was counted only inside the sampled films (1-3 award films per
+director, top-5 cast each), which undercounts a pair's real history: Coen-McDormand 1 sampled
+film vs 9 real ones, Tarantino-Samuel L. Jackson 0 vs 6, Ford-Wayne 4 vs 23. Fixed by keeping the
+node set as sampled and counting edges between those nodes over their full Wikidata filmographies
+(`compute_collaboration_edges` in `src/pipeline.py`): works where both people appear, restricted
+to films (P31 subclass of Q11424), excluding documentaries (P31/P136 subclass of Q93204), so a
+shared TV series or documentary appearance doesn't count (2,643 of 23,047 shared works dropped).
+Result with ≥2 films: `COLLABORATED_WITH` 3,864, `CO_STARRED_WITH` 16,938; `edges.csv` now
+28,544 edges, 11 types, nodes unchanged (3,911); largest connected component 99.7% (was 98.8%).
+Caveat for weighted analysis: the highest weights are silent-era one-reel shorts (D. W. Griffith's
+Biograph stock company, up to 128 films with one actor; Laurel & Hardy 147), which are real
+collaborations but will dominate any weight-based metric. Also fixed in passing: the Leo McCarey
+`PRODUCED_BY` row was still present in `edges_structured_only.csv`.
+
+**Neo4j reload + first GDS run (09/11).** Reloaded with `load_neo4j.py --wipe` (MERGE alone keeps
+edges that were dropped from the CSVs): 3,911 nodes, 28,539 relationships (5 duplicate CSV rows
+merged). `src/gds_stats.py` runs GDS on the person-person projection (Actor/Director +
+`COLLABORATED_WITH`/`CO_STARRED_WITH`, a pair with both types = 1 edge, unweighted): 2,072 of
+2,399 people have ≥1 collaboration edge, 20,529 edges (matches a direct Cypher count), 9
+components, largest 99.1%; Louvain 13 communities, modularity 0.495, split by era and national
+industry (modern US auteur circle, median birth 1956: S. L. Jackson, Dafoe, De Niro, Buscemi;
+studio-era contract players, 1896; Ford/Wayne westerns, 1917; 1950s-60s MGM/British, 1921;
+contemporary British, 1964: Caine, Cumberbatch, Gleeson, Fiennes; plus small German and Chilean
+clusters).
+
+The run exposed a **node-selection flaw**: Bess Flowers, an uncredited background extra, ranks #1
+on degree, PageRank and betweenness. Cause: `MAX_CAST_PER_FILM=5` keeps the first 5 rows of a
+P161 SPARQL query that has no `ORDER BY` and Wikidata has no billing order, so the "top 5" is
+arbitrary — *It Happened One Night* kept Bess Flowers, Claire McDowell and Dolores Fuller (all
+uncredited) next to Gable and Colbert; *Titanic* kept Danny Nucci but not Kate Winslet;
+*Casablanca* kept Paul Panzer and Curt Bois but not Claude Rains. Full-filmography counting then
+amplifies such prolific extras (Bess Flowers: 242 P161 works). Also found: 129 nodes have no
+display name (42 actors, 4 directors incl. Nolan and Cameron, 83 films). The run2 GDS numbers
+above are superseded by run3.
+
+**Cast-selection fix → `data/output/run3` (09/11).** Cast now comes from each film's Wikipedia
+`Infobox film` `starring` field (credited leads in poster billing order, linked titles resolved to
+QIDs, P31=Q5 required), replacing the arbitrary first-5 P161 rows; `MAX_CAST_PER_FILM` removed.
+Checked on the problem films: *It Happened One Night* → Gable, Colbert; *Titanic* → DiCaprio,
+Winslet, Zane, Bates…; *Casablanca* → Bogart, Bergman, Henreid, Rains… Only 5 films have no usable
+`starring` field. Other fixes in the same pass: names via the `en` label falling back to `mul`
+(Nolan, Cameron etc. only have `mul` labels; 0 unnamed people/films now, 5 unnamed studios);
+`PRODUCED_BY` targets that are humans dropped (Leo McCarey plus 4 producers wrongly recorded as
+production companies, e.g. on *The Graduate*); `--films-from` reuses run2's film set but drops 12
+films no current seed selects (foreign-language films with a minor US co-producer credit, left over
+from the removed International Feature seed — they had produced the Chilean/German clusters);
+NLP merge is now `src/merge_nlp_edges.py` instead of a manual step. Build:
+`pipeline --films-from run2/nodes_films.csv --out run3` → `run_agency_representation` →
+copy run2's `replaced_in_role_edges*.csv` (same films) → `merge_nlp_edges`.
+
+run3 totals: 4,155 nodes (702 films, 2,681 people, 374 studios, 5 agencies, 393 award events),
+34,320 edges (34,315 relationships in Neo4j after MERGE), 11 types — `CO_STARRED_WITH` 21,899,
+`COLLABORATED_WITH` 4,250, `ACTED_IN` 3,967, `PRODUCED_BY` 1,049, `DISTRIBUTED_BY` 1,005,
+`NOMINATED_FOR` 899, `DIRECTED` 771, `WON_AWARD` 315, `MARRIED_TO` 132, `REPLACED_IN_ROLE` 20,
+`REPRESENTED_BY` 13. 0 dangling edges, every film has ≥1 award edge.
+
+run3 GDS (person-person projection, unweighted): 2,356/2,681 people with ≥1 collaboration edge,
+25,847 edges, 5 components (largest 99.7%). Degree top: Ward Bond, John Carradine, Henry O'Neill,
+Frank Faylen, Reginald Owen (credited studio-era character actors who worked with many stars),
+then Samuel L. Jackson, Walter Brennan, Willem Dafoe. PageRank top: S. L. Jackson, Dafoe, Ward Bond,
+Carradine, De Niro. Betweenness top (bridges across eras/industries): Christopher Lee, Harry Dean
+Stanton, Carradine, Michael Caine, De Niro. Louvain: 12 communities, modularity 0.503 — modern US
+(median birth 1957, 939 people), studio era (1901, 544), postwar (1921, 515), contemporary
+British/international (1967, 320), plus small ensembles (the *Cocoon* cast, the *Crouching Tiger*
+cast).
+
+Next: network stats via Neo4j GDS (section 4b), then the report.
 
 ## 6. Risks
 

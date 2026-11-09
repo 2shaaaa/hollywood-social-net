@@ -1,4 +1,6 @@
 """Wikidata client: SPARQL (structured relations) + Action API (QID lookup by enwiki page title)."""
+from collections import defaultdict
+
 from . import config
 from .http_utils import get_json
 
@@ -48,7 +50,7 @@ def fetch_award_subjects(session, award_qid: str, subject_type: str = "film", pr
       {type_filter}
       OPTIONAL {{ ?stmt pq:P585 ?date . BIND(YEAR(?date) AS ?year) }}
       OPTIONAL {{ ?stmt pq:P1686 ?film . }}
-      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,mul". }}
     }}
     """
     rows = _run_sparql(session, query)
@@ -76,7 +78,7 @@ def fetch_relation(session, qids: list[str], prop: str, value_is_entity: bool = 
             SELECT ?film ?value ?valueLabel WHERE {{
               VALUES ?film {{ {values} }}
               ?film wdt:{prop} ?value .
-              SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+              SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,mul". }}
             }}
             """
         else:
@@ -114,6 +116,52 @@ def fetch_min_year(session, qids: list[str], prop: str = "P577") -> dict[str, st
         for row in rows:
             out[_qid_of(row["item"]["value"])] = row["year"]["value"]
     return out
+
+
+def fetch_labels(session, qids: list[str]) -> dict[str, str]:
+    """Display name per QID: the English label, else the language-neutral `mul` label — many person
+    items (e.g. Christopher Nolan, James Cameron) now carry their name only as `mul`."""
+    by_lang = defaultdict(dict)
+    for batch in _chunks(qids, config.SPARQL_BATCH_SIZE):
+        values = " ".join(f"wd:{q}" for q in batch)
+        query = f"""
+        SELECT ?item ?label WHERE {{
+          VALUES ?item {{ {values} }}
+          ?item rdfs:label ?label . FILTER(LANG(?label) IN ("en", "mul"))
+        }}
+        """
+        for row in _run_sparql(session, query):
+            by_lang[_qid_of(row["item"]["value"])][row["label"]["xml:lang"]] = row["label"]["value"]
+    return {q: langs.get("en") or langs["mul"] for q, langs in by_lang.items()}
+
+
+def fetch_works_by_person(session, person_qids: list[str], prop: str) -> dict[str, set[str]]:
+    """{person_qid: {work_qid, ...}} for every work whose `prop` (P57 director / P161 cast member)
+    points to the person — their whole career on Wikidata, not just the sampled films."""
+    out = defaultdict(set)
+    for batch in _chunks(person_qids, config.SPARQL_BATCH_SIZE):
+        values = " ".join(f"wd:{q}" for q in batch)
+        query = f"SELECT ?work ?person WHERE {{ VALUES ?person {{ {values} }} ?work wdt:{prop} ?person . }}"
+        for row in _run_sparql(session, query):
+            out[_qid_of(row["person"]["value"])].add(_qid_of(row["work"]["value"]))
+    return out
+
+
+def filter_feature_films(session, work_qids: set[str], batch_size: int = 200) -> set[str]:
+    """Subset of work_qids that are films (P31 subclass of Q11424), minus documentaries (P31 or P136
+    subclass of Q93204): a shared TV series or a documentary appearance isn't a film collaboration."""
+    keep = set()
+    for batch in _chunks(sorted(work_qids), batch_size):
+        values = " ".join(f"wd:{q}" for q in batch)
+        query = f"""
+        SELECT DISTINCT ?work WHERE {{
+          VALUES ?work {{ {values} }}
+          ?work wdt:P31/wdt:P279* wd:Q11424 .
+          FILTER NOT EXISTS {{ ?work (wdt:P31|wdt:P136)/wdt:P279* wd:Q93204 . }}
+        }}
+        """
+        keep.update(_qid_of(row["work"]["value"]) for row in _run_sparql(session, query))
+    return keep
 
 
 def fetch_enwiki_titles(session, qids: list[str]) -> dict[str, str]:
