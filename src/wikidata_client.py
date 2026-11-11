@@ -37,6 +37,9 @@ def fetch_award_subjects(session, award_qid: str, subject_type: str = "film", pr
     - subject_type="person": awards given to an individual (Best Director...) -> the subject
       MUST be instance-of human; the film is read from the P1686 "for work" qualifier (can be
       empty if Wikidata is missing it).
+    - year: the statement's P585 "point in time" qualifier; when that is missing (most Oscar
+      nominations), the date of the ceremony the statement points to via P805 "statement is
+      subject of" (e.g. "70th Academy Awards" -> its P585, else P580). None if neither exists.
     """
     type_filter = (
         "?subject wdt:P31/wdt:P279* wd:Q11424 ."
@@ -44,27 +47,39 @@ def fetch_award_subjects(session, award_qid: str, subject_type: str = "film", pr
         else "?subject wdt:P31 wd:Q5 ."
     )
     query = f"""
-    SELECT DISTINCT ?subject ?subjectLabel ?film ?filmLabel ?year WHERE {{
+    SELECT ?stmt ?subject ?subjectLabel ?film ?filmLabel ?year WHERE {{
       ?subject p:{prop} ?stmt .
       ?stmt ps:{prop} wd:{award_qid} .
       {type_filter}
-      OPTIONAL {{ ?stmt pq:P585 ?date . BIND(YEAR(?date) AS ?year) }}
+      OPTIONAL {{ ?stmt pq:P585 ?date . }}
+      OPTIONAL {{ ?stmt pq:P805 ?ceremony . OPTIONAL {{ ?ceremony wdt:P585 ?cdate . }} OPTIONAL {{ ?ceremony wdt:P580 ?cstart . }} }}
+      BIND(YEAR(COALESCE(?date, ?cdate, ?cstart)) AS ?year)
       OPTIONAL {{ ?stmt pq:P1686 ?film . }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,mul". }}
     }}
     """
-    rows = _run_sparql(session, query)
-    out = []
-    for row in rows:
-        out.append(
-            {
+    # A statement can join several ceremony dates -> one row each; keep its earliest year, then
+    # dedupe on (subject, film, year) as before (two statements saying the same thing = one row).
+    by_stmt = {}
+    for row in _run_sparql(session, query):
+        film_qid = _qid_of(row["film"]["value"]) if "film" in row else None
+        year = row.get("year", {}).get("value")
+        key = (row["stmt"]["value"], film_qid)
+        prev = by_stmt.get(key)
+        if prev is None or (year and (not prev["year"] or int(year) < int(prev["year"]))):
+            by_stmt[key] = {
                 "subject_qid": _qid_of(row["subject"]["value"]),
                 "subject_label": row.get("subjectLabel", {}).get("value"),
-                "film_qid": _qid_of(row["film"]["value"]) if "film" in row else None,
+                "film_qid": film_qid,
                 "film_label": row.get("filmLabel", {}).get("value") if "film" in row else None,
-                "year": row.get("year", {}).get("value"),
+                "year": year,
             }
-        )
+    out, seen = [], set()
+    for r in by_stmt.values():
+        k = (r["subject_qid"], r["film_qid"], r["year"])
+        if k not in seen:
+            seen.add(k)
+            out.append(r)
     return out
 
 

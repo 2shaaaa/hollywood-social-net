@@ -312,7 +312,10 @@ def run_pipeline(pilot: bool, film_limit: int | None, out_dir: Path, target_film
     won_edges = []
     nominated_edges = []
     for r in award_rows:
-        event_id = f"{r['award_key']}_{r['year'] or 'unknown'}"
+        # An event is one award in one year. With no year on Wikidata (statement nor ceremony),
+        # give the row its own event rather than a shared "<award>_unknown" node, which would
+        # falsely put films from different years in the same ceremony.
+        event_id = f"{r['award_key']}_{r['year']}" if r["year"] else f"{r['award_key']}_unknown_{r['film_qid']}"
         if event_id not in events:
             events[event_id] = {
                 "event_id": event_id,

@@ -289,6 +289,16 @@ agencies, a gallery, a distributor, an individual agent). Merged with the 13 tex
 → **37 edges, 16 agencies** (adds MCA for Stewart/Fonda/Davis/Reagan, WME, ICM, Japanese agencies
 for the *Letters from Iwo Jima* cast). Edge `context` records the source(s).
 
+**Award-event year fix (12/11, code only).** run3 had 7 shared `<award>_unknown` events holding 72
+award edges (`oscar_best_picture_unknown` alone joined 48 films from different years as if one
+ceremony), because the year was read only from the statement's P585 qualifier, which most Oscar
+nominations lack. Now: P585, else the date (P585/P580) of the ceremony item the statement points to
+via P805 (e.g. "70th Academy Awards"); a row with neither gets its own `<award>_unknown_<film>` event
+instead of a shared one. On run3's films: same 1,390 award rows, 61 of the 72 rows get a year, 12
+stay unknown (mostly Golden Globes, incl. *Titanic*) as single-edge events → 401 events (was 393),
+`WON_AWARD` 315 (unchanged), `NOMINATED_FOR` 884 (was 899: 15 winners also had a year-less
+nomination row that the "winner isn't also merely nominated" rule couldn't match before).
+
 Next: network stats via Neo4j GDS (section 4b), then the report.
 
 ## 6. Risks
