@@ -7,3 +7,4 @@ tqdm>=4.66
 mwparserfromhell>=0.6
 networkx>=3.3
 neo4j>=5.0
+spacy>=3.7
