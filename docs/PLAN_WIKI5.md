@@ -57,8 +57,8 @@ transparent about it (in a "not yet achieved" section).
 9. `MARRIED_TO` — spouse (P26), kept only where both sides are already actors/directors in this dataset — a genuine social tie not derivable from any other relation here, structured/high-precision, real yield (111 unique pairs out of 2,383 people)
 
 **B. NLP-derived (extracted from text with spaCy — the assignment's actual focus)**
-10. `REPRESENTED_BY` — **"Commercial representation"**: NER detects an ORG entity matching the agency list + dependency parsing finds a "sign/represent/client of" verb phrase near the agency name in the actor/director's bio. Scope-filtered to keep only clients who are already actors/directors in this dataset (an agency's "clients" sentence also lists authors, athletes, TV hosts, and its own founders — not relevant to Topic 5)
-11. `REPLACED_IN_ROLE` — **"Conflict/Role replacement"**: scans the "Production"/"Casting" section of a film article for patterns like "replaced by / recast / dropped out / fired from / departed" plus 2 PERSON entities (the person replaced, the replacement), linked to the relevant film
+10. `REPRESENTED_BY` — **"Commercial representation"**, two sources merged into one edge per (person, agency): (a) spaCy NER over the "client" sentences of each seeded agency's own Wikipedia article; (b) Wikidata P1875 "represented by" on the dataset's people, kept only when the value is a talent agency (P31/P279* Q5354754, or a seeded agency). Scope-filtered to people who are already actors/directors in this dataset (an agency's "clients" sentence also lists authors, athletes, TV hosts, and its own founders — not relevant to Topic 5). Edge `context` records the source(s)
+11. `REPLACED_IN_ROLE` — **"Conflict/Role replacement"**: scans a film article, minus sections not about the filmmaking (plot, release/reception, adaptations, back matter), for a "replace/recast" verb with 2 PERSON entities (the person replaced, the replacement), linked to the film; kept only if both resolve to humans (P31=Q5) and the replacement is in the film's Wikidata cast (P161)
 
 → Totals **11 detailed relation types**, above the required minimum.
 
@@ -267,6 +267,27 @@ Stanton, Carradine, Michael Caine, De Niro. Louvain: 12 communities, modularity 
 (median birth 1957, 939 people), studio era (1901, 544), postwar (1921, 515), contemporary
 British/international (1967, 320), plus small ensembles (the *Cocoon* cast, the *Crouching Tiger*
 cast).
+
+**NLP relation fixes (10/11, code only — the committed run3 CSVs still hold the old NLP edges).**
+`REPLACED_IN_ROLE`: a manual check of run3's 20 edges found only 10 were an actor replaced in a
+part during filmmaking; the rest were 5 director replacements (Weir for Kanew on *Dead Poets
+Society*, Ford for Wyler, Milestone for Reed, Marton for Bennett, LeRoy for Lewin), 2
+cinematographer replacements (Menges for Deakins; MacWilliams for "Arthur Miller", which also
+resolved to the playwright instead of cinematographer Arthur C. Miller) and 3 recastings in later
+radio adaptations (*Stage Door*, *All About Eve*). Causes: any "replace" sentence with 2 humans was
+accepted, and the scan ran from Production to the end of the article. Fix: drop non-filmmaking
+sections (plot, release/reception, adaptations, back matter; sub-sections inherit) and require the
+replacing person to be in the film's Wikidata cast (P161). An occupation filter (P106 ⊂ actor) was
+measured and rejected: it kept Ford/Wyler and Reed/Milestone (both credited as actors) and dropped
+the true Melton → Grayson edge (Melton is typed only as an opera singer). Result on run3's 702 films:
+24 candidate mentions → 22 resolved → 17 both human → **10 edges, exactly the 10 correct ones**.
+`REPRESENTED_BY`: Wikipedia has no client rosters (those live in trade press / IMDbPro, outside a
+Wikipedia-only topic). Added Wikidata P1875 "represented by" as a second source, value restricted
+to talent agencies (P31/P279* Q5354754, or a seeded agency — ICM is typed only as "business"):
+41 P1875 statements on 32 of 2,681 dataset people → 24 to talent agencies (the rest: modeling
+agencies, a gallery, a distributor, an individual agent). Merged with the 13 text edges (0 overlap)
+→ **37 edges, 16 agencies** (adds MCA for Stewart/Fonda/Davis/Reagan, WME, ICM, Japanese agencies
+for the *Letters from Iwo Jima* cast). Edge `context` records the source(s).
 
 Next: network stats via Neo4j GDS (section 4b), then the report.
 

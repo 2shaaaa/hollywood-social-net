@@ -1,14 +1,17 @@
 """NLP extraction of the REPLACED_IN_ROLE relation ("Conflict/Role replacement") required by
 Topic 5 — uses spaCy NER + dependency parsing on each film's full Wikipedia article text.
 
-Technique: for every film, fetch the full plaintext (not just the lead), scan the sentences
-from the "Production"/"Casting" section onward for a trigger verb ("replace"/"recast") in
-either active or passive voice, pull out the two PERSON entities involved, apply a light
-same-document coreference heuristic (surname-only mentions resolved to the full name seen
-earlier in the article), then verify each name resolves to a real Wikidata QID AND is
-instance-of-human (P31=Q5) before keeping the edge — this acts as a precision filter against NER
-false positives and non-human QID matches (disambiguation pages, bare family-name entities,
-organizations mistagged as PERSON).
+Technique: for every film, fetch the full plaintext (not just the lead), drop the sections that
+are not about making the film (plot, release/reception, later adaptations...), scan the rest for
+a trigger verb ("replace"/"recast") in either active or passive voice, pull out the two PERSON
+entities involved, and apply a light same-document coreference heuristic (surname-only mentions
+resolved to the full name seen earlier in the article). An edge is kept only if:
+  1. both names resolve to a Wikidata QID that is instance-of-human (P31=Q5) — drops NER false
+     positives, disambiguation pages, bare family-name entities, organizations tagged PERSON;
+  2. the replacing person is a cast member of that film (Wikidata P161) — the one who
+     took over a part must end up in the cast. This drops replacements of a director
+     (Peter Weir taking over Dead Poets Society) or a cinematographer, and names that resolved to
+     the wrong person (a cinematographer "Arthur Miller" matched to the playwright).
 """
 import re
 
@@ -20,7 +23,6 @@ from .http_utils import get_json
 
 API_URL = "https://en.wikipedia.org/w/api.php"
 REPLACE_LEMMAS = {"replace", "recast"}
-SECTION_HEADINGS = ("== Production ==", "== Casting ==", "== Development ==")
 
 _nlp = None
 
@@ -57,17 +59,45 @@ def fetch_full_plaintext(session, title: str) -> str:
     return ""
 
 
-MAX_SCAN_CHARS = 20000  # bounds spaCy processing time on long Featured-Article-length pages
+MAX_SCAN_CHARS = 30000  # bounds spaCy processing time on long Featured-Article-length pages
+
+# Sections about something other than making the film: its story, what happened after release,
+# and later versions — e.g. Stage Door's 1950s radio adaptation recasting Hepburn's part is not a
+# replacement during filmmaking. Matched as substrings of the lowercased heading.
+EXCLUDED_SECTION_WORDS = (
+    "plot", "synopsis", "adaptation", "remake", "sequel", "version", "radio", "legacy",
+    "popular culture", "home media", "release", "reception", "box office", "critical",
+    "accolade", "award", "honor", "honour",
+)
+# Back matter, matched as the whole heading (a substring match would also drop "Production notes").
+EXCLUDED_SECTION_TITLES = {
+    "see also", "notes", "references", "sources", "citations", "footnotes", "bibliography",
+    "further reading", "external links",
+}
+_HEADING_RE = re.compile(r"^(=+) (.+?) \1$", re.M)
 
 
-def _production_onward(text: str) -> str:
-    idx = None
-    for heading in SECTION_HEADINGS:
-        i = text.find(heading)
-        if i != -1 and (idx is None or i < idx):
-            idx = i
-    scanned = text[idx:] if idx is not None else text
-    return scanned[:MAX_SCAN_CHARS]
+def _is_excluded_section(title: str) -> bool:
+    title = title.lower()
+    return title in EXCLUDED_SECTION_TITLES or any(w in title for w in EXCLUDED_SECTION_WORDS)
+
+
+def _filmmaking_text(text: str) -> str:
+    """The article minus excluded sections. A sub-section inherits its parent's exclusion
+    ("=== Radio ===" under "== Adaptations =="). Headings themselves are left out."""
+    kept, stack, pos, excluded = [], [], 0, False
+    for m in _HEADING_RE.finditer(text):
+        if not excluded:
+            kept.append(text[pos : m.start()])
+        level = len(m.group(1))
+        while stack and stack[-1][0] >= level:
+            stack.pop()
+        stack.append((level, _is_excluded_section(m.group(2).strip())))
+        excluded = any(ex for _, ex in stack)
+        pos = m.end()
+    if not excluded:
+        kept.append(text[pos:])
+    return "\n".join(kept)[:MAX_SCAN_CHARS]
 
 
 def _build_surname_registry(doc) -> dict[str, str]:
@@ -138,14 +168,13 @@ def extract_role_replacements_for_films(session, film_titles: dict[str, str], ve
     """film_titles: {film_qid: enwiki_title}. Fetches text, extracts mentions, resolves names
     to Wikidata QIDs, and returns [{film_qid, old_actor_qid, new_actor_qid, sentence}]."""
     raw_mentions = []
-    for qid, title in film_titles.items():
+    for i, (qid, title) in enumerate(film_titles.items(), 1):
         text = fetch_full_plaintext(session, title)
-        if not text:
-            continue
-        scan_text = _production_onward(text)
-        for m in extract_replacement_mentions(scan_text):
+        for m in extract_replacement_mentions(_filmmaking_text(text)) if text else []:
             m["film_qid"] = qid
             raw_mentions.append(m)
+        if verbose and i % 50 == 0:
+            print(f"  [nlp:replaced_in_role] scanned {i}/{len(film_titles)} films, {len(raw_mentions)} candidate mentions so far")
 
     if verbose:
         print(f"  [nlp:replaced_in_role] {len(raw_mentions)} candidate mentions before QID resolution")
@@ -162,22 +191,36 @@ def extract_role_replacements_for_films(session, film_titles: dict[str, str], ve
     instance_of_edges = wd.fetch_relation(session, candidate_qids, "P31") if candidate_qids else []
     human_qids = {qid for qid, value_qid, _ in instance_of_edges if value_qid == "Q5"}
 
-    out = []
+    resolved, n_resolved = [], 0
     for m in raw_mentions:
         old_qid = name_to_qid.get(m["old_actor_name"])
         new_qid = name_to_qid.get(m["new_actor_name"])
-        if not old_qid or not new_qid:
+        if not old_qid or not new_qid or old_qid == new_qid:
             continue  # name didn't resolve to a real Wikipedia/Wikidata entity -> drop (precision filter)
+        n_resolved += 1
         if old_qid not in human_qids or new_qid not in human_qids:
             continue  # resolved to a non-human entity (disambiguation page, family name, company...) -> drop
-        out.append(
-            {
-                "film_qid": m["film_qid"],
-                "old_actor_qid": old_qid,
-                "new_actor_qid": new_qid,
-                "sentence": m["sentence"],
-            }
-        )
+        resolved.append((m, old_qid, new_qid))
+
+    # Role filter: the replacing person must be in the film's Wikidata cast (P161, which also lists
+    # supporting and uncredited parts, unlike the infobox "Starring" field used for ACTED_IN).
+    film_ids = sorted({m["film_qid"] for m, _, _ in resolved})
+    cast_by_film = {}
+    for film_qid, person_qid, _ in (wd.fetch_relation(session, film_ids, "P161") if film_ids else []):
+        cast_by_film.setdefault(film_qid, set()).add(person_qid)
+
+    out, seen = [], set()
+    for m, old_qid, new_qid in resolved:
+        if new_qid not in cast_by_film.get(m["film_qid"], set()):
+            continue  # took over a non-acting job (director, cinematographer...) or a mis-resolved name
+        key = (m["film_qid"], old_qid, new_qid)
+        if key in seen:
+            continue  # the same replacement told twice in one article (e.g. Cast and Production)
+        seen.add(key)
+        out.append({"film_qid": m["film_qid"], "old_actor_qid": old_qid, "new_actor_qid": new_qid, "sentence": m["sentence"]})
     if verbose:
-        print(f"  [nlp:replaced_in_role] {len(out)} edges confirmed after QID resolution")
+        print(
+            f"  [nlp:replaced_in_role] {n_resolved} resolved to QIDs -> {len(resolved)} both human"
+            f" -> {len(out)} edges where the replacing person is in the film's cast (P161), deduplicated"
+        )
     return out

@@ -2,7 +2,7 @@
 write the resulting edges to a standalone CSV (merged into the main edges.csv separately).
 
 Usage:
-    python -m src.run_role_replacement --films data/output/run2/nodes_films.csv --out data/output/run2/replaced_in_role_edges.csv
+    python -m src.run_role_replacement --films data/output/run3/nodes_films.csv --out data/output/run3/replaced_in_role_edges.csv
 """
 import argparse
 import csv

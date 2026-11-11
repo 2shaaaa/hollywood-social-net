@@ -118,21 +118,34 @@ def fetch_min_year(session, qids: list[str], prop: str = "P577") -> dict[str, st
     return out
 
 
-def fetch_labels(session, qids: list[str]) -> dict[str, str]:
+def fetch_labels(session, qids: list[str], any_language: bool = False) -> dict[str, str]:
     """Display name per QID: the English label, else the language-neutral `mul` label — many person
-    items (e.g. Christopher Nolan, James Cameron) now carry their name only as `mul`."""
+    items (e.g. Christopher Nolan, James Cameron) now carry their name only as `mul`. With
+    any_language, an item with neither falls back to a label in any language (e.g. a Japanese
+    talent agency labelled only in `ja`)."""
+    lang_filter = "" if any_language else 'FILTER(LANG(?label) IN ("en", "mul"))'
     by_lang = defaultdict(dict)
     for batch in _chunks(qids, config.SPARQL_BATCH_SIZE):
         values = " ".join(f"wd:{q}" for q in batch)
         query = f"""
         SELECT ?item ?label WHERE {{
           VALUES ?item {{ {values} }}
-          ?item rdfs:label ?label . FILTER(LANG(?label) IN ("en", "mul"))
+          ?item rdfs:label ?label . {lang_filter}
         }}
         """
         for row in _run_sparql(session, query):
             by_lang[_qid_of(row["item"]["value"])][row["label"]["xml:lang"]] = row["label"]["value"]
-    return {q: langs.get("en") or langs["mul"] for q, langs in by_lang.items()}
+    return {q: langs.get("en") or langs.get("mul") or langs[min(langs)] for q, langs in by_lang.items()}
+
+
+def fetch_instances_of(session, qids: list[str], class_qid: str) -> set[str]:
+    """Subset of qids that are an instance of class_qid or of one of its subclasses (P31/P279*)."""
+    keep = set()
+    for batch in _chunks(qids, config.SPARQL_BATCH_SIZE):
+        values = " ".join(f"wd:{q}" for q in batch)
+        query = f"SELECT DISTINCT ?item WHERE {{ VALUES ?item {{ {values} }} ?item wdt:P31/wdt:P279* wd:{class_qid} . }}"
+        keep.update(_qid_of(row["item"]["value"]) for row in _run_sparql(session, query))
+    return keep
 
 
 def fetch_works_by_person(session, person_qids: list[str], prop: str) -> dict[str, set[str]]:
