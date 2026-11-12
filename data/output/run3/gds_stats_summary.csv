@@ -1,11 +1,11 @@
 metric,id,name,labels,value
-projection_people,,,,2356
-projection_edges,,,,25847
-people_without_collab_edges,,,,325
+projection_people,,,,2357
+projection_edges,,,,25844
+people_without_collab_edges,,,,318
 wcc_components,,,,5
-wcc_largest_size,,,,2348
+wcc_largest_size,,,,2349
 louvain_communities,,,,12
-louvain_modularity,,,,0.5027
+louvain_modularity,,,,0.5081
 degree_top10,Q1280760,Ward Bond,Actor,172.0
 degree_top10,Q312878,John Carradine,Actor,155.0
 degree_top10,Q461949,Henry O'Neill,Actor,137.0
@@ -16,23 +16,23 @@ degree_top10,Q219521,Walter Brennan,Actor,122.0
 degree_top10,Q188772,Willem Dafoe,Actor,121.0
 degree_top10,Q93957,Gary Cooper,Actor,118.0
 degree_top10,Q40531,John Wayne,Actor/Director,117.0
-pagerank_top10,Q172678,Samuel L. Jackson,Actor,5.535917
-pagerank_top10,Q188772,Willem Dafoe,Actor,5.250675
-pagerank_top10,Q1280760,Ward Bond,Actor,4.898074
-pagerank_top10,Q312878,John Carradine,Actor,4.57688
-pagerank_top10,Q36949,Robert De Niro,Actor,4.477702
-pagerank_top10,Q577687,Reginald Owen,Actor,3.994267
-pagerank_top10,Q201279,Woody Harrelson,Actor,3.952023
-pagerank_top10,Q461949,Henry O'Neill,Actor,3.943039
-pagerank_top10,Q40531,John Wayne,Actor/Director,3.937637
-pagerank_top10,Q459786,Frank Faylen,Actor,3.881736
-betweenness_top10,Q180338,Christopher Lee,Actor,96091.976509
-betweenness_top10,Q314290,Harry Dean Stanton,Actor,83745.770132
-betweenness_top10,Q312878,John Carradine,Actor,61693.387598
-betweenness_top10,Q123351,Michael Caine,Actor,59102.227787
-betweenness_top10,Q36949,Robert De Niro,Actor,53783.187231
-betweenness_top10,Q104081,Mickey Rooney,Actor,51323.143949
-betweenness_top10,Q172678,Samuel L. Jackson,Actor,47611.707139
-betweenness_top10,Q188772,Willem Dafoe,Actor,43266.19589
-betweenness_top10,Q19155,Henry Fonda,Actor,42619.466168
-betweenness_top10,Q102711,Dennis Hopper,Actor/Director,39143.853743
+pagerank_top10,Q172678,Samuel L. Jackson,Actor,5.540259
+pagerank_top10,Q188772,Willem Dafoe,Actor,5.253064
+pagerank_top10,Q1280760,Ward Bond,Actor,4.899133
+pagerank_top10,Q312878,John Carradine,Actor,4.578052
+pagerank_top10,Q36949,Robert De Niro,Actor,4.486322
+pagerank_top10,Q577687,Reginald Owen,Actor,3.995116
+pagerank_top10,Q201279,Woody Harrelson,Actor,3.954499
+pagerank_top10,Q461949,Henry O'Neill,Actor,3.943853
+pagerank_top10,Q40531,John Wayne,Actor/Director,3.938512
+pagerank_top10,Q459786,Frank Faylen,Actor,3.882687
+betweenness_top10,Q180338,Christopher Lee,Actor,96134.190371
+betweenness_top10,Q314290,Harry Dean Stanton,Actor,83822.698873
+betweenness_top10,Q312878,John Carradine,Actor,61792.801731
+betweenness_top10,Q123351,Michael Caine,Actor,59144.881921
+betweenness_top10,Q36949,Robert De Niro,Actor,54144.171414
+betweenness_top10,Q104081,Mickey Rooney,Actor,51332.021388
+betweenness_top10,Q172678,Samuel L. Jackson,Actor,47669.082702
+betweenness_top10,Q188772,Willem Dafoe,Actor,43309.454626
+betweenness_top10,Q19155,Henry Fonda,Actor,42766.215468
+betweenness_top10,Q102711,Dennis Hopper,Actor/Director,39176.269908

@@ -1,0 +1,52 @@
+metric,variant,rank,id,name,value
+degree_top10_overlap,,,,,7
+degree_spearman,,,,,0.9926
+pagerank_top10_overlap,,,,,9
+pagerank_spearman,,,,,0.9918
+louvain_communities_unweighted,,,,,12
+louvain_modularity_unweighted,,,,,0.5081
+louvain_communities_weighted,,,,,13
+louvain_modularity_weighted,,,,,0.5192
+louvain_nmi,,,,,0.7699
+louvain_nmi_baseline_min,,,,,0.6677
+louvain_nmi_baseline_mean,,,,,0.7511
+degree,unweighted,1,Q1280760,Ward Bond,172.0
+degree,unweighted,2,Q312878,John Carradine,155.0
+degree,unweighted,3,Q461949,Henry O'Neill,137.0
+degree,unweighted,4,Q459786,Frank Faylen,134.0
+degree,unweighted,5,Q577687,Reginald Owen,132.0
+degree,unweighted,6,Q172678,Samuel L. Jackson,129.0
+degree,unweighted,7,Q219521,Walter Brennan,122.0
+degree,unweighted,8,Q188772,Willem Dafoe,121.0
+degree,unweighted,9,Q93957,Gary Cooper,118.0
+degree,unweighted,10,Q40531,John Wayne,117.0
+degree,weighted,1,Q1280760,Ward Bond,607.0
+degree,weighted,2,Q461949,Henry O'Neill,551.0
+degree,weighted,3,Q312878,John Carradine,482.0
+degree,weighted,4,Q459786,Frank Faylen,439.0
+degree,weighted,5,Q577687,Reginald Owen,418.0
+degree,weighted,6,Q51491,Michael Curtiz,410.0
+degree,weighted,7,Q40531,John Wayne,389.0
+degree,weighted,8,Q295593,Lionel Barrymore,376.0
+degree,weighted,9,Q172678,Samuel L. Jackson,364.0
+degree,weighted,10,Q367073,Donald Crisp,362.0
+pagerank,unweighted,1,Q172678,Samuel L. Jackson,5.540259
+pagerank,unweighted,2,Q188772,Willem Dafoe,5.253064
+pagerank,unweighted,3,Q1280760,Ward Bond,4.899133
+pagerank,unweighted,4,Q312878,John Carradine,4.578052
+pagerank,unweighted,5,Q36949,Robert De Niro,4.486322
+pagerank,unweighted,6,Q577687,Reginald Owen,3.995116
+pagerank,unweighted,7,Q201279,Woody Harrelson,3.954499
+pagerank,unweighted,8,Q461949,Henry O'Neill,3.943853
+pagerank,unweighted,9,Q40531,John Wayne,3.938512
+pagerank,unweighted,10,Q459786,Frank Faylen,3.882687
+pagerank,weighted,1,Q1280760,Ward Bond,6.37533
+pagerank,weighted,2,Q172678,Samuel L. Jackson,6.320645
+pagerank,weighted,3,Q461949,Henry O'Neill,5.717924
+pagerank,weighted,4,Q188772,Willem Dafoe,5.698947
+pagerank,weighted,5,Q312878,John Carradine,5.378763
+pagerank,weighted,6,Q36949,Robert De Niro,5.131577
+pagerank,weighted,7,Q40531,John Wayne,4.782807
+pagerank,weighted,8,Q577687,Reginald Owen,4.728707
+pagerank,weighted,9,Q459786,Frank Faylen,4.720276
+pagerank,weighted,10,Q51491,Michael Curtiz,4.425822
