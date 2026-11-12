@@ -5,11 +5,12 @@ Centrality is computed on this projection rather than on the full loaded graph b
 Studio and AwardEvent nodes sit on every path between two people and get artificially high
 betweenness (NetworkX quick pass: 9/10 top-betweenness nodes were studios). A pair linked by both
 relation types becomes one edge, weighted by its larger film count. All algorithms run unweighted:
-edges are already filtered to >=2 films together, and raw weights are dominated by silent-era
-one-reel shorts (up to 147 films for one pair).
+edges are already filtered to >=2 films together, and raw weights are dominated by studio-era
+and silent-era output (up to 45 films for one pair in run3); src/gds_weight_check.py measures
+how much weighting would change the results.
 
 Usage:
-    python -m src.gds_stats --dir data/output/run2 --password password123
+    python -m src.gds_stats --dir data/output/run3 --uri bolt://localhost:7688 --password password123
 """
 import argparse
 import csv
@@ -69,13 +70,17 @@ def main():
             for r in results[metric]:
                 print(f"  {r['score']:>10.4f}  {r['name']} ({'/'.join(l for l in r['labels'] if l != 'Entity')})")
 
+        # One Louvain run (mutate) supplies both the partition and its count/modularity; separate
+        # stream + stats calls are two runs and can disagree. concurrency 1 makes it reproducible.
+        modularity = s.run(
+            "CALL gds.louvain.mutate($g, {mutateProperty: 'community', concurrency: 1}) "
+            "YIELD modularity, communityCount RETURN modularity, communityCount", g=GRAPH).single()
         louvain = s.run(
-            "CALL gds.louvain.stream($g) YIELD nodeId, communityId "
-            "WITH gds.util.asNode(nodeId) AS n, communityId "
+            "CALL gds.graph.nodeProperty.stream($g, 'community') YIELD nodeId, propertyValue "
+            "WITH gds.util.asNode(nodeId) AS n, propertyValue AS communityId "
             "RETURN communityId, n.id AS id, n.name AS name, n.birth_year AS birth_year",
             g=GRAPH,
         ).data()
-        modularity = s.run("CALL gds.louvain.stats($g) YIELD modularity, communityCount RETURN modularity, communityCount", g=GRAPH).single()
         degree_of = {r["id"]: r["score"] for r in s.run(
             "CALL gds.degree.stream($g) YIELD nodeId, score RETURN gds.util.asNode(nodeId).id AS id, score", g=GRAPH).data()}
         sizes = Counter(r["communityId"] for r in louvain)
